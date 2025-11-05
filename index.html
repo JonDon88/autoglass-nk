@@ -7,25 +7,60 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900">
-  <header class="border-b sticky top-0 z-40 bg-white/80 backdrop-blur">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-3">
+ <!-- HEADER -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-orange-100">
+  <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <div class="flex items-center justify-between gap-3 py-3">
+
+      <!-- left: brand -->
+      <a href="/" class="group flex items-center gap-3">
+        <!-- mini-logo -->
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-600 to-amber-500 shadow-lg ring-1 ring-orange-300/40
+                    group-hover:scale-105 transition"></div>
+
         <div class="flex items-center gap-2">
-          <span class="inline-block w-6 h-6 rounded bg-orange-600"></span>
-          <span class="font-semibold">Autoglass NK</span>
-          <span class="text-gray-500 text-sm">• <span data-i18n="city">Миколаїв</span></span>
+          <span class="text-lg md:text-xl font-semibold text-gray-900">Autoglass NK</span>
+          <!-- city chip -->
+          <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs
+                       bg-gray-100 text-gray-600">
+            • Миколаїв
+          </span>
         </div>
-        <div class="flex gap-3 items-center">
-          <button id="langBtn" class="hidden sm:inline-flex border rounded px-3 py-2 border-orange-600 text-orange-700 hover:bg-orange-50">
-            <span class="mr-2">🌐</span><span id="langLabel">RU</span>
-          </button>
-          <a href="tel:+380997625455" class="bg-orange-600 hover:bg-orange-700 text-white rounded px-4 py-2"> 
-            <span>📞</span> <span data-i18n="ctaCall">Подзвонити</span>
-          </a>
-        </div>
+      </a>
+
+      <!-- right: controls -->
+      <div class="flex items-center gap-3">
+
+        <!-- language pill -->
+        <button type="button"
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border
+                       border-orange-300/70 text-orange-700 hover:bg-orange-50
+                       transition-colors">
+          <!-- globe icon -->
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true">
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20Zm0 2a8 8 0 016.93 4H14.9a17.8 17.8 0 00-2.1-4Zm-2.8 4H5.07A8 8 0 0112 4c-.9 1.13-1.63 2.54-2.8 4Zm-4.13 2h4.5A20 20 0 019.5 12c0 1.08.2 2.12.57 3H5.07A8 8 0 013.07 10Zm1.99 8h4.13A17.8 17.8 0 0012 20a8 8 0 01-6.94-4Zm9.71 0h4.16A8 8 0 0112 20c.9-1.13 1.63-2.54 2.77-4Zm-3.35-2c-.34-.9-.53-1.92-.53-3 0-1.08.19-2.1.53-3h3.29c.34.9.53 1.92.53 3 0 1.08-.19 2.1-.53 3h-3.29Zm4.96-6h4.13A8 8 0 0118.93 8h-4.13c.45 1.08.73 2.12.73 3s-.28 1.92-.73 3h4.13A8 8 0 0121 12c0-.7-.1-1.38-.29-2Z"/>
+          </svg>
+          RU
+        </button>
+
+        <!-- call button -->
+        <a href="tel:+380997625455"
+           class="inline-flex items-center gap-2 px-4 md:px-5 py-2 rounded-xl
+                  text-white font-semibold
+                  bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500
+                  shadow-[0_6px_20px_-2px_rgba(234,88,12,.45)]
+                  hover:shadow-[0_10px_28px_-4px_rgba(234,88,12,.55)]
+                  active:scale-[.98] transition">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          Подзвонити
+        </a>
       </div>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <main>
     <!-- Hero -->
