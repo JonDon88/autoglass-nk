@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Autoglass NK — Миколаїв</title>
+  <meta name="description" content="Продаж і професійна заміна автоскла, сертифіковане тонування у Миколаєві. Оригінальні матеріали, гарантія до 12 місяців, встановлення в той самий день.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preload" as="image" href="images/hero.webp">
 </head>
 <body class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900">
  <!-- HEADER -->
@@ -22,8 +24,8 @@
           <span class="text-lg md:text-xl font-semibold text-gray-900">Autoglass NK</span>
           <!-- city chip -->
           <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs
-                       bg-gray-100 text-gray-600">
-            • Миколаїв
+                       bg-gray-100 text-gray-600" data-i18n="city">
+            Миколаїв
           </span>
         </div>
       </a>
@@ -32,7 +34,7 @@
       <div class="flex items-center gap-3">
 
         <!-- language pill -->
-        <button type="button"
+        <button id="langBtn" type="button"
                 class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border
                        border-orange-300/70 text-orange-700 hover:bg-orange-50
                        transition-colors">
@@ -40,7 +42,7 @@
           <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true">
             <path d="M12 2a10 10 0 100 20 10 10 0 000-20Zm0 2a8 8 0 016.93 4H14.9a17.8 17.8 0 00-2.1-4Zm-2.8 4H5.07A8 8 0 0112 4c-.9 1.13-1.63 2.54-2.8 4Zm-4.13 2h4.5A20 20 0 019.5 12c0 1.08.2 2.12.57 3H5.07A8 8 0 013.07 10Zm1.99 8h4.13A17.8 17.8 0 0012 20a8 8 0 01-6.94-4Zm9.71 0h4.16A8 8 0 0112 20c.9-1.13 1.63-2.54 2.77-4Zm-3.35-2c-.34-.9-.53-1.92-.53-3 0-1.08.19-2.1.53-3h3.29c.34.9.53 1.92.53 3 0 1.08-.19 2.1-.53 3h-3.29Zm4.96-6h4.13A8 8 0 0118.93 8h-4.13c.45 1.08.73 2.12.73 3s-.28 1.92-.73 3h4.13A8 8 0 0121 12c0-.7-.1-1.38-.29-2Z"/>
           </svg>
-          RU
+          <span id="langLabel">RU</span>
         </button>
 
         <!-- call button -->
@@ -54,7 +56,7 @@
           <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true">
             <path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
           </svg>
-          Подзвонити
+          <span data-i18n="ctaCall">Подзвонити</span>
         </a>
       </div>
     </div>
@@ -80,10 +82,19 @@
             <a href="https://www.google.com/maps?q=Миколаїв,+вул.+Будівельників,+7" target="_blank" rel="noreferrer" data-i18n="address">Миколаїв, вул. Будівельників, 7</a>
           </div>
         </div>
-        <div class="rounded-2xl border shadow-sm bg-white/70 h-[320px] flex items-center justify-center text-gray-500">
-          <img src="images/images4.jfif" alt="Autoglass NK установка стекла"
-           class="w-full max-w-md rounded-2xl border-4 border-orange-500 shadow-xl hover:scale-[1.02] transition-transform duration-300">
-    </div>
+
+        <!-- HERO IMAGE (single file to replace: images/hero.webp) -->
+        <div class="rounded-2xl border shadow-sm bg-white/70">
+          <figure class="relative w-full overflow-hidden rounded-2xl">
+            <img
+              src="images/hero.webp"
+              alt="Autoglass NK — робота з автосклом"
+              loading="eager"
+              decoding="async"
+              class="block w-full h-auto max-h-[420px] md:max-h-[520px] object-cover"
+              style="aspect-ratio: 4 / 3;"
+            />
+          </figure>
         </div>
       </div>
     </section>
@@ -92,20 +103,28 @@
 <section class="max-w-6xl mx-auto px-4 md:px-8 py-12">
   <div class="grid md:grid-cols-2 gap-10 items-center">
 
-    <!-- Фото -->
+    <!-- ABOUT IMAGE (single file to replace: images/about.webp) -->
     <div class="flex justify-center">
-      <img src="images/images1.jfif" alt="Autoglass NK установка стекла"
-           class="w-full max-w-md rounded-2xl border-4 border-orange-500 shadow-xl hover:scale-[1.02] transition-transform duration-300">
+      <figure class="relative w-full max-w-xl overflow-hidden rounded-2xl border-4 border-orange-500 shadow-xl">
+        <img
+          src="images/about.webp"
+          alt="Autoglass NK установка скла"
+          loading="lazy"
+          decoding="async"
+          class="block w-full h-auto object-cover"
+          style="aspect-ratio: 4 / 3;"
+        />
+      </figure>
     </div>
 
     <!-- Текст -->
     <div>
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Про нас</h2>
-      <p class="text-gray-700 leading-relaxed mb-3">
-        <strong>Autoglass NK</strong> спеціалізується на професійній заміні та ремонті автостекол у Миколаєві.
+      <h2 class="text-3xl font-bold text-gray-900 mb-4" data-i18n="aboutTitle">Про нас</h2>
+      <p class="text-gray-700 leading-relaxed mb-3" data-i18n="aboutP1">
+        <strong>Autoglass NK</strong> спеціалізується на професійній заміні та ремонті автоскол у Миколаєві.
         Ми використовуємо лише перевірені матеріали та технології, що гарантують довговічність та безпеку кожної установки.
       </p>
-      <p class="text-gray-700 leading-relaxed">
+      <p class="text-gray-700 leading-relaxed" data-i18n="aboutP2">
         Наші майстри мають великий досвід роботи з авто будь-яких марок — від легкових до вантажних.
         Працюємо швидко, акуратно і з гарантією якості.
       </p>
@@ -121,17 +140,17 @@
         <h2 class="text-2xl sm:text-3xl font-bold mb-8" data-i18n="servicesTitle">Наші послуги</h2>
         <div class="grid md:grid-cols-3 gap-6">
           <div class="border rounded shadow-sm p-5 bg-white">
-            <div class="text-orange-600 mb-2">🚗</div>
+            <div class="text-orange-600 mb-2" aria-hidden="true">🚗</div>
             <div class="text-lg font-semibold" data-i18n="s1t">Заміна лобового, бокових та задніх стекол</div>
             <div class="text-gray-600" data-i18n="s1d">Професійна заміна будь-яких стекол з дотриманням технологій. Якісні клеї, праймери та контроль герметичності.</div>
           </div>
           <div class="border rounded shadow-sm p-5 bg-white">
-            <div class="text-orange-600 mb-2">🌞</div>
+            <div class="text-orange-600 mb-2" aria-hidden="true">🌞</div>
             <div class="text-lg font-semibold" data-i18n="s2t">Професійне тонування</div>
             <div class="text-gray-600" data-i18n="s2d">Сонцезахисні та атермальні плівки з сертифікацією. Рівні краї, без пилу й підривів.</div>
           </div>
           <div class="border rounded shadow-sm p-5 bg-white">
-            <div class="text-orange-600 mb-2">🛡️</div>
+            <div class="text-orange-600 mb-2" aria-hidden="true">🛡️</div>
             <div class="text-lg font-semibold" data-i18n="s3t">Підбір автостекол для всіх типів автомобілів</div>
             <div class="text-gray-600" data-i18n="s3d">Підбираємо автостекла для легкових, вантажних автомобілів та спецтехніки. Враховуємо всі параметри, гарантуємо сумісність та довговічність.</div>
           </div>
@@ -142,7 +161,7 @@
     <!-- Brands -->
     <section class="py-14 sm:py-20">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl sm:text-3xl font-bold mb-2">Бренды автостекол / Brands</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold mb-2" data-i18n="brandsTitle">Бренди автостекол</h2>
         <p class="text-gray-600 mb-6" data-i18n="brandsSub">Мы сотрудничаем только с проверенными мировыми производителями:</p>
         <div class="flex flex-wrap gap-3">
           <span class="rounded-full border px-4 py-2 bg-white shadow-sm text-sm font-medium">Pilkington</span>
@@ -212,6 +231,9 @@
       badge1: "Гарантія до 12 міс.",
       badge2: "Оригінальні матеріали",
       badge3: "Той самий день",
+      aboutTitle: "Про нас",
+      aboutP1: "Autoglass NK спеціалізується на професійній заміні та ремонті автоскол у Миколаєві. Ми використовуємо лише перевірені матеріали та технології, що гарантують довговічність та безпеку кожної установки.",
+      aboutP2: "Наші майстри мають великий досвід роботи з авто будь-яких марок — від легкових до вантажних. Працюємо швидко, акуратно і з гарантією якості.",
       servicesTitle: "Наші послуги",
       s1t: "Заміна лобового, бокових та задніх стекол",
       s1d: "Професійна заміна будь-яких стекол з дотриманням технологій. Якісні клеї, праймери та контроль герметичності.",
@@ -219,6 +241,8 @@
       s2d: "Сонцезахисні та атермальні плівки з сертифікацією. Рівні краї, без пилу й підривів.",
       s3t: "Підбір автостекол для всіх типів автомобілів",
       s3d: "Підбираємо автостекла для легкових, вантажних автомобілів та спецтехніки. Враховуємо всі параметри, гарантуємо сумісність та довговічність.",
+      brandsTitle: "Бренди автоскла",
+      brandsSub: "Ми співпрацюємо лише з перевіреними світовими виробниками:",
       pricesTitle: "Орієнтовні ціни",
       pricesNote: "Фінальна вартість залежить від моделі авто та обраних матеріалів.",
       p1: "Заміна лобового скла (робота)",
@@ -245,6 +269,9 @@
       badge1: "Гарантия до 12 мес.",
       badge2: "Оригинальные материалы",
       badge3: "В тот же день",
+      aboutTitle: "О нас",
+      aboutP1: "Autoglass NK специализируется на профессиональной замене и ремонте автостекол в Николаеве. Мы используем только проверенные материалы и технологии, гарантирующие долговечность и безопасность каждой установки.",
+      aboutP2: "Наши мастера имеют большой опыт работы с авто любых марок — от легковых до грузовых. Работаем быстро, аккуратно и с гарантией качества.",
       servicesTitle: "Наши услуги",
       s1t: "Замена лобового, боковых и задних стекол",
       s1d: "Профессиональная замена любых стекол с соблюдением технологий. Качественные клеи, праймеры и контроль герметичности.",
@@ -252,6 +279,8 @@
       s2d: "Солнцезащитные и атермальные пленки с сертификацией. Ровные края, без пыли и подрывов.",
       s3t: "Подбор автостекол для всех типов автомобилей",
       s3d: "Подбираем автостекла для легковых, грузовых автомобилей и спецтехники. Учитываем все параметры, гарантируем совместимость и долговечность.",
+      brandsTitle: "Бренды автостекол",
+      brandsSub: "Мы сотрудничаем только с проверенными мировыми производителями:",
       pricesTitle: "Ориентировочные цены",
       pricesNote: "Финальная стоимость зависит от модели авто и выбранных материалов.",
       p1: "Замена лобового стекла (работа)",
@@ -269,43 +298,63 @@
       formErr: "Ошибка отправки. Проверьте подключение Telegram.",
       rights: "Все права защищены"
     };
-    let lang = 'ua';
-    const dict = { ua, ru };
-    function applyLang() {
-      const t = dict[lang];
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (key && t[key] !== undefined) el.textContent = t[key];
-      });
-      document.documentElement.lang = (lang === 'ua' ? 'uk' : 'ru');
-      document.getElementById("langLabel").textContent = (lang === 'ua' ? 'RU' : 'UA');
-    }
-    document.getElementById("langBtn").addEventListener("click", () => { lang = (lang === 'ua' ? 'ru' : 'ua'); applyLang(); });
-    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Form submit
-    document.getElementById("leadForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const btn = document.getElementById("submitBtn");
-      const ok = document.getElementById("okMsg");
-      const err = document.getElementById("errMsg");
-      ok.classList.add("hidden"); err.classList.add("hidden");
-      btn.disabled = true; btn.textContent = (lang==='ua'?'Надсилаємо...':'Отправляем...');
-      const form = new FormData(e.target);
-      const payload = { lang, name: form.get('name')||'', phone: form.get('phone')||'', msg: form.get('msg')||'' };
-      try {
-        const r = await fetch('/api/telegram', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
-        if (!r.ok) throw new Error(await r.text());
-        ok.classList.remove("hidden");
-        (e.target).reset();
-      } catch (e) {
-        console.error(e);
-        err.classList.remove("hidden");
-      } finally {
-        btn.disabled = false; btn.textContent = (lang==='ua'?ua.formSend:ru.formSend);
+    document.addEventListener('DOMContentLoaded', () => {
+      let lang = (localStorage.getItem('lang') || 'ua');
+      const dict = { ua, ru };
+
+      function applyLang() {
+        const t = dict[lang];
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (key && t[key] !== undefined) {
+            el.textContent = t[key];
+          }
+        });
+        document.documentElement.lang = (lang === 'ua' ? 'uk' : 'ru');
+        const label = document.getElementById('langLabel');
+        if (label) label.textContent = (lang === 'ua' ? 'RU' : 'UA');
+        localStorage.setItem('lang', lang);
       }
+
+      const btn = document.getElementById('langBtn');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          lang = (lang === 'ua' ? 'ru' : 'ua');
+          applyLang();
+        });
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Form submit
+      const leadForm = document.getElementById('leadForm');
+      if (leadForm) {
+        leadForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const btn = document.getElementById('submitBtn');
+          const ok = document.getElementById('okMsg');
+          const err = document.getElementById('errMsg');
+          ok.classList.add('hidden'); err.classList.add('hidden');
+          btn.disabled = true; btn.textContent = (lang==='ua'?ua.formSend:ru.formSend) + '...';
+          const form = new FormData(e.target);
+          const payload = { lang, name: form.get('name')||'', phone: form.get('phone')||'', msg: form.get('msg')||'' };
+          try {
+            const r = await fetch('/api/telegram', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+            if (!r.ok) throw new Error(await r.text());
+            ok.classList.remove('hidden');
+            (e.target).reset();
+          } catch (e2) {
+            console.error(e2);
+            err.classList.remove('hidden');
+          } finally {
+            btn.disabled = false; btn.textContent = (lang==='ua'?ua.formSend:ru.formSend);
+          }
+        });
+      }
+
+      applyLang();
     });
-    applyLang();
   </script>
 </body>
 </html>
