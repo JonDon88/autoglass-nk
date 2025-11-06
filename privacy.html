@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Політика конфіденційності — Autoglass NK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Політика конфіденційності Autoglass NK (Миколаїв). Як ми обробляємо персональні дані клієнтів.">
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+  <header class="border-b bg-white">
+    <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="text-lg font-semibold text-gray-900">Autoglass NK</a>
+      <button id="langBtn" class="px-3 py-1.5 rounded-full border text-sm">RU</button>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4" data-i18n="title">Політика конфіденційності</h1>
+    <p class="text-gray-600 mb-8" data-i18n="intro">
+      Ця сторінка пояснює, які дані ми збираємо, з якою метою та як ви можете керувати ними.
+    </p>
+
+    <div class="space-y-6">
+      <section>
+        <h2 class="text-xl font-semibold mb-2" data-i18n="whoTitle">Хто ми</h2>
+        <p data-i18n="whoBody">
+          Autoglass NK, м. Миколаїв, вул. Будівельників, 7. Телефон: +380997625455, Email: trashkalov88@gmail.com.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2" data-i18n="dataTitle">Які дані ми збираємо</h2>
+        <ul class="list-disc pl-5 space-y-1" data-i18n="dataList">
+          <li>Ім’я, телефон, повідомлення — з форми на сайті.</li>
+          <li>Технічні дані браузера (IP-адреса, user-agent) — для безпеки та статистики.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2" data-i18n="whyTitle">Навіщо ми це робимо</h2>
+        <ul class="list-disc pl-5 space-y-1" data-i18n="whyList">
+          <li>Щоб зв’язатися з вами та надати послугу.</li>
+          <li>Щоб вести базовий облік звернень і покращувати сервіс.</li>
+          <li>Для запобігання шахрайству та забезпечення безпеки сайту.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2" data-i18n="lawTitle">Правові підстави</h2>
+        <p data-i18n="lawBody">
+          Згода користувача та законний інтерес компанії (надання послуг, забезпечення безпеки).
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2" data-i18n="shareTitle">Передача третім сторонам</h2>
+        <p data-i18n="shareBody">
+          Дані не передаємо третім особам, окрім випадків технічної обробки (наприклад, надсилання заявки до нашого Telegram-бота) або вимог закону.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2" data-i18n="storeTitle">Зберігання</h2>
+        <p data-i18n="storeBody">
+          Заявки зберігаємо не довше 12 місяців. Ви можете подати запит на видалення в будь-який час.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2" data-i18n="rightsTitle">Ваші права</h2>
+        <ul class="list-disc pl-5 space-y-1" data-i18n="rightsList">
+          <li>Отримати копію ваших даних.</li>
+          <li>Виправити або видалити дані.</li>
+          <li>Обмежити або заперечити обробку.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2" data-i18n="cookiesTitle">Cookies та аналітика</h2>
+        <p data-i18n="cookiesBody">
+          Ми не використовуємо сторонні аналітичні скрипти без вашої згоди. Базові технічні cookies можуть використовуватись для роботи форми та безпеки.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2" data-i18n="contactTitle">Контакти з питань конфіденційності</h2>
+        <p data-i18n="contactBody">
+          Напишіть нам: trashkalov88@gmail.com або зателефонуйте: +380997625455.
+        </p>
+      </section>
+    </div>
+
+    <div class="mt-10 text-sm text-gray-500" data-i18n="update">
+      Оновлено: <span id="date"></span>
+    </div>
+  </main>
+
+  <script>
+    const ua = {
+      title: "Політика конфіденційності",
+      intro: "Ця сторінка пояснює, які дані ми збираємо, з якою метою та як ви можете керувати ними.",
+      whoTitle: "Хто ми",
+      whoBody: "Autoglass NK, м. Миколаїв, вул. Будівельників, 7. Телефон: +380997625455, Email: trashkalov88@gmail.com.",
+      dataTitle: "Які дані ми збираємо",
+      dataList: "",
+      whyTitle: "Навіщо ми це робимо",
+      whyList: "",
+      lawTitle: "Правові підстави",
+      lawBody: "Згода користувача та законний інтерес компанії (надання послуг, забезпечення безпеки).",
+      shareTitle: "Передача третім сторонам",
+      shareBody: "Дані не передаємо третім особам, окрім випадків технічної обробки (наприклад, надсилання заявки до нашого Telegram-бота) або вимог закону.",
+      storeTitle: "Зберігання",
+      storeBody: "Заявки зберігаємо не довше 12 місяців. Ви можете подати запит на видалення в будь-який час.",
+      rightsTitle: "Ваші права",
+      rightsList: "",
+      cookiesTitle: "Cookies та аналітика",
+      cookiesBody: "Ми не використовуємо сторонні аналітичні скрипти без вашої згоди. Базові технічні cookies можуть використовуватись для роботи форми та безпеки.",
+      contactTitle: "Контакти з питань конфіденційності",
+      contactBody: "Напишіть нам: trashkalov88@gmail.com або зателефонуйте: +380997625455.",
+      update: "Оновлено: "
+    };
+    const ru = {
+      title: "Политика конфиденциальности",
+      intro: "На этой странице описано, какие данные мы собираем, зачем и как вы можете ими управлять.",
+      whoTitle: "Кто мы",
+      whoBody: "Autoglass NK, г. Николаев, ул. Строителей, 7. Телефон: +380997625455, Email: trashkalov88@gmail.com.",
+      dataTitle: "Какие данные мы собираем",
+      dataList: "",
+      whyTitle: "Зачем мы это делаем",
+      whyList: "",
+      lawTitle: "Правовые основания",
+      lawBody: "Согласие пользователя и законный интерес компании (оказание услуг, обеспечение безопасности).",
+      shareTitle: "Передача третьим сторонам",
+      shareBody: "Данные не передаются третьим лицам, кроме случаев технической обработки (например, отправка заявки в наш Telegram-бот) или требований закона.",
+      storeTitle: "Хранение",
+      storeBody: "Заявки храним не дольше 12 месяцев. Вы можете запросить удаление в любое время.",
+      rightsTitle: "Ваши права",
+      rightsList: "",
+      cookiesTitle: "Cookies и аналитика",
+      cookiesBody: "Мы не используем стороннюю аналитику без вашего согласия. Базовые технические cookies могут применяться для работы формы и безопасности.",
+      contactTitle: "Контакты по вопросам конфиденциальности",
+      contactBody: "Пишите: trashkalov88@gmail.com или звоните: +380997625455.",
+      update: "Обновлено: "
+    };
+    let lang = (localStorage.getItem('lang') || 'ua');
+    const dict = { ua, ru };
+    function applyLang() {
+      const t = dict[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+      document.documentElement.lang = (lang==='ua'?'uk':'ru');
+      document.getElementById('langBtn').textContent = (lang==='ua'?'RU':'UA');
+      localStorage.setItem('lang', lang);
+    }
+    document.getElementById('langBtn').addEventListener('click', ()=>{ lang=(lang==='ua'?'ru':'ua'); applyLang(); });
+    document.getElementById('date').textContent = new Date().toISOString().slice(0,10);
+    applyLang();
+  </script>
+</body>
+</html>
