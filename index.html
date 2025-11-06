@@ -302,43 +302,48 @@
 
 
   <script>
+   <script>
     const ua = {
-      city: "Миколаїв",
-      ctaCall: "Подзвонити",
-      heroTitle: "Продаж та заміна автостекол, тонування у Миколаєві",
-      heroSubtitle: "Оригінальні автостекла, професійна установка і сертифіковане тонування. Гарантія, швидкість, якість.",
-      heroExtra: "Підбираємо професійно автостекла для всіх типів автомобілів — легкових, вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі та надійність установки.",
-      badge1: "Гарантія до 12 міс.",
-      badge2: "Оригінальні матеріали",
-      badge3: "Той самий день",
-      aboutTitle: "Про нас",
-      aboutP1: "Autoglass NK спеціалізується на професійній заміні та ремонті автоскол у Миколаєві. Ми використовуємо лише перевірені матеріали та технології, що гарантують довговічність та безпеку кожної установки.",
-      aboutP2: "Наші майстри мають великий досвід роботи з авто будь-яких марок — від легкових до вантажних. Працюємо швидко, акуратно і з гарантією якості.",
-      servicesTitle: "Наші послуги",
-      s1t: "Заміна лобового, бокових та задніх стекол",
-      s1d: "Професійна заміна будь-яких стекол з дотриманням технологій. Якісні клеї, праймери та контроль герметичності.",
-      s2t: "Професійне тонування",
-      s2d: "Сонцезахисні та атермальні плівки з сертифікацією. Рівні краї, без пилу й підривів.",
-      s3t: "Підбір автостекол для всіх типів автомобілів",
-      s3d: "Підбираємо автостекла для легкових, вантажних автомобілів та спецтехніки. Враховуємо всі параметри, гарантуємо сумісність та довговічність.",
-      brandsTitle: "Бренди автоскла",
-      brandsSub: "Ми співпрацюємо лише з перевіреними світовими виробниками:",
-      pricesTitle: "Орієнтовні ціни",
-      pricesNote: "Фінальна вартість залежить від моделі авто та обраних матеріалів.",
-      p1: "Заміна лобового скла (робота)",
-      p2: "Комплект лобового скла",
-      p3: "Тонування седан (усі вікна)",
-      p4: "Атермальне тонування лобового",
-      contactTitle: "Контакти та запис",
-      contactSub: "Працюємо щодня 09:00–19:00",
-      address: "Миколаїв, вул. Будівельників, 7",
-      formName: "Ім'я",
-      formPhone: "Телефон",
-      formMsg: "Коментар (модель авто / тип послуги)",
-      formSend: "Надіслати заявку",
-      formOk: "Дякуємо! Заявку надіслано в Telegram.",
-      formErr: "Помилка відправки. Перевірте підключення Telegram.",
-      rights: "Всі права захищені"
+        lang: "UA",
+        ...
+// --- Services block (карточки “Наші послуги”) ---
+services_title: "Наші послуги",
+service1_title: "Заміна лобового скла",
+service1_desc:  "Професійно демонтуємо старе скло та встановлюємо нове з дотриманням технології виробника.",
+service2_title: "Комплект автоскла",
+service2_desc:  "Підбираємо та встановлюємо лобове, бокові та заднє скло.",
+service3_title: "Тонування автомобіля",
+service3_desc:  "Сертифіковані плівки, акуратний монтаж без пилу та бульбашок.",
+service4_title: "Атермальне тонування",
+service4_desc:  "Плівка, що затримує до 70% тепла. Менше нагріву та більше комфорту.",
+
+// --- Contacts block (оранжевый блок “Контакти та запис”) ---
+contacts_title: "Контакти та запис",
+contacts_work: "Працюємо щодня 09:00–19:00",
+contacts_address: "Миколаїв, вул. Будівельників, 7",
+contacts_phone: "+380997625455",
+contacts_email: "trashkalov88@gmail.com",
+ const ru = {
+        lang: "RU",
+        ...
+          // --- Services block ---
+services_title: "Наши услуги",
+service1_title: "Замена лобового стекла",
+service1_desc:  "Профессионально демонтируем старое стекло и устанавливаем новое по технологии производителя.",
+service2_title: "Комплект автостекла",
+service2_desc:  "Подбираем и устанавливаем лобовое, боковые и заднее стекло.",
+service3_title: "Тонировка автомобиля",
+service3_desc:  "Сертифицированные плёнки, аккуратный монтаж без пыли и пузырей.",
+service4_title: "Атермальная тонировка",
+service4_desc:  "Плёнка задерживает до 70% тепла. Меньше нагрева — больше комфорта.",
+
+// --- Contacts block ---
+contacts_title: "Контакты и запись",
+contacts_work: "Работаем ежедневно 09:00–19:00",
+contacts_address: "Николаев, ул. Строителей, 7",
+contacts_phone: "+380997625455",
+contacts_email: "trashkalov88@gmail.com",
+
     };
     const ru = {
       city: "Николаев",
@@ -437,218 +442,7 @@
     });
   </script>
   <script>
-window.i18n = window.i18n || { ua: {}, ru: {} };
 
-Object.assign(window.i18n.ua, {
-  service1_title: "Заміна лобового скла",
-  service1_desc: "Професійно демонтуємо старе скло та встановлюємо нове з дотриманням технології виробника.",
-
-  service2_title: "Комплект автоскла",
-  service2_desc: "Підбираємо та встановлюємо лобове, бокові та заднє скло.",
-
-  service3_title: "Тонування автомобіля",
-  service3_desc: "Сертифіковані плівки, акуратний монтаж без пилу та бульбашок.",
-
-  service4_title: "Атермальне тонування",
-  service4_desc: "Плівка, що затримує до 70% тепла. Менше нагріву та більше комфорту."
-});
-
-Object.assign(window.i18n.ru, {
-  service1_title: "Замена лобового стекла",
-  service1_desc: "Профессионально демонтируем старое стекло и устанавливаем новое по технологии производителя.",
-
-  service2_title: "Комплект автостекла",
-  service2_desc: "Подбираем и устанавливаем лобовое, боковые и заднее стекло.",
-
-  service3_title: "Тонировка автомобиля",
-  service3_desc: "Сертифицированные пленки, аккуратный монтаж без пыли и пузырей.",
-
-  service4_title: "Атермальная тонировка",
-  service4_desc: "Пленка задерживает до 70% тепла. Меньше нагрева — больше комфорта."
-});
-</script>
-<script>
-window.i18n = window.i18n || { ua: {}, ru: {} };
-
-Object.assign(window.i18n.ua, {
-  service1_title: "Заміна лобового скла",
-  service1_desc: "Професійно демонтуємо старе скло та встановлюємо нове з дотриманням технології виробника.",
-
-  service2_title: "Комплект автоскла",
-  service2_desc: "Підбираємо та встановлюємо лобове, бокові та заднє скло.",
-
-  service3_title: "Тонування автомобіля",
-  service3_desc: "Сертифіковані плівки, акуратний монтаж без пилу та бульбашок.",
-
-  service4_title: "Атермальне тонування",
-  service4_desc: "Плівка, що затримує до 70% тепла. Менше нагріву та більше комфорту."
-});
-
-Object.assign(window.i18n.ru, {
-  service1_title: "Замена лобового стекла",
-  service1_desc: "Профессионально демонтируем старое стекло и устанавливаем новое по технологии производителя.",
-
-  service2_title: "Комплект автостекла",
-  service2_desc: "Подбираем и устанавливаем лобовое, боковые и заднее стекло.",
-
-  service3_title: "Тонировка автомобиля",
-  service3_desc: "Сертифицированные пленки, аккуратный монтаж без пыли и пузырей.",
-
-  service4_title: "Атермальная тонировка",
-  service4_desc: "Пленка задерживает до 70% тепла. Меньше нагрева — больше комфорта."
-});
-</script>
-<script>
-/* ==== 1) СЛОВАРЬ ПЕРЕВОДОВ ==== */
-window.i18n = window.i18n || { ua: {}, ru: {} };
-
-// --- Services (Наші послуги) ---
-Object.assign(window.i18n.ua, {
-  services_title: "Наші послуги",
-  service1_title: "Заміна лобового скла",
-  service1_desc:  "Професійно демонтуємо старе скло та встановлюємо нове з дотриманням технології виробника.",
-  service2_title: "Комплект автоскла",
-  service2_desc:  "Підбираємо та встановлюємо лобове, бокові та заднє скло.",
-  service3_title: "Тонування автомобіля",
-  service3_desc:  "Сертифіковані плівки, акуратний монтаж без пилу та бульбашок.",
-  service4_title: "Атермальне тонування",
-  service4_desc:  "Плівка, що затримує до 70% тепла. Менше нагріву та більше комфорту."
-});
-
-Object.assign(window.i18n.ru, {
-  services_title: "Наши услуги",
-  service1_title: "Замена лобового стекла",
-  service1_desc:  "Профессионально демонтируем старое стекло и устанавливаем новое по технологии производителя.",
-  service2_title: "Комплект автостекла",
-  service2_desc:  "Подбираем и устанавливаем лобовое, боковые и заднее стекло.",
-  service3_title: "Тонировка автомобиля",
-  service3_desc:  "Сертифицированные плёнки, аккуратный монтаж без пыли и пузырей.",
-  service4_title: "Атермальная тонировка",
-  service4_desc:  "Плёнка задерживает до 70% тепла. Меньше нагрева — больше комфорта."
-});
-
-// --- Contacts (Контакти) ---
-Object.assign(window.i18n.ua, {
-  contacts_title: "Контакти та запис",
-  contacts_work: "Працюємо щодня 09:00–19:00",
-  contacts_address: "Миколаїв, вул. Будівельників, 7",
-  contacts_phone: "+380997625455",
-  contacts_email: "trashkalov88@gmail.com"
-});
-Object.assign(window.i18n.ru, {
-  contacts_title: "Контакты и запись",
-  contacts_work: "Работаем ежедневно 09:00–19:00",
-  contacts_address: "Николаев, ул. Строителей, 7",
-  contacts_phone: "+380997625455",
-  contacts_email: "trashkalov88@gmail.com"
-});
-
-/* ==== 2) ПРИМЕНЕНИЕ ЯЗЫКА ==== */
-function applyLanguage(lang) {
-  var dict = (window.i18n && window.i18n[lang]) || {};
-  document.querySelectorAll("[data-i18n]").forEach(function(el){
-    var key = el.getAttribute("data-i18n");
-    if (dict[key] !== undefined) {
-      // меняем только текст, разметку (ссылки/иконки) не ломаем
-      el.textContent = dict[key];
-    }
-  });
-  document.documentElement.setAttribute("lang", lang === "ru" ? "ru" : "uk");
-  localStorage.setItem("lang", lang);
-  // Подсветка активной кнопки (если есть)
-  document.querySelectorAll("[data-set-lang]").forEach(function(btn){
-    btn.classList.toggle("opacity-50", btn.getAttribute("data-set-lang") !== lang);
-  });
-}
-window.applyLanguage = applyLanguage;
-
-/* ==== 3) ОБРАБОТЧИКИ КНОПОК ==== */
-// Работает с любыми элементами, у которых есть data-set-lang="ua" или "ru"
-document.addEventListener("click", function(e){
-  var target = e.target.closest("[data-set-lang]");
-  if (!target) return;
-  var lang = target.getAttribute("data-set-lang");
-  applyLanguage(lang);
-});
-
-/* ==== 4) АВТО-ИНИЦИАЛИЗАЦИЯ ==== */
-document.addEventListener("DOMContentLoaded", function(){
-  var saved = localStorage.getItem("lang") || "ua"; // по умолчанию украинский
-  applyLanguage(saved);
-});
-</script>
-<script>
-window.i18n = window.i18n || { ua: {}, ru: {} };
-
-Object.assign(window.i18n.ua, {
-  services_title: "Наші послуги",
-  service1_title: "Заміна лобового скла",
-  service1_desc: "Професійно демонтуємо старе скло та встановлюємо нове з дотриманням технології виробника.",
-  service2_title: "Комплект автоскла",
-  service2_desc: "Підбираємо та встановлюємо лобове, бокові та заднє скло.",
-  service3_title: "Тонування автомобіля",
-  service3_desc: "Сертифіковані плівки, акуратний монтаж без пилу та бульбашок.",
-  service4_title: "Атермальне тонування",
-  service4_desc: "Плівка, що затримує до 70% тепла. Менше нагріву та більше комфорту.",
-
-  contacts_title: "Контакти та запис",
-  contacts_work: "Працюємо щодня 09:00–19:00",
-  contacts_address: "Миколаїв, вул. Будівельників, 7",
-  contacts_phone: "+380997625455",
-  contacts_email: "trashkalov88@gmail.com"
-});
-
-Object.assign(window.i18n.ru, {
-  services_title: "Наши услуги",
-  service1_title: "Замена лобового стекла",
-  service1_desc: "Профессионально демонтируем старое стекло и устанавливаем новое по технологии производителя.",
-  service2_title: "Комплект автостекла",
-  service2_desc: "Подбираем и устанавливаем лобовое, боковые и заднее стекло.",
-  service3_title: "Тонировка автомобиля",
-  service3_desc: "Сертифицированные плёнки, аккуратный монтаж без пыли и пузырей.",
-  service4_title: "Атермальная тонировка",
-  service4_desc: "Плёнка задерживает до 70% тепла. Меньше нагрева — больше комфорта.",
-
-  contacts_title: "Контакты и запись",
-  contacts_work: "Работаем ежедневно 09:00–19:00",
-  contacts_address: "Николаев, ул. Строителей, 7",
-  contacts_phone: "+380997625455",
-  contacts_email: "trashkalov88@gmail.com"
-});
-</script>
-<script>
-(function () {
-  function translateServicesAndContacts(lang) {
-    var dict = (window.i18n && window.i18n[lang]) || {};
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var key = el.getAttribute("data-i18n");
-      if (dict[key] !== undefined) el.textContent = dict[key];
-    });
-    localStorage.setItem("lang", lang);
-  }
-
-  // если у тебя уже есть setLanguage — добавляем к ней наш перевод
-  var originalSetLanguage = window.setLanguage;
-  window.setLanguage = function (lang) {
-    if (typeof originalSetLanguage === "function") {
-      originalSetLanguage(lang);
-    }
-    translateServicesAndContacts(lang);
-  };
-
-  // авто-инициализация
-  document.addEventListener("DOMContentLoaded", function () {
-    var saved = localStorage.getItem("lang") || "ua";
-    translateServicesAndContacts(saved);
-  });
-
-  // на случай, если у тебя кнопки с data-set-lang
-  document.addEventListener("click", function (e) {
-    var btn = e.target.closest("[data-set-lang]");
-    if (!btn) return;
-    translateServicesAndContacts(btn.getAttribute("data-set-lang"));
-  });
-})();
 </script>
 
 </body>
