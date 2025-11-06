@@ -531,6 +531,85 @@ Object.assign(window.i18n.ru, {
   service4_desc: "Пленка задерживает до 70% тепла. Меньше нагрева — больше комфорта."
 });
 </script>
+<script>
+/* ==== 1) СЛОВАРЬ ПЕРЕВОДОВ ==== */
+window.i18n = window.i18n || { ua: {}, ru: {} };
+
+// --- Services (Наші послуги) ---
+Object.assign(window.i18n.ua, {
+  services_title: "Наші послуги",
+  service1_title: "Заміна лобового скла",
+  service1_desc:  "Професійно демонтуємо старе скло та встановлюємо нове з дотриманням технології виробника.",
+  service2_title: "Комплект автоскла",
+  service2_desc:  "Підбираємо та встановлюємо лобове, бокові та заднє скло.",
+  service3_title: "Тонування автомобіля",
+  service3_desc:  "Сертифіковані плівки, акуратний монтаж без пилу та бульбашок.",
+  service4_title: "Атермальне тонування",
+  service4_desc:  "Плівка, що затримує до 70% тепла. Менше нагріву та більше комфорту."
+});
+
+Object.assign(window.i18n.ru, {
+  services_title: "Наши услуги",
+  service1_title: "Замена лобового стекла",
+  service1_desc:  "Профессионально демонтируем старое стекло и устанавливаем новое по технологии производителя.",
+  service2_title: "Комплект автостекла",
+  service2_desc:  "Подбираем и устанавливаем лобовое, боковые и заднее стекло.",
+  service3_title: "Тонировка автомобиля",
+  service3_desc:  "Сертифицированные плёнки, аккуратный монтаж без пыли и пузырей.",
+  service4_title: "Атермальная тонировка",
+  service4_desc:  "Плёнка задерживает до 70% тепла. Меньше нагрева — больше комфорта."
+});
+
+// --- Contacts (Контакти) ---
+Object.assign(window.i18n.ua, {
+  contacts_title: "Контакти та запис",
+  contacts_work: "Працюємо щодня 09:00–19:00",
+  contacts_address: "Миколаїв, вул. Будівельників, 7",
+  contacts_phone: "+380997625455",
+  contacts_email: "trashkalov88@gmail.com"
+});
+Object.assign(window.i18n.ru, {
+  contacts_title: "Контакты и запись",
+  contacts_work: "Работаем ежедневно 09:00–19:00",
+  contacts_address: "Николаев, ул. Строителей, 7",
+  contacts_phone: "+380997625455",
+  contacts_email: "trashkalov88@gmail.com"
+});
+
+/* ==== 2) ПРИМЕНЕНИЕ ЯЗЫКА ==== */
+function applyLanguage(lang) {
+  var dict = (window.i18n && window.i18n[lang]) || {};
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var key = el.getAttribute("data-i18n");
+    if (dict[key] !== undefined) {
+      // меняем только текст, разметку (ссылки/иконки) не ломаем
+      el.textContent = dict[key];
+    }
+  });
+  document.documentElement.setAttribute("lang", lang === "ru" ? "ru" : "uk");
+  localStorage.setItem("lang", lang);
+  // Подсветка активной кнопки (если есть)
+  document.querySelectorAll("[data-set-lang]").forEach(function(btn){
+    btn.classList.toggle("opacity-50", btn.getAttribute("data-set-lang") !== lang);
+  });
+}
+window.applyLanguage = applyLanguage;
+
+/* ==== 3) ОБРАБОТЧИКИ КНОПОК ==== */
+// Работает с любыми элементами, у которых есть data-set-lang="ua" или "ru"
+document.addEventListener("click", function(e){
+  var target = e.target.closest("[data-set-lang]");
+  if (!target) return;
+  var lang = target.getAttribute("data-set-lang");
+  applyLanguage(lang);
+});
+
+/* ==== 4) АВТО-ИНИЦИАЛИЗАЦИЯ ==== */
+document.addEventListener("DOMContentLoaded", function(){
+  var saved = localStorage.getItem("lang") || "ua"; // по умолчанию украинский
+  applyLanguage(saved);
+});
+</script>
 
 </body>
 </html>
