@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="64" viewBox="0 0 180 64">
+  <rect width="180" height="64" fill="white"/>
+  <!-- emblem: angled pane -->
+  <path d="M18 18h20l-8 28H10z" fill="none" stroke="#1f2937" stroke-width="3"/>
+  <text x="56" y="41" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="700" font-size="34" fill="#1f2937">AGC</text>
+</svg>

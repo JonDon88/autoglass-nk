@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="64" viewBox="0 0 200 64">
+  <rect width="200" height="64" fill="white"/>
+  <!-- emblem: stacked panes -->
+  <rect x="12" y="18" width="22" height="28" fill="none" stroke="#1f2937" stroke-width="3"/>
+  <rect x="18" y="14" width="22" height="28" fill="none" stroke="#1f2937" stroke-width="3" opacity="0.7"/>
+  <text x="56" y="40" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="600" font-size="28" fill="#1f2937">BENSON</text>
+</svg>
