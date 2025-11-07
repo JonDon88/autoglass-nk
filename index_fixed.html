@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autoglass NK — Миколаїв</title>
+  <meta name="description" content="Продаж і професійна заміна автоскла, сертифіковане тонування у Миколаєві. Оригінальні матеріали, гарантія до 12 місяців, встановлення в той самий день.">
+  
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const I18N = {
+    ua: {
+      city: "Миколаїв",
+      ctaCall: "Подзвонити",
+      heroTitle: "Продаж та заміна автостекол, тонування у Миколаєві",
+      heroSubtitle: "Оригінальні автостекла, професійна установка і сертифіковане тонування. Гарантія, швидкість, якість.",
+      heroExtra: "Підбираємо професійно автостекла для всіх типів автомобілів — легкових, вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі та надійність установки.",
+      badge1: "Гарантія до 12 міс.",
+      badge2: "Оригінальні матеріали",
+      badge3: "Той самий день",
+      address: "Миколаїв, вул. Будівельників, 7",
+
+      services_title: "Наші послуги",
+      service1_title: "Заміна лобового скла",
+      service1_desc:  "Професійно демонтуємо старе скло та встановлюємо нове з дотриманням технології виробника.",
+      service2_title: "Комплект автоскла",
+      service2_desc:  "Підбираємо та встановлюємо лобове, бокові та заднє скло.",
+      service3_title: "Тонування автомобіля",
+      service3_desc:  "Сертифіковані плівки, акуратний монтаж без пилу та бульбашок.",
+      service4_title: "Атермальне тонування",
+      service4_desc:  "Плівка, що затримує до 70% тепла. Менше нагріву та більше комфорту.",
+
+      brandsTitle: "Бренди автоскла",
+      brandsSub: "Ми співпрацюємо лише з перевіреними світовими виробниками:",
+
+      pricesTitle: "Орієнтовні ціни",
+      pricesNote: "Фінальна вартість залежить від моделі авто та обраних матеріалів.",
+
+      contacts_title: "Контакти та запис",
+      contacts_work: "Працюємо щодня 09:00–19:00",
+      contacts_address: "Миколаїв, вул. Будівельників, 7",
+      contacts_phone: "+380997625455",
+      contacts_email: "trashkalov88@gmail.com",
+
+      formName: "Ім'я",
+      formPhone: "Телефон",
+      formMsg: "Коментар (модель авто / тип послуги)",
+      formSend: "Надіслати заявку",
+      formOk: "Дякуємо! Заявку надіслано в Telegram.",
+      formErr: "Помилка відправки. Перевірте підключення Telegram.",
+      rights: "Всі права захищені"
+    },
+    ru: {
+      city: "Николаев",
+      ctaCall: "Позвонить",
+      heroTitle: "Продажа и замена автостёкол, тонировка в Николаеве",
+      heroSubtitle: "Оригинальные автостёкла, профессиональная установка и сертифицированная тонировка. Гарантия, скорость, качество.",
+      heroExtra: "Профессионально подбираем автостёкла для всех типов автомобилей — легковых, грузовых и спецтехники. Гарантируем точное соответствие модели и надёжную установку.",
+      badge1: "Гарантия до 12 мес.",
+      badge2: "Оригинальные материалы",
+      badge3: "В тот же день",
+      address: "Николаев, ул. Строителей, 7",
+
+      services_title: "Наши услуги",
+      service1_title: "Замена лобового стекла",
+      service1_desc:  "Профессионально демонтируем старое стекло и устанавливаем новое по технологии производителя.",
+      service2_title: "Комплект автостекла",
+      service2_desc:  "Подбираем и устанавливаем лобовое, боковые и заднее стекло.",
+      service3_title: "Тонировка автомобиля",
+      service3_desc:  "Сертифицированные плёнки, аккуратный монтаж без пыли и пузырей.",
+      service4_title: "Атермальная тонировка",
+      service4_desc:  "Плёнка задерживает до 70% тепла. Меньше нагрева — больше комфорта.",
+
+      brandsTitle: "Бренды автостёкол",
+      brandsSub: "Мы сотрудничаем только с проверенными мировыми производителями:",
+
+      pricesTitle: "Ориентировочные цены",
+      pricesNote: "Финальная стоимость зависит от модели авто и выбранных материалов.",
+
+      contacts_title: "Контакты и запись",
+      contacts_work: "Работаем ежедневно 09:00–19:00",
+      contacts_address: "Николаев, ул. Строителей, 7",
+      contacts_phone: "+380997625455",
+      contacts_email: "trashkalov88@gmail.com",
+
+      formName: "Имя",
+      formPhone: "Телефон",
+      formMsg: "Комментарий (модель авто / тип услуги)",
+      formSend: "Отправить заявку",
+      formOk: "Спасибо! Заявка отправлена в Telegram.",
+      formErr: "Ошибка отправки. Проверьте подключение Telegram.",
+      rights: "Все права защищены"
+    }
+  };
+
+  let lang = (localStorage.getItem('lang') || 'ua');
+  const langBtn = document.getElementById('langBtn');
+  const langLabel = document.getElementById('langLabel');
+
+  function applyLang() {
+    const dict = I18N[lang] || I18N.ua;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (key && dict[key] !== undefined) {
+        // If element only has text, use textContent; else allow HTML injection (not used here but safe fallback)
+        if (el.childNodes.length === 1 && el.firstChild.nodeType === Node.TEXT_NODE) {
+          el.textContent = dict[key];
+        } else {
+          el.innerHTML = dict[key];
+        }
+      }
+    });
+    document.documentElement.lang = (lang === 'ua' ? 'uk' : 'ru');
+    if (langLabel) langLabel.textContent = (lang === 'ua' ? 'RU' : 'UA');
+    localStorage.setItem('lang', lang);
+  }
+
+  if (langBtn) {
+    langBtn.addEventListener('click', () => {
+      lang = (lang === 'ua' ? 'ru' : 'ua');
+      applyLang();
+    });
+  }
+
+  // Year
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Lead form (unchanged, keeps Telegram submit flow)
+  const leadForm = document.getElementById('leadForm');
+  if (leadForm) {
+    leadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const ok = document.getElementById('okMsg');
+      const err = document.getElementById('errMsg');
+      ok.classList.add('hidden'); err.classList.add('hidden');
+      btn.disabled = true;
+    
+        const form = new FormData(e.target);
+        const payload = {
+          lang,
+          name: form.get('name') || '',
+          phone: form.get('phone') || '',
+          msg: form.get('msg') || ''
+        };
+        try {
+          const r = await fetch('/api/telegram', {
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body: JSON.stringify(payload)
+          });
+          if (!r.ok) throw new Error(await r.text());
+          ok.classList.remove('hidden');
+          (e.target).reset();
+        } catch (err2) {
+          console.error(err2);
+          err.classList.remove('hidden');
+        } finally {
+          btn.disabled = false;
+          const dict = I18N[lang] || I18N.ua;
+          btn.textContent = dict.formSend;
+        }
+      });
+  }
+
+  applyLang();
+});
+</script>
+
+</body>
+</html>
