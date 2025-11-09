@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Autoglass NK — Миколаїв</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- === START: SEO & SOCIAL === -->
+  <link rel="canonical" href="https://autoglass-nk.vercel.app/">
+  <meta name="description" content="Оригінальні автоскла, професійна заміна та сертифіковане тонування у Миколаєві. Гарантія до 12 місяців, матеріали преміум, точність підбору для будь-яких авто.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://autoglass-nk.vercel.app/">
+  <meta property="og:title" content="Autoglass NK — продаж та заміна автоскла, тонування у Миколаєві">
+  <meta property="og:description" content="Оригінальні автоскла, професійна заміна та сертифіковане тонування. Гарантія, швидкість, якість.">
+  <meta property="og:image" content="https://autoglass-nk.vercel.app/images/og-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Autoglass NK — автоскло та тонування">
+  <meta name="twitter:description" content="Підбір, заміна, тонування. Гарантія та сертифікати.">
+  <meta name="twitter:image" content="https://autoglass-nk.vercel.app/images/og-hero.jpg">
+  <link rel="icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- === END: SEO & SOCIAL === -->
+
 </head>
 <body class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900">
   <header class="border-b sticky top-0 z-40 bg-white/80 backdrop-blur">
@@ -74,6 +92,29 @@
         </div>
       </div>
     </section>
+<section class="py-14 sm:py-20" id="brands-section">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="rounded-3xl overflow-hidden shadow border border-black/10">
+        <img src="./images/brands-photo.webp" alt="Майстер встановлює автомобільне скло"
+             class="w-full object-cover block" style="aspect-ratio:16/9;" loading="lazy" decoding="async">
+      </div>
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold mb-2" data-i18n="brandsTitle">Бренди автоскла</h2>
+        <p class="text-gray-900 mb-6" data-i18n="brandsSub">Ми співпрацюємо лише з перевіреними світовими виробниками:</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">Pilkington</span>
+          <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">AGC</span>
+          <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">Guardian</span>
+          <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">Benson</span>
+          <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">XYG</span>
+          <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">Sekurit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Brands -->
     <section class="py-14 sm:py-20">
@@ -243,5 +284,59 @@
     });
     applyLang();
   </script>
+
+    <footer class="py-10 text-center text-sm text-gray-600">
+      <a href="/privacy.html" class="underline hover:no-underline">Політика конфіденційності / Политика конфиденциальности</a>
+    </footer>
+    
+
+<!-- === START: LANG META UPDATER === -->
+<script>
+(function(){
+  // If global dictionaries exist, hook into your update function or create one
+  function setLangMeta(dict){
+    try{
+      if(dict && dict.metaTitle){ document.title = dict.metaTitle; }
+      if(dict && dict.metaDesc){
+        const md = document.querySelector('meta[name="description"]');
+        if(md) md.setAttribute('content', dict.metaDesc);
+        const ogt = document.querySelector('meta[property="og:title"]');
+        if(ogt && dict.metaTitle) ogt.setAttribute('content', dict.metaTitle);
+        const ogd = document.querySelector('meta[property="og:description"]');
+        if(ogd) ogd.setAttribute('content', dict.metaDesc);
+        const twt = document.querySelector('meta[name="twitter:title"]');
+        if(twt && dict.metaTitle) twt.setAttribute('content', dict.metaTitle);
+        const twd = document.querySelector('meta[name="twitter:description"]');
+        if(twd) twd.setAttribute('content', dict.metaDesc);
+      }
+    }catch(e){}
+  }
+
+  // Try to detect global lang and dictionaries (ua/ru) from your existing script
+  try{
+    var _btn = document.getElementById('lang-btn');
+    var _current = window.currentLang || 'ua';
+    var _ua = window.ua || (typeof ua !== 'undefined' ? ua : null);
+    var _ru = window.ru || (typeof ru !== 'undefined' ? ru : null);
+
+    function _apply(){
+      var dict = (_current === 'ru') ? _ru : _ua;
+      setLangMeta(dict || {});
+    }
+    // initial
+    _apply();
+
+    if(_btn){
+      _btn.addEventListener('click', function(){
+        _current = (_current === 'ru') ? 'ua' : 'ru';
+        window.currentLang = _current;
+        _apply();
+      });
+    }
+  }catch(e){}
+})();
+</script>
+<!-- === END: LANG META UPDATER === -->
+
 </body>
 </html>
