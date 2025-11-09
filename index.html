@@ -46,12 +46,19 @@
           </div>
         </div>
      <div class="relative rounded-3xl bg-white shadow border border-black/10 p-2 flex items-center justify-center">
-  <img 
-    src="images/hero.webp"
-    alt="Автостекла та тонування у Миколаєві"
-    class="w-full h-full object-cover rounded-2xl"
-  >
+  <picture class="block w-full">
+    <source srcset="./images/hero.webp" type="image/webp">
+    <img
+      src="./images/hero.jpg"
+      alt="Автостекла та тонування у Миколаєві"
+      class="w-full object-cover rounded-2xl block"
+      style="aspect-ratio: 16 / 9;"
+      loading="eager"
+      decoding="async"
+    >
+  </picture>
 </div>
+
 
 
     <!-- Services -->
@@ -78,35 +85,30 @@
       </div>
     </section>
 
-    <!-- Brands -->
-<!-- Brands -->
+   <!-- Brands -->
 <section class="py-14 sm:py-20" id="brands-section">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
-     <!-- ЛЕВАЯ КОЛОНКА: Фото -->
-<div class="rounded-3xl overflow-hidden shadow border border-black/10">
-  <img
-    src="./images/brands-photo.webp"
-    alt="Майстер встановлює автомобільне скло"
-    class="w-full object-cover rounded-3xl block"
-    style="aspect-ratio: 16 / 9;"
-    loading="lazy"
-    decoding="async"
-  >
-</div>
+      <!-- ЛЕВАЯ КОЛОНКА: Фото -->
+      <div class="rounded-3xl overflow-hidden shadow border border-black/10">
+        <img
+          src="./images/brands-photo.webp"
+          alt="Майстер встановлює автомобільне скло"
+          class="w-full object-cover block"
+          style="aspect-ratio: 16 / 9;"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
 
-      <!-- ПРАВАЯ КОЛОНКА: Заголовок + бренды -->
+      <!-- ПРАВАЯ КОЛОНКА: Заголовок + “пилюли” -->
       <div>
-        <h2 class="text-2xl sm:text-3xl font-bold mb-2" data-i18n="brandsTitle">
-          Бренди автоскла
-        </h2>
-
+        <h2 class="text-2xl sm:text-3xl font-bold mb-2" data-i18n="brandsTitle">Бренди автоскла</h2>
         <p class="text-gray-900 mb-6" data-i18n="brandsSub">
           Ми співпрацюємо лише з перевіреними світовими виробниками:
         </p>
-
         <div class="flex flex-wrap gap-3">
           <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">Pilkington</span>
           <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">AGC</span>
@@ -115,13 +117,13 @@
           <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">XYG</span>
           <span class="rounded-full px-4 py-2 text-sm font-semibold bg-orange-500 text-black border border-black/10 shadow">Sekurit</span>
         </div>
-
       </div>
 
     </div>
 
   </div>
 </section>
+
 
     <!-- Prices -->
     <section class="py-14 sm:py-20" id="prices">
