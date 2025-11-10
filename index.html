@@ -200,17 +200,40 @@
 </section>
 
     <!-- Contact -->
-    <section class="py-14 sm:py-20" id="contact">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 items-start">
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-bold" data-i18n="contactTitle">Контакти та запис</h2>
-          <p class="text-gray-600 mt-2" data-i18n="contactSub">Працюємо щодня 09:00–19:00</p>
-          <div class="mt-4 space-y-1 text-sm text-gray-700">
-            <div class="flex items-center gap-2"><span class="text-orange-600">📍</span><a target="_blank" rel="noreferrer" href="https://www.google.com/maps?q=Миколаїв,+вул.+Будівельників,+7" data-i18n="address">Миколаїв, вул. Будівельників, 7</a></div>
-            <div class="flex items-center gap-2"><span class="text-orange-600">📞</span><a class="hover:underline" href="tel:+380997625455">+380997625455</a></div>
-            <div class="flex items-center gap-2"><span class="text-orange-600">✉️</span><a class="hover:underline" href="mailto:trashkalov88@gmail.com">trashkalov88@gmail.com</a></div>
-          </div>
-        </div>
+   <section id="contacts" class="py-20">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Заголовок вне квадрата -->
+    <h2 class="text-4xl font-bold mb-4" data-i18n="contactTitle">
+      Контакти та запис
+    </h2>
+    <p class="text-lg text-gray-700 mb-8" data-i18n="contactSub">
+      Працюємо щодня 09:00–19:00
+    </p>
+
+    <!-- Оранжевый блок -->
+    <div class="bg-orange-500 text-white p-10 rounded-3xl shadow-xl max-w-xl">
+
+      <div class="flex items-center mb-4">
+        <span class="text-2xl mr-3">📍</span>
+        <span data-i18n="address">Миколаїв, вул. Будівельників, 7</span>
+      </div>
+
+      <div class="flex items-center mb-4">
+        <span class="text-2xl mr-3">📞</span>
+        <span>+380997625455</span>
+      </div>
+
+      <div class="flex items-center">
+        <span class="text-2xl mr-3">✉️</span>
+        <span>trashkalov88@gmail.com</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
         <form id="leadForm" class="rounded-2xl border p-5 bg-white/70 backdrop-blur">
           <div class="grid gap-4">
             <label class="text-sm"><span data-i18n="formName">Ім'я</span><input name="name" class="mt-1 w-full rounded-xl border px-3 py-2" placeholder="Олег" /></label>
