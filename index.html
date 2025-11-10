@@ -22,9 +22,9 @@
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <!-- === END: SEO & SOCIAL === -->
-
 </head>
 <body class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900">
+  <!-- Header -->
   <header class="border-b sticky top-0 z-40 bg-white/80 backdrop-blur">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-3">
@@ -37,7 +37,7 @@
           <button id="langBtn" class="hidden sm:inline-flex border rounded px-3 py-2 border-orange-600 text-orange-700 hover:bg-orange-50">
             <span class="mr-2">🌐</span><span id="langLabel">RU</span>
           </button>
-          <a href="tel:+380997625455" class="bg-orange-600 hover:bg-orange-700 text-white rounded px-4 py-2"> 
+          <a href="tel:+380997625455" class="bg-orange-600 hover:bg-orange-700 text-white rounded px-4 py-2">
             <span>📞</span> <span data-i18n="ctaCall">Подзвонити</span>
           </a>
         </div>
@@ -63,82 +63,81 @@
             <a href="https://www.google.com/maps?q=Миколаїв,+вул.+Будівельників,+7" target="_blank" rel="noreferrer" data-i18n="address">Миколаїв, вул. Будівельників, 7</a>
           </div>
         </div>
+
         <div class="relative rounded-3xl bg-white shadow border border-black/10 p-2 flex items-center justify-center">
-  <img 
-    src="images/hero.webp"
-    alt="Автостекла та тонування у Миколаєві"
-    class="w-full h-full object-cover rounded-2xl"
-  >
-</div>
-
-
-   <!-- SERVICES + PHOTO -->
-<section id="services" class="py-16">
-  <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
-    <!-- LEFT: PHOTO -->
-    <figure class="order-1 lg:order-none">
-      <img
-        src="images/brands-photo"
-        alt="Майстер встановлює автомобільне скло"
-        class="w-full rounded-3xl shadow-xl object-cover aspect-[16/10] md:aspect-[4/3]"
-      />
-    </figure>
-
-    <!-- RIGHT: SERVICES -->
-    <div>
-      <h2 class="text-4xl font-bold mb-8" data-i18n="servicesTitle">Наші послуги</h2>
-
-      <div class="grid sm:grid-cols-2 gap-6">
-        <!-- Услуга 1 -->
-        <div class="p-6 bg-white rounded-2xl shadow border border-gray-200">
-          <div class="text-3xl mb-3">🚗</div>
-          <h3 class="text-xl font-semibold mb-2" data-i18n="s1">Заміна лобового, бокових та задніх стекол</h3>
-          <p class="text-gray-700" data-i18n="s1text">
-            Професійна заміна стекол з гарантією та сертифікованими матеріалами.
-          </p>
-        </div>
-
-        <!-- Услуга 2 -->
-        <div class="p-6 bg-white rounded-2xl shadow border border-gray-200">
-          <div class="text-3xl mb-3">🌞</div>
-          <h3 class="text-xl font-semibold mb-2" data-i18n="s2">Професійне тонування</h3>
-          <p class="text-gray-700" data-i18n="s2text">
-            Сонцезахисні та атермальні плівки з сертифікацією. Рівні краї, без пилу й підривів.
-          </p>
-        </div>
-
-        <!-- Услуга 3 -->
-        <div class="p-6 bg-white rounded-2xl shadow border border-gray-200">
-          <div class="text-3xl mb-3">🛡</div>
-          <h3 class="text-xl font-semibold mb-2" data-i18n="s3">Підбір автоскел</h3>
-          <p class="text-gray-700" data-i18n="s3text">
-            Автоскло для легкових, вантажних і спецтехніки з урахуванням моделі.
-          </p>
+          <img
+            src="images/hero.webp"
+            alt="Автостекла та тонування у Миколаєві"
+            class="w-full h-full object-cover rounded-2xl"
+          />
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- BRANDS (отдельная секция) -->
-<section id="brands" class="py-12">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-6" data-i18n="brandsTitle">Бренди автоскла</h2>
-    <p class="text-lg text-gray-700 mb-6" data-i18n="brandsSub">
-      Ми співпрацюємо лише з перевіреними світовими виробниками:
-    </p>
+    <!-- Services + Photo -->
+    <section id="services" class="py-16">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-start">
+        <!-- LEFT: PHOTO -->
+        <figure class="order-1 lg:order-none">
+          <img
+            src="images/brands-photo.webp"
+            alt="Майстер встановлює автомобільне скло"
+            class="w-full rounded-3xl shadow-xl object-cover aspect-[16/10] md:aspect-[4/3]"
+          />
+        </figure>
 
-    <div class="flex flex-wrap gap-4">
-      <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">Pilkington</span>
-      <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">AGC</span>
-      <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">Guardian</span>
-      <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">Benson</span>
-      <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">XYG</span>
-      <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">Sekurit</span>
-    </div>
-  </div>
-</section>
+        <!-- RIGHT: SERVICES -->
+        <div>
+          <h2 class="text-4xl font-bold mb-8" data-i18n="servicesTitle">Наші послуги</h2>
 
+          <div class="grid sm:grid-cols-2 gap-6">
+            <!-- 1 -->
+            <div class="p-6 bg-white rounded-2xl shadow border border-gray-200">
+              <div class="text-3xl mb-3">🚗</div>
+              <h3 class="text-xl font-semibold mb-2" data-i18n="s1t">Заміна лобового, бокових та задніх стекол</h3>
+              <p class="text-gray-700" data-i18n="s1d">
+                Професійна заміна будь-яких стекол з дотриманням технологій. Якісні клеї, праймери та контроль герметичності.
+              </p>
+            </div>
+            <!-- 2 -->
+            <div class="p-6 bg-white rounded-2xl shadow border border-gray-200">
+              <div class="text-3xl mb-3">🌞</div>
+              <h3 class="text-xl font-semibold mb-2" data-i18n="s2t">Професійне тонування</h3>
+              <p class="text-gray-700" data-i18n="s2d">
+                Сонцезахисні та атермальні плівки з сертифікацією. Рівні краї, без пилу й підривів.
+              </p>
+            </div>
+            <!-- 3 -->
+            <div class="p-6 bg-white rounded-2xl shadow border border-gray-200">
+              <div class="text-3xl mb-3">🛡</div>
+              <h3 class="text-xl font-semibold mb-2" data-i18n="s3t">Підбір автостекол для всіх типів автомобілів</h3>
+              <p class="text-gray-700" data-i18n="s3d">
+                Підбираємо автостекла для легкових, вантажних автомобілів та спецтехніки. Враховуємо всі параметри, гарантуємо сумісність та довговічність.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <section id="brands" class="py-12">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold mb-6" data-i18n="brandsTitle">Бренди автоскла</h2>
+        <p class="text-lg text-gray-700 mb-6" data-i18n="brandsSub">
+          Ми співпрацюємо лише з перевіреними світовими виробниками:
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">Pilkington</span>
+          <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">AGC</span>
+          <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">Guardian</span>
+          <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">Benson</span>
+          <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">XYG</span>
+          <span class="px-6 py-3 bg-orange-500 text-white rounded-full text-lg">Sekurit</span>
+        </div>
+      </div>
+    </section>
 
     <!-- Prices -->
     <section class="py-14 sm:py-20" id="prices">
@@ -180,13 +179,16 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="border-t py-8 text-sm">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
       <div class="text-gray-600">© <span id="year"></span> Autoglass NK — <span data-i18n="city">Миколаїв</span></div>
       <div class="text-gray-400" data-i18n="rights">Всі права захищені</div>
+      <a href="/privacy.html" class="text-gray-500 hover:text-gray-700 underline decoration-dotted">Політика конфіденційності / Политика конфиденциальности</a>
     </div>
   </footer>
 
+  <!-- i18n -->
   <script>
     const ua = {
       city: "Миколаїв",
@@ -197,6 +199,7 @@
       badge1: "Гарантія до 12 міс.",
       badge2: "Оригінальні матеріали",
       badge3: "Той самий день",
+
       servicesTitle: "Наші послуги",
       s1t: "Заміна лобового, бокових та задніх стекол",
       s1d: "Професійна заміна будь-яких стекол з дотриманням технологій. Якісні клеї, праймери та контроль герметичності.",
@@ -204,12 +207,17 @@
       s2d: "Сонцезахисні та атермальні плівки з сертифікацією. Рівні краї, без пилу й підривів.",
       s3t: "Підбір автостекол для всіх типів автомобілів",
       s3d: "Підбираємо автостекла для легкових, вантажних автомобілів та спецтехніки. Враховуємо всі параметри, гарантуємо сумісність та довговічність.",
+
+      brandsTitle: "Бренди автоскла",
+      brandsSub: "Ми співпрацюємо лише з перевіреними світовими виробниками:",
+
       pricesTitle: "Орієнтовні ціни",
       pricesNote: "Фінальна вартість залежить від моделі авто та обраних матеріалів.",
       p1: "Заміна лобового скла (робота)",
       p2: "Комплект лобового скла",
       p3: "Тонування седан (усі вікна)",
       p4: "Атермальне тонування лобового",
+
       contactTitle: "Контакти та запис",
       contactSub: "Працюємо щодня 09:00–19:00",
       address: "Миколаїв, вул. Будівельників, 7",
@@ -221,6 +229,7 @@
       formErr: "Помилка відправки. Перевірте підключення Telegram.",
       rights: "Всі права захищені"
     };
+
     const ru = {
       city: "Николаев",
       ctaCall: "Позвонить",
@@ -230,6 +239,7 @@
       badge1: "Гарантия до 12 мес.",
       badge2: "Оригинальные материалы",
       badge3: "В тот же день",
+
       servicesTitle: "Наши услуги",
       s1t: "Замена лобового, боковых и задних стекол",
       s1d: "Профессиональная замена любых стекол с соблюдением технологий. Качественные клеи, праймеры и контроль герметичности.",
@@ -237,12 +247,17 @@
       s2d: "Солнцезащитные и атермальные пленки с сертификацией. Ровные края, без пыли и подрывов.",
       s3t: "Подбор автостекол для всех типов автомобилей",
       s3d: "Подбираем автостекла для легковых, грузовых автомобилей и спецтехники. Учитываем все параметры, гарантируем совместимость и долговечность.",
+
+      brandsTitle: "Бренды автостекла",
+      brandsSub: "Мы работаем только с проверенными мировыми производителями:",
+
       pricesTitle: "Ориентировочные цены",
       pricesNote: "Финальная стоимость зависит от модели авто и выбранных материалов.",
       p1: "Замена лобового стекла (работа)",
       p2: "Комплект лобового стекла",
       p3: "Тонировка седан (все окна)",
       p4: "Атермальная тонировка лобового",
+
       contactTitle: "Контакты и запись",
       contactSub: "Работаем ежедневно 09:00–19:00",
       address: "Николаев, ул. Строителей, 7",
@@ -254,8 +269,10 @@
       formErr: "Ошибка отправки. Проверьте подключение Telegram.",
       rights: "Все права защищены"
     };
+
     let lang = 'ua';
     const dict = { ua, ru };
+
     function applyLang() {
       const t = dict[lang];
       document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -265,7 +282,12 @@
       document.documentElement.lang = (lang === 'ua' ? 'uk' : 'ru');
       document.getElementById("langLabel").textContent = (lang === 'ua' ? 'RU' : 'UA');
     }
-    document.getElementById("langBtn").addEventListener("click", () => { lang = (lang === 'ua' ? 'ru' : 'ua'); applyLang(); });
+
+    document.getElementById("langBtn").addEventListener("click", () => {
+      lang = (lang === 'ua' ? 'ru' : 'ua');
+      applyLang();
+    });
+
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // Form submit
@@ -293,58 +315,43 @@
     applyLang();
   </script>
 
-    <footer class="py-10 text-center text-sm text-gray-600">
-      <a href="/privacy.html" class="underline hover:no-underline">Політика конфіденційності / Политика конфиденциальности</a>
-    </footer>
-    
-
-<!-- === START: LANG META UPDATER === -->
-<script>
-(function(){
-  // If global dictionaries exist, hook into your update function or create one
-  function setLangMeta(dict){
+  <!-- === START: LANG META UPDATER (фикс id кнопки) === -->
+  <script>
+  (function(){
+    function setLangMeta(dict){
+      try{
+        if(dict && dict.metaTitle){ document.title = dict.metaTitle; }
+        if(dict && dict.metaDesc){
+          const md = document.querySelector('meta[name="description"]');
+          if(md) md.setAttribute('content', dict.metaDesc);
+          const ogt = document.querySelector('meta[property="og:title"]');
+          if(ogt && dict.metaTitle) ogt.setAttribute('content', dict.metaTitle);
+          const ogd = document.querySelector('meta[property="og:description"]');
+          if(ogd) ogd.setAttribute('content', dict.metaDesc);
+          const twt = document.querySelector('meta[name="twitter:title"]');
+          if(twt && dict.metaTitle) twt.setAttribute('content', dict.metaTitle);
+          const twd = document.querySelector('meta[name="twitter:description"]');
+          if(twd) twd.setAttribute('content', dict.metaDesc);
+        }
+      }catch(e){}
+    }
     try{
-      if(dict && dict.metaTitle){ document.title = dict.metaTitle; }
-      if(dict && dict.metaDesc){
-        const md = document.querySelector('meta[name="description"]');
-        if(md) md.setAttribute('content', dict.metaDesc);
-        const ogt = document.querySelector('meta[property="og:title"]');
-        if(ogt && dict.metaTitle) ogt.setAttribute('content', dict.metaTitle);
-        const ogd = document.querySelector('meta[property="og:description"]');
-        if(ogd) ogd.setAttribute('content', dict.metaDesc);
-        const twt = document.querySelector('meta[name="twitter:title"]');
-        if(twt && dict.metaTitle) twt.setAttribute('content', dict.metaTitle);
-        const twd = document.querySelector('meta[name="twitter:description"]');
-        if(twd) twd.setAttribute('content', dict.metaDesc);
+      var _btn = document.getElementById('langBtn');
+      var _current = 'ua';
+      function _apply(){
+        var d = (_current==='ru') ? window.ru : window.ua;
+        setLangMeta(d || {});
+      }
+      _apply();
+      if(_btn){
+        _btn.addEventListener('click', function(){
+          _current = (_current === 'ru') ? 'ua' : 'ru';
+          _apply();
+        });
       }
     }catch(e){}
-  }
-
-  // Try to detect global lang and dictionaries (ua/ru) from your existing script
-  try{
-    var _btn = document.getElementById('lang-btn');
-    var _current = window.currentLang || 'ua';
-    var _ua = window.ua || (typeof ua !== 'undefined' ? ua : null);
-    var _ru = window.ru || (typeof ru !== 'undefined' ? ru : null);
-
-    function _apply(){
-      var dict = (_current === 'ru') ? _ru : _ua;
-      setLangMeta(dict || {});
-    }
-    // initial
-    _apply();
-
-    if(_btn){
-      _btn.addEventListener('click', function(){
-        _current = (_current === 'ru') ? 'ua' : 'ru';
-        window.currentLang = _current;
-        _apply();
-      });
-    }
-  }catch(e){}
-})();
-</script>
-<!-- === END: LANG META UPDATER === -->
-
+  })();
+  </script>
+  <!-- === END: LANG META UPDATER === -->
 </body>
 </html>
