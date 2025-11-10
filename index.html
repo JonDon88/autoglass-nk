@@ -45,50 +45,69 @@
     </div>
   </header>
 
-  <main>
-<section class="py-16">
+  <main><section class="py-16">
   <div class="max-w-7xl mx-auto px-4">
 
-    <div class="bg-orange-500 text-white p-10 rounded-3xl shadow-xl flex flex-col lg:flex-row items-center lg:items-start gap-10">
+    <!-- ДВЕ КОЛОНКИ -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
-      <!-- ЛЕВАЯ ЧАСТЬ — ТЕКСТ -->
-      <div class="flex-1">
+      <!-- ЛЕВАЯ ЧАСТЬ — ОРАНЖЕВЫЙ БЛОК -->
+      <div>
+        <div class="bg-orange-500 text-white p-10 rounded-3xl shadow-xl">
 
-        <p class="text-2xl font-semibold mb-6 leading-snug">
-          Оригінальні автоскла, професійна установка і сертифіковане тонування. 
-          Гарантія, швидкість, якість.
-        </p>
+          <p class="text-3xl font-semibold mb-6 leading-snug">
+            Оригінальні автоскла, професійна установка і сертифіковане тонування.
+            Гарантія, швидкість, якість.
+          </p>
 
-        <p class="text-lg mb-10 leading-relaxed">
-          Підбираємо професійно автоскла для всіх типів автомобілів — легкових,
-          вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі
-          та надійність установки.
-        </p>
+          <p class="text-lg mb-10 leading-relaxed">
+            Підбираємо професійно автоскла для всіх типів автомобілів — легкових,
+            вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі
+            та надійність установки.
+          </p>
 
-        <!-- Три преимущества -->
-        <div class="flex flex-wrap gap-4 mb-10">
+          <!-- Преимущества -->
+          <div class="flex flex-wrap gap-4 mb-10">
 
-          <div class="bg-white text-orange-600 px-6 py-3 rounded-full flex items-center shadow">
-            <span class="text-2xl mr-2">✔️</span>
-            <span>Гарантія до 12 міс.</span>
+            <div class="bg-white text-orange-600 px-6 py-3 rounded-full flex items-center shadow">
+              <span class="text-2xl mr-2">✔️</span>
+              <span>Гарантія до 12 міс.</span>
+            </div>
+
+            <div class="bg-white text-orange-600 px-6 py-3 rounded-full flex items-center shadow">
+              <span class="text-2xl mr-2">✔️</span>
+              <span>Оригінальні матеріали</span>
+            </div>
+
+            <div class="bg-white text-orange-600 px-6 py-3 rounded-full flex items-center shadow">
+              <span class="text-2xl mr-2">✔️</span>
+              <span>Той самий день</span>
+            </div>
+
           </div>
 
-          <div class="bg-white text-orange-600 px-6 py-3 rounded-full flex items-center shadow">
-            <span class="text-2xl mr-2">✔️</span>
-            <span>Оригінальні матеріали</span>
-          </div>
-
-          <div class="bg-white text-orange-600 px-6 py-3 rounded-full flex items-center shadow">
-            <span class="text-2xl mr-2">✔️</span>
-            <span>Той самий день</span>
+          <!-- Адрес -->
+          <div class="flex items-center text-white text-lg">
+            <span class="text-2xl mr-3">📍</span>
+            <span>Миколаїв, вул. Будівельників, 7</span>
           </div>
 
         </div>
+      </div>
 
-        <!-- Адрес -->
-        <div class="flex items-center text-white text-lg">
-          <span class="text-2xl mr-3">📍</span>
-          <span>Миколаїв, вул. Буді
+      <!-- ПРАВАЯ ЧАСТЬ — ФОТО -->
+      <div class="flex justify-center">
+        <img 
+          src="images/hero.webp" 
+          alt="Авто скло" 
+          class="rounded-3xl shadow-2xl w-full max-w-xl object-cover"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
     <!-- Services + Photo -->
