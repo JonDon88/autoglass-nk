@@ -47,22 +47,54 @@
 
   <main>
     <!-- Hero -->
-    <section class="py-14 sm:py-20">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 class="text-4xl font-bold leading-tight" data-i18n="heroTitle">Продаж та заміна автостекол, тонування у Миколаєві</h1>
-          <p class="mt-3 text-gray-600 text-lg" data-i18n="heroSubtitle">Оригінальні автостекла, професійна установка і сертифіковане тонування. Гарантія, швидкість, якість.</p>
-          <p class="mt-2 text-gray-700 text-base font-medium" data-i18n="heroExtra">Підбираємо професійно автостекла для всіх типів автомобілів — легкових, вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі та надійність установки.</p>
-          <div class="mt-4 flex flex-wrap gap-2 text-sm">
-            <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 bg-white border-orange-200"><span class="text-orange-600">✔</span><span data-i18n="badge1">Гарантія до 12 міс.</span></span>
-            <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 bg-white border-orange-200"><span class="text-orange-600">✔</span><span data-i18n="badge2">Оригінальні матеріали</span></span>
-            <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 bg-white border-orange-200"><span class="text-orange-600">✔</span><span data-i18n="badge3">Той самий день</span></span>
-          </div>
-          <div class="mt-3 flex items-center gap-2 text-sm text-gray-500">
-            <span>📍</span>
-            <a href="https://www.google.com/maps?q=Миколаїв,+вул.+Будівельників,+7" target="_blank" rel="noreferrer" data-i18n="address">Миколаїв, вул. Будівельників, 7</a>
-          </div>
+  <!-- Блок преимуществ в оранжевом фоне -->
+<section class="py-16">
+  <div class="max-w-4xl mx-auto px-4">
+
+    <div class="bg-orange-500 text-white p-10 rounded-3xl shadow-xl">
+
+      <p class="text-xl mb-6">
+        Оригінальні автоскла, професійна установка і сертифіковане тонування.
+        Гарантія, швидкість, якість.
+      </p>
+
+      <p class="text-lg mb-10">
+        Підбираємо професійно автоскла для всіх типів автомобілів — легкових,
+        вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі
+        та надійність установки.
+      </p>
+
+      <!-- Три преимущества -->
+      <div class="flex flex-wrap gap-4 mb-8">
+
+        <div class="bg-white text-orange-600 px-6 py-3 rounded-full flex items-center shadow">
+          <span class="text-2xl mr-2">✔️</span>
+          <span data-i18n="hero1">Гарантія до 12 міс.</span>
         </div>
+
+        <div class="bg-white text-orange-600 px-6 py-3 rounded-full flex items-center shadow">
+          <span class="text-2xl mr-2">✔️</span>
+          <span data-i18n="hero2">Оригінальні матеріали</span>
+        </div>
+
+        <div class="bg-white text-orange-600 px-6 py-3 rounded-full flex items-center shadow">
+          <span class="text-2xl mr-2">✔️</span>
+          <span data-i18n="hero3">Той самий день</span>
+        </div>
+
+      </div>
+
+      <!-- Адрес -->
+      <div class="flex items-center text-white text-lg">
+        <span class="text-2xl mr-3">📍</span>
+        <span data-i18n="heroAddress">Миколаїв, вул. Будівельників, 7</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
         <div class="relative rounded-3xl bg-white shadow border border-black/10 p-2 flex items-center justify-center">
           <img
