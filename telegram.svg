@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Telegram">
+  <defs>
+    <linearGradient id="tg" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop stop-color="#2BA5E6" offset="0"/>
+      <stop stop-color="#229BD9" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="256" cy="256" r="248" fill="url(#tg)"/>
+    <path d="M120 251l256-102c8-3 16 2 14 11l-44 206c-2 9-12 12-19 7l-70-51-34 33c-4 4-10 2-11-3l-3-53 156-141-195 122-50-19c-10-4-10-17 0-21z" fill="#FFF"/>
+  </g>
+</svg>

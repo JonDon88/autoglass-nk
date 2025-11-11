@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Viber">
+  <defs>
+    <linearGradient id="vb" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop stop-color="#8E66FF" offset="0"/>
+      <stop stop-color="#6E48FF" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="256" cy="256" r="248" fill="url(#vb)"/>
+    <path d="M320 114H192c-27 0-50 22-50 50v152c0 28 23 50 50 50h128c27 0 50-22 50-50V164c0-28-23-50-50-50zm29 202c0 16-13 29-29 29H192c-16 0-29-13-29-29V164c0-16 13-29 29-29h128c16 0 29 13 29 29v152z" fill="#FFF"/>
+    <path d="M276 171c32 6 57 31 62 62 1 7-4 13-11 14h-2c-6 0-11-4-12-10-4-23-22-41-45-45-6-1-11-6-10-12 1-7 7-12 14-11h4zM274 202c16 4 29 17 33 33 1 6-3 11-9 12h-2c-5 0-9-3-10-8-2-10-10-18-20-20-5-1-8-5-8-10 0-6 6-10 12-9h4zM242 217c4 1 7 5 8 9 1 6-3 12-9 13-7 1-12 7-11 13 1 6-3 12-9 13-6 1-12-3-13-9-3-19 11-36 30-39h4z" fill="#FFF"/>
+  </g>
+</svg>
