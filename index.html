@@ -28,19 +28,22 @@
 
   <!-- ==================== HEADER ==================== -->
   <header class="w-full bg-white border-b">
-   <div class="container mx-auto px-4 flex items-center justify-between gap-6">
+    <div class="container mx-auto px-4 flex items-center justify-between gap-6">
 
-    <!-- ЛОГО -->
-    <div class="flex items-center gap-3 flex-none">
-      <span class="text-3xl">🚗</span>
-      <span class="text-2xl font-semibold">Autoglass NK</span>
-    </div>
+      <!-- ЛОГО -->
+      <div class="flex items-center gap-3 flex-none">
+        <span class="text-3xl">🚗</span>
+        <span class="text-2xl font-semibold">Autoglass NK</span>
+      </div>
 
-    <!-- ✅ ГОРОД + ЛОКАЦИЯ ВМЕСТЕ -->
-    <div class="flex items-center gap-2 flex-none">
-      <span class="text-xl">📍</span>
-      <span class="font-semibold text-lg text-slate-700" data-i18n="city">Миколаїв</span>
-    </div>
+      <!-- ✅ Кликабельный адрес (город + улица) -->
+      <a href="https://www.google.com/maps?q=Миколаїв, вул. Будівельників, 7"
+         target="_blank" rel="noopener"
+         class="flex items-center gap-2 text-lg font-semibold text-slate-700 hover:text-orange-600"
+         aria-label="Відкрити адресу в Google Maps"
+         data-i18n="address">
+        📍 Миколаїв, вул. Будівельників, 7
+      </a>
 
       <!-- Справа: номер в рамке + Telegram/Viber + Контакти + Язык -->
       <div class="flex items-center gap-4 flex-none">
@@ -48,39 +51,43 @@
         <!-- Номер в рамке + иконки -->
         <div class="flex items-center gap-3 bg-white border-2 border-orange-500 rounded-full py-2 pl-4 pr-3">
           <a href="tel:+380997625455"
-            class="text-slate-900 font-semibold whitespace-nowrap">
+             class="text-slate-900 font-semibold whitespace-nowrap">
             +380 99 762 5455
           </a>
 
-         <a href="https://t.me/+380997625455" target="_blank" rel="noopener"
-   class="w-8 h-8 hover:scale-110 transition" aria-label="Telegram">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-       class="w-8 h-8" fill="none">
-    <circle cx="12" cy="12" r="12" fill="#229ED9"/>
-    <path fill="#fff"
-      d="M17.53 7.44c.2-1.02-.74-1.11-1.52-.82L6.1 10.2c-1.04.42-1.03 1-.19 1.27l2.68.84 6.2-3.9c.29-.18.56-.08.34.12l-5.02 4.53-.2 2.86c.29 0 .41-.14.57-.3l1.37-1.33 2.84 2.1c.52.29.9.14 1.03-.49l1.78-8.46Z"/>
-  </svg>
-</a>
-<a href="viber://chat?number=%2B380997625455" target="_blank" rel="noopener"
-   class="w-8 h-8 hover:scale-110 transition" aria-label="Viber">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-       class="w-8 h-8" fill="none">
-    <circle cx="12" cy="12" r="12" fill="#7360F2"/>
-    <path fill="#fff"
-      d="M16.8 13.97c-.16 1.04-1.46 1.83-2.56 2.08-.86.19-1.98.21-3.18-.19l-1.4.74c-.19.1-.41.02-.49-.17l-.69-1.62c-.99-.8-1.74-1.86-2.17-3.04-.52-1.38-.49-2.56-.29-3.42.25-1.1 1.04-2.4 2.08-2.56 2.66-.41 5.29.36 7.17 2.24 1.88 1.88 2.65 4.51 2.13 6.94ZM9.4 10.2c.1.55.38 1.11.8 1.58.42.47.95.8 1.46.93.18.05.38 0 .52-.13l.6-.6c.15-.15.19-.38.1-.57l-.33-.7a.47.47 0 0 0-.51-.27l-.67.13c-.39-.28-.7-.6-.92-1l.14-.66a.47.47 0 0 0-.27-.51l-.7-.33a.47.47 0 0 0-.57.1l-.6.6c-.14.14-.19.34-.13.52Z"/>
-  </svg>
-</a>
+          <!-- Telegram (SVG без фона) -->
+          <a href="https://t.me/+380997625455" target="_blank" rel="noopener"
+             class="w-8 h-8 hover:scale-110 transition" aria-label="Telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 class="w-8 h-8" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#229ED9"/>
+              <path fill="#fff"
+                d="M17.53 7.44c.2-1.02-.74-1.11-1.52-.82L6.1 10.2c-1.04.42-1.03 1-.19 1.27l2.68.84 6.2-3.9c.29-.18.56-.08.34.12l-5.02 4.53-.2 2.86c.29 0 .41-.14.57-.3l1.37-1.33 2.84 2.1c.52.29.9.14 1.03-.49l1.78-8.46Z"/>
+            </svg>
+          </a>
+
+          <!-- Viber (SVG без фона) -->
+          <a href="viber://chat?number=%2B380997625455" target="_blank" rel="noopener"
+             class="w-8 h-8 hover:scale-110 transition" aria-label="Viber">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 class="w-8 h-8" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#7360F2"/>
+              <path fill="#fff"
+                d="M16.8 13.97c-.16 1.04-1.46 1.83-2.56 2.08-.86.19-1.98.21-3.18-.19l-1.4.74c-.19.1-.41.02-.49-.17l-.69-1.62c-.99-.8-1.74-1.86-2.17-3.04-.52-1.38-.49-2.56-.29-3.42.25-1.1 1.04-2.4 2.08-2.56 2.66-.41 5.29.36 7.17 2.24 1.88 1.88 2.65 4.51 2.13 6.94ZM9.4 10.2c.1.55.38 1.11.8 1.58.42.47.95.8 1.46.93.18.05.38 0 .52-.13l.6-.6c.15-.15.19-.38.1-.57l-.33-.7a.47.47 0 0 0-.51-.27l-.67.13c-.39-.28-.7-.6-.92-1l.14-.66a.47.47 0 0 0-.27-.51l-.7-.33a.47.47 0 0 0-.57.1l-.6.6c-.14.14-.19.34-.13.52Z"/>
+            </svg>
+          </a>
+        </div>
 
         <!-- Кнопка Контакти (пульс) -->
         <a href="#contacts"
-          class="px-5 py-2 bg-orange-500 text-white rounded-full font-semibold hover:bg-orange-600 transition btn-pulse"
-          data-i18n="contactHeader">
+           class="px-5 py-2 bg-orange-500 text-white rounded-full font-semibold hover:bg-orange-600 transition btn-pulse"
+           data-i18n="contactHeader">
           Контакти
         </a>
 
         <!-- Переключатель языка -->
         <button id="langBtn"
-          class="px-5 py-2 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition">
+                class="px-5 py-2 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition">
           <span id="langLabel">RU</span>
         </button>
       </div>
@@ -102,7 +109,7 @@
               Підбираємо професійно автоскла для всіх типів автомобілів — легкових, вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі та надійність установки.
             </p>
 
-            <div class="flex flex-wrap gap-4 mb-8">
+            <div class="flex flex-wrap gap-4 mb-2">
               <div class="bg-white text-orange-600 px-5 py-3 rounded-full flex items-center shadow">
                 <span class="text-2xl mr-2">✔️</span>
                 <span data-i18n="benefit1">Гарантія до 12 міс.</span>
@@ -116,11 +123,7 @@
                 <span data-i18n="benefit3">Той самий день</span>
               </div>
             </div>
-
-            <div class="flex items-center text-white text-lg">
-              <span class="text-2xl mr-3">📍</span>
-              <span data-i18n="address">Миколаїв, вул. Будівельників, 7</span>
-            </div>
+            <!-- Адреса з геро-блока прибрана за вашим запитом -->
           </div>
         </div>
 
@@ -214,7 +217,7 @@
 
         <div class="bg-orange-500 text-white rounded-3xl p-8 shadow-xl">
           <h3 class="text-2xl font-bold mb-3" data-i18n="p4">Атермальне тонування лобового</h3>
-          <div class="text-xl font-extrabод" data-i18n="p4price">від 1800 грн</div>
+          <div class="text-xl font-extrabold" data-i18n="p4price">від 1800 грн</div>
         </div>
       </div>
     </div>
@@ -233,7 +236,12 @@
           <ul class="space-y-4 text-lg">
             <li class="flex items-center gap-3">
               <span class="text-2xl">📍</span>
-              <span data-i18n="address">Миколаїв, вул. Будівельників, 7</span>
+              <a href="https://www.google.com/maps?q=Миколаїв, вул. Будівельників, 7" target="_blank" rel="noopener"
+                 class="underline underline-offset-4 hover:opacity-90"
+                 aria-label="Відкрити адресу в Google Maps"
+                 data-i18n="address">
+                Миколаїв, вул. Будівельників, 7
+              </a>
             </li>
             <li class="flex items-center gap-3">
               <span class="text-2xl">📞</span>
@@ -286,7 +294,7 @@
       city: "Миколаїв",
       contactHeader: "Контакти",
       metaTitle: "Autoglass NK — Автостекла і тонування в Миколаєві",
-      metaDesc: "Продаж, підбір і професійна установка автоскла, сертифіковане тонування. Гарантія, швидкість, якість. Миколаїв, вул. Будівельників, 7.",
+      metaDesc: "Продаж, підбір і професійна установка автскла, сертифіковане тонування. Гарантія, швидкість, якість. Миколаїв, вул. Будівельників, 7.",
       menuContacts: "Контакти",
 
       heroTitle: "Оригінальні автоскла, професійна установка і сертифіковане тонування. Гарантія, швидкість, якість.",
@@ -424,3 +432,4 @@
   </script>
 </body>
 </html>
+
