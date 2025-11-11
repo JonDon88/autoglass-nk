@@ -18,23 +18,32 @@
 </head>
 <body class="bg-white text-slate-900 antialiased">
 
-  <!-- ====== HEADER ====== -->
-  <header class="border-b border-slate-200">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <span class="text-3xl">🚘</span>
-        <span class="text-xl font-semibold">Autoglass NK</span>
-      </a>
-
-      <div class="flex items-center gap-3">
-        <a href="#contacts" class="hidden sm:inline-block text-sm px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 transition"
-           data-i18n="menuContacts">Контакти</a>
-        <button id="langBtn" class="text-sm px-4 py-2 rounded-full bg-black text-white hover:opacity-90 transition">
-          <span id="langLabel">RU</span>
-        </button>
-      </div>
+  <header class="w-full py-4 border-b">
+  <div class="flex items-center justify-between container mx-auto px-4">
+    
+    <!-- LOGO -->
+    <div class="flex items-center space-x-3">
+      <span class="text-3xl">🚗</span>
+      <span class="text-2xl font-semibold">Autoglass NK</span>
     </div>
-  </header>
+
+    <!-- ✅ NEW BLOCK: CITY + PHONE -->
+    <div class="hidden md:flex flex-col ml-10 text-slate-700 leading-tight">
+      <span class="font-bold text-lg">📍 Миколаїв</span>
+      <a href="tel:+380997625455" class="text-lg hover:text-orange-600">📞 +380 99 762 5455</a>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="flex items-center space-x-3">
+      <a href="#contact" class="px-5 py-2 bg-slate-100 rounded-full hover:bg-slate-200" data-i18n="contactHeader">Контакти</a>
+      <button id="langBtn" class="px-5 py-2 bg-black text-white rounded-full">
+        <span id="langLabel">RU</span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
 
   <!-- ====== HERO ====== -->
   <section class="py-14">
