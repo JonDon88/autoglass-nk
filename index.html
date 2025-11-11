@@ -3,203 +3,426 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Autoglass NK — Миколаїв</title>
+  <title data-i18n="metaTitle">Autoglass NK — Автостекла і тонування в Миколаєві</title>
+  <meta name="description" content="Продаж, підбір і професійна установка автоскла, сертифіковане тонування. Гарантія, швидкість, якість. Миколаїв, вул. Будівельників, 7." data-i18n="metaDesc" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚘</text></svg>">
 
-  <!-- Tailwind CDN (удобно для статичной вёрстки) -->
+  <!-- Tailwind (CDN для статичного сайту) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Базовый стиль + пульсация кнопки -->
+  <!-- Невеликий твік Tailwind для більш читабельних шрифтів -->
   <style>
-    /* Гладкая типографика */
     html { scroll-behavior: smooth; }
-    body { color: #0f172a; } /* slate-900 */
-
-    /* Пульсация для кнопки "Контакти" */
-    .pulse-btn {
-      position: relative;
-      animation: pulse 1.8s infinite ease-in-out;
-    }
-    @keyframes pulse {
-      0%   { box-shadow: 0 0 0 0 rgba(255,102,0,0.55); }
-      70%  { box-shadow: 0 0 0 16px rgba(255,102,0,0); }
-      100% { box-shadow: 0 0 0 0 rgba(255,102,0,0); }
-    }
-    /* Ховер для иконок */
-    .icon-btn { transition: transform .2s ease; }
-    .icon-btn:hover { transform: scale(1.08); }
+    .container { max-width: 1200px; }
   </style>
 </head>
-<body class="bg-white">
+<body class="bg-white text-slate-900 antialiased">
 
-  <!-- ================== HEADER ================== -->
-  <header class="w-full bg-white/95 backdrop-blur border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
+  <header class="w-full py-4 border-b bg-white">
+  <div class="container mx-auto px-4 flex items-center justify-between gap-6">
 
-      <!-- Левая часть: логотип + город -->
-      <div class="flex items-center gap-4">
-        <div class="text-3xl">🚗</div>
-        <div class="text-2xl font-semibold tracking-tight">Autoglass NK</div>
+    <!-- ЛОГО -->
+    <div class="flex items-center gap-3 flex-none">
+      <span class="text-3xl">🚗</span>
+      <span class="text-2xl font-semibold">Autoglass NK</span>
+    </div>
 
-        <!-- Город -->
-        <div class="text-base sm:text-lg text-gray-600 flex items-center gap-1">
-          <span>📍</span>
-          <span data-i18n="city">Миколаїв</span>
+    <!-- ✅ ЛЕВАЯ ЧАСТЬ — ГОРОД -->
+    <div class="flex-1">
+      <span class="font-semibold text-lg text-slate-700" data-i18n="city">Миколаїв</span>
+    </div>
+
+    <!-- ✅ ПРАВАЯ ЧАСТЬ — ТЕЛЕФОН + МЕССЕНДЖЕРЫ -->
+    <div class="flex items-center gap-4 flex-none">
+
+      <!-- Телефон -->
+      <a href="tel:+380997625455"
+         class="text-lg font-semibold text-slate-800 hover:text-orange-600 flex items-center gap-1">
+        📞 +380 99 762 5455
+      </a>
+
+      <!-- Telegram -->
+      <a href="https://t.me/+380997625455" target="_blank" class="text-2xl hover:scale-110 transition">
+        🚀
+      </a>
+
+      <!-- Viber -->
+      <a href="viber://chat?number=%2B380997625455" target="_blank" class="text-2xl hover:scale-110 transition">
+        📲
+      </a>
+
+      <!-- Кнопка Контакты -->
+      <a href="#contact"
+         class="px-5 py-2 bg-orange-500 text-white rounded-full font-semibold hover:bg-orange-600 transition"
+         data-i18n="contactHeader">
+        Контакти
+      </a>
+
+      <!-- Переключатель языка -->
+      <button id="langBtn"
+              class="px-5 py-2 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition">
+        <span id="langLabel">RU</span>
+      </button>
+
+    </div>
+
+  </div>
+</header>
+
+
+  <!-- ====== HERO ====== -->
+  <section class="py-14">
+    <div class="container mx-auto px-4">
+      <!-- Заголовок поза оранжевим блоком -->
+      <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-10"
+          data-i18n="heroTitle">
+        Оригінальні автоскла, професійна установка і сертифіковане тонування. Гарантія, швидкість, якість.
+      </h1>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <!-- Ліва частина — помаранчевий блок -->
+        <div>
+          <div class="bg-orange-500 text-white p-8 lg:p-10 rounded-3xl shadow-xl">
+            <p class="text-lg leading-relaxed mb-8" data-i18n="heroText">
+              Підбираємо професійно автоскла для всіх типів автомобілів — легкових, вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі та надійність установки.
+            </p>
+
+            <div class="flex flex-wrap gap-4 mb-8">
+              <div class="bg-white text-orange-600 px-5 py-3 rounded-full flex items-center shadow">
+                <span class="text-2xl mr-2">✔️</span>
+                <span data-i18n="benefit1">Гарантія до 12 міс.</span>
+              </div>
+              <div class="bg-white text-orange-600 px-5 py-3 rounded-full flex items-center shadow">
+                <span class="text-2xl mr-2">✔️</span>
+                <span data-i18n="benefit2">Оригінальні матеріали</span>
+              </div>
+              <div class="bg-white text-orange-600 px-5 py-3 rounded-full flex items-center shadow">
+                <span class="text-2xl mr-2">✔️</span>
+                <span data-i18n="benefit3">Той самий день</span>
+              </div>
+            </div>
+
+            <div class="flex items-center text-white text-lg">
+              <span class="text-2xl mr-3">📍</span>
+              <span data-i18n="address">Миколаїв, вул. Будівельників, 7</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Права частина — фото -->
+        <div class="flex justify-center">
+          <img src="images/hero.webp" alt="Авто скло" class="rounded-3xl shadow-2xl w-full max-w-xl object-cover" />
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Правая часть: телефон + TG + Viber + Контакти + переключатель языка -->
-      <div class="flex items-center gap-3 sm:gap-4">
+  <!-- ====== SERVICES ====== -->
+  <section id="services" class="py-10">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-extrabold mb-8" data-i18n="servicesTitle">Наші послуги</h2>
 
-        <!-- Телефон в обводке -->
-        <a href="tel:+380997625455"
-           class="text-sm sm:text-base font-semibold text-orange-600 border-2 border-orange-500
-                  px-3 sm:px-4 py-1.5 rounded-full hover:bg-orange-50 transition flex items-center gap-2">
-          <span>📞</span>
-          <span class="tracking-wide">+380&nbsp;99&nbsp;762&nbsp;5455</span>
-        </a>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- 1 -->
+        <article class="bg-orange-500 text-white rounded-3xl p-8 shadow-lg">
+          <div class="text-3xl mb-4">🚗</div>
+          <h3 class="text-2xl font-bold mb-4" data-i18n="s1Title">Заміна лобового, бокових та задніх стекол</h3>
+          <p class="leading-relaxed" data-i18n="s1Text">
+            Професійна заміна будь-яких стекол з дотриманням технологій. Якісні клеї, праймери та контроль герметичності.
+          </p>
+        </article>
 
-        <!-- Telegram -->
-<a href="https://t.me/+380997625455" target="_blank" class="icon-btn w-7 h-7">
-  <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full text-blue-500">
-    <path d="M9.04 15.28 8.9 18.54c.32 0 .46-.14.63-.31l1.5-1.44 3.11 2.28c.57.32.97.15 1.12-.53l2.02-9.51c.18-.82-.32-1.14-.87-.94L3.84 11.27c-.82.32-.8.78-.14.98l3.57 1.11 8.29-5.23c.39-.25.75-.11.46.14" />
-  </svg>
-</a>
+        <!-- 2 -->
+        <article class="bg-orange-500 text-white rounded-3xl p-8 shadow-lg">
+          <div class="text-3xl mb-4">😎</div>
+          <h3 class="text-2xl font-bold mb-4" data-i18n="s2Title">Професійне тонування</h3>
+          <p class="leading-relaxed" data-i18n="s2Text">
+            Сонцезахисні та атермальні плівки з сертифікацією. Рівні краї, без пилу й підривів.
+          </p>
+        </article>
 
-<!-- Viber -->
-<a href="viber://chat?number=%2B380997625455" target="_blank" class="icon-btn w-7 h-7">
-  <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full text-purple-600">
-    <path d="M15.07 1.1c1.7.3 3.2.9 4.4 2.1s1.8 2.7 2.1 4.4c.4 2.2.4 4.4 0 6.6-.3 1.7-.9 3.2-2.1 4.4s-2.7 1.8-4.4 2.1c-2.2.4-4.4.4-6.6 0-1.7-.3-3.2-.9-4.4-2.1s-1.8-2.7-2.1-4.4c-.4-2.2-.4-4.4 0-6.6.3-1.7.9-3.2 2.1-4.4s2.7-1.8 4.4-2.1c2.2-.3 4.4-.3 6.6 0zm-2.1 3.4c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.6 1.8.2 3.3 1.7 3.5 3.5.1.3.3.5.6.5h.4c.3 0 .6-.3.5-.6-.3-2.6-2.3-4.6-4.9-4.9h-.1zm0 2.2c-.3 0-.5.2-.5.5v.4c0 .3.2.5.5.6.9.1 1.7.9 1.8 1.8.1.3.3.5.6.5h.4c.3 0 .6-.3.5-.6-.2-1.8-1.6-3.2-3.4-3.4h-.1zm2.2 4.4c-.2-.2-.5-.4-.8-.4-.4 0-.8.3-1 .7-.4.7-.9 1.4-1.5 2-.4.4-.8.8-1.3 1.1-.5.3-1.2.1-1.6-.3l-.9-.9c-.4-.4-.6-.9-.3-1.4.2-.3.4-.6.6-.9.2-.3.1-.7-.2-.9l-1.7-1c-.3-.2-.7-.2-1 .1l-.3.3c-.8.8-1 2-.5 3 .3.7.8 1.6 1.6 2.4 1 1 2.1 1.7 3.3 2.1.8.3 1.8.1 2.5-.4 1.3-.9 2.3-2.1 3.1-3.4.2-.3.2-.7 0-1l-1.3-1.3z"/>
-  </svg>
-</a>
-
-        <!-- Пульсирующая кнопка "Контакти" -->
-        <a href="#contact"
-           class="pulse-btn px-4 sm:px-5 py-2 bg-orange-500 text-white rounded-full font-semibold hover:bg-orange-600 transition"
-           data-i18n="contactHeader">
-          Контакти
-        </a>
-
-        <!-- Переключатель языка -->
-        <button id="langBtn"
-                class="px-4 sm:px-5 py-2 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition">
-          <span id="langLabel">RU</span>
-        </button>
-
+        <!-- 3 -->
+        <article class="bg-orange-500 text-white rounded-3xl p-8 shadow-lg">
+          <div class="text-3xl mb-4">🛡️</div>
+          <h3 class="text-2xl font-bold mb-4" data-i18n="s3Title">Підбір автоскел для всіх типів автомобілів</h3>
+          <p class="leading-relaxed" data-i18n="s3Text">
+            Підбираємо автоскла для легковиків, вантажних авто та спецтехніки. Враховуємо всі параметри, гарантуємо сумісність.
+          </p>
+        </article>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- ================== HERO (пример секции) ================== -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4" data-i18n="headline">
-      Оригінальні автоскла, професійна установка і сертифіковане тонування. Гарантія, швидкість, якість.
-    </h1>
-    <p class="text-lg text-slate-600 max-w-4xl" data-i18n="subline">
-      Підбираємо професійно автоскла для всіх типів автомобілів — легкових, вантажних та спеціальної техніки.
-      Гарантуємо точну відповідність моделі та надійність установки.
+  <!-- ====== BRANDS ====== -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-4xl font-extrabold mb-3" data-i18n="brandsTitle">Бренди автоскла</h2>
+          <p class="text-lg mb-6" data-i18n="brandsText">Ми співпрацюємо лише з перевіреними світовими виробниками:</p>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="px-5 py-3 rounded-full bg-orange-500 text-white shadow">Pilkington</span>
+            <span class="px-5 py-3 rounded-full bg-orange-500 text-white shadow">AGC</span>
+            <span class="px-5 py-3 rounded-full bg-orange-500 text-white shadow">Guardian</span>
+            <span class="px-5 py-3 rounded-full bg-orange-500 text-white shadow">Benson</span>
+            <span class="px-5 py-3 rounded-full bg-orange-500 text-white shadow">XYG</span>
+            <span class="px-5 py-3 rounded-full bg-orange-500 text-white shadow">Sekurit</span>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2 flex justify-center">
+          <img src="images/brands-photo.webp" alt="Монтаж автоскла" class="rounded-3xl shadow-2xl w-full max-w-xl object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices" class="py-12">
+  <div class="container mx-auto px-4">
+    
+    <h2 class="text-4xl font-extrabold mb-3" data-i18n="pricesTitle">
+      Орієнтовні ціни
+    </h2>
+
+    <p class="text-slate-600 mb-8" data-i18n="pricesNote">
+      Фінальна вартість залежить від моделі авто та обраних матеріалів.
     </p>
-  </section>
 
-  <!-- ================== CONTACT SECTION (якорь) ================== -->
-  <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-    <div class="grid md:grid-cols-2 gap-8 items-start">
-      <div class="space-y-4">
-        <h2 class="text-3xl font-bold" data-i18n="contactTitle">Контакти та запис</h2>
-        <p class="text-slate-600" data-i18n="workHours">Працюємо щодня 09:00–19:00</p>
+    <div class="grid gap-6 lg:grid-cols-2">
 
-        <div class="space-y-2 text-lg">
-          <div>📍 <span data-i18n="address">Миколаїв, вул. Будівельників, 7</span></div>
-          <div>📞 <a href="tel:+380997625455" class="text-orange-600 font-semibold">+380 99 762 5455</a></div>
-          <div>✉️ <a href="mailto:trashkalov88@gmail.com" class="underline">trashkalov88@gmail.com</a></div>
-        </div>
+      <div class="bg-orange-500 text-white rounded-3xl p-8 shadow-xl">
+        <h3 class="text-2xl font-bold mb-3" data-i18n="p1">Заміна лобового стекла (робота)</h3>
+        <div class="text-xl font-extrabold" data-i18n="p1price">від 2200 грн</div>
       </div>
 
-      <!-- Простой контакт-форм (можно удалить/заменить) -->
-      <form class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
-        <div class="grid sm:grid-cols-2 gap-4">
-          <label class="block">
-            <span class="text-sm text-slate-600" data-i18n="formName">Ім'я</span>
-            <input type="text" class="mt-1 w-full border rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" />
-          </label>
-          <label class="block">
-            <span class="text-sm text-slate-600" data-i18n="formPhone">Телефон</span>
-            <input type="tel" class="mt-1 w-full border rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400" />
-          </label>
-        </div>
-        <label class="block">
-          <span class="text-sm text-slate-600" data-i18n="formMsg">Коментар (модель авто / тип послуги)</span>
-          <textarea rows="4" class="mt-1 w-full border rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
-        </label>
+      <div class="bg-orange-500 text-white rounded-3xl p-8 shadow-xl">
+        <h3 class="text-2xl font-bold mb-3" data-i18n="p2">Комплект лобового скла</h3>
+        <div class="text-xl font-extrabold" data-i18n="p2price">від 3500 грн</div>
+      </div>
 
-        <button type="submit"
-                class="px-5 py-2.5 bg-orange-500 text-white rounded-xl font-semibold hover:bg-orange-600 transition"
-                data-i18n="formSend">
-          Надіслати заявку
-        </button>
-      </form>
+      <div class="bg-orange-500 text-white rounded-3xl p-8 shadow-xl">
+        <h3 class="text-2xl font-bold mb-3" data-i18n="p3">Тонування седан (усі вікна)</h3>
+        <div class="text-xl font-extrabold" data-i18n="p3price">від 3500 грн</div>
+      </div>
+
+      <div class="bg-orange-500 text-white rounded-3xl p-8 shadow-xl">
+        <h3 class="text-2xl font-bold mb-3" data-i18n="p4">Атермальне тонування лобового</h3>
+        <div class="text-xl font-extrabold" data-i18n="p4price">від 1800 грн</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ====== CONTACTS ====== -->
+  <section id="contacts" class="py-14">
+    <div class="container mx-auto px-4">
+      <!-- Заголовок поза блоком -->
+      <h2 class="text-4xl font-extrabold mb-6" data-i18n="contactTitle">Контакти та запис</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <!-- Ліворуч — помаранчевий блок з контактами -->
+        <div class="bg-orange-500 text-white p-8 rounded-3xl shadow-xl">
+          <p class="text-lg mb-6" data-i18n="contactSub">Працюємо щодня 09:00–19:00</p>
+
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-center gap-3">
+              <span class="text-2xl">📍</span>
+              <span data-i18n="address">Миколаїв, вул. Будівельників, 7</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-2xl">📞</span>
+              <a href="tel:+380997625455" class="underline underline-offset-4 hover:opacity-90">+380997625455</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-2xl">✉️</span>
+              <a href="mailto:trashkalov88@gmail.com" class="underline underline-offset-4 hover:opacity-90">trashkalov88@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Праворуч — форма (телеграм-хук, за потреби) -->
+        <form id="leadForm" class="bg-white rounded-3xl p-8 shadow space-y-5">
+          <div>
+            <label class="block text-sm text-slate-600 mb-1" data-i18n="formName">Ім'я</label>
+            <input type="text" name="name" class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-slate-600 mb-1" data-i18n="formPhone">Телефон</label>
+            <input type="tel" name="phone" class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-slate-600 mb-1" data-i18n="formMsg">Коментар (модель авто / тип послуги)</label>
+            <textarea name="msg" rows="4" class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400"></textarea>
+          </div>
+
+          <button id="submitBtn" class="w-full bg-black text-white px-6 py-3 rounded-xl hover:opacity-90 transition" data-i18n="formSend">
+            Надіслати заявку
+          </button>
+
+          <p id="okMsg" class="hidden text-green-600" data-i18n="formOk">Дякуємо! Заявка відправлена в Telegram.</p>
+          <p id="errMsg" class="hidden text-red-600" data-i18n="formErr">Помилка відправки. Перевірте підключення Telegram.</p>
+        </form>
+      </div>
     </div>
   </section>
 
-  <!-- ================== FOOTER ================== -->
-  <footer class="border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-slate-500">
-      © <span id="year"></span> Autoglass NK. <span data-i18n="rights">Всі права захищені.</span>
+  <!-- ====== FOOTER ====== -->
+  <footer class="border-t py-6 text-center text-sm text-slate-500">
+    <div class="container mx-auto px-4">
+      <span>&copy; <span id="year"></span> Autoglass NK. </span>
+      <span data-i18n="rights">Всі права захищені</span>
     </div>
   </footer>
 
-  <!-- ================== i18n (UA/RU) ================== -->
+  <!-- ====== I18N + ЛОГІКА ФОРМИ ====== -->
   <script>
-    let lang = 'ua';
-
+    // ==== Переклади ====
     const ua = {
       city: "Миколаїв",
-      contactHeader: "Контакти",
-      headline: "Оригінальні автоскла, професійна установка і сертифіковане тонування. Гарантія, швидкість, якість.",
-      subline: "Підбираємо професійно автоскла для всіх типів автомобілів — легкових, вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі та надійність установки.",
-      contactTitle: "Контакти та запис",
-      workHours: "Працюємо щодня 09:00–19:00",
+contactHeader: "Контакти",
+
+      metaTitle: "Autoglass NK — Автостекла і тонування в Миколаєві",
+      metaDesc: "Продаж, підбір і професійна установка автоскла, сертифіковане тонування. Гарантія, швидкість, якість. Миколаїв, вул. Будівельників, 7.",
+      menuContacts: "Контакти",
+
+      heroTitle: "Оригінальні автоскла, професійна установка і сертифіковане тонування. Гарантія, швидкість, якість.",
+      heroText: "Підбираємо професійно автоскла для всіх типів автомобілів — легкових, вантажних та спеціальної техніки. Гарантуємо точну відповідність моделі та надійність установки.",
+      benefit1: "Гарантія до 12 міс.",
+      benefit2: "Оригінальні матеріали",
+      benefit3: "Той самий день",
       address: "Миколаїв, вул. Будівельників, 7",
+
+      servicesTitle: "Наші послуги",
+      s1Title: "Заміна лобового, бокових та задніх стекол",
+      s1Text: "Професійна заміна будь-яких стекол з дотриманням технологій. Якісні клеї, праймери та контроль герметичності.",
+      s2Title: "Професійне тонування",
+      s2Text: "Сонцезахисні та атермальні плівки з сертифікацією. Рівні краї, без пилу й підривів.",
+      s3Title: "Підбір автоскел для всіх типів автомобілів",
+      s3Text: "Підбираємо автоскла для легковиків, вантажних авто та спецтехніки. Враховуємо всі параметри, гарантуємо сумісність.",
+
+      brandsTitle: "Бренди автоскла",
+      brandsText: "Ми співпрацюємо лише з перевіреними світовими виробниками:",
+
+      pricesTitle: "Орієнтовні ціни",
+      pricesNote: "Фінальна вартість залежить від моделі авто та обраних матеріалів.",
+      p1: "Заміна лобового стекла (робота)", p1price: "від 2200 грн",
+      p2: "Комплект лобового скла",       p2price: "від 3500 грн",
+      p3: "Тонування седан (усі вікна)",  p3price: "від 3500 грн",
+      p4: "Атермальне тонування лобового", p4price: "від 1800 грн",
+
+      contactTitle: "Контакти та запис",
+      contactSub: "Працюємо щодня 09:00–19:00",
+
       formName: "Ім'я",
       formPhone: "Телефон",
       formMsg: "Коментар (модель авто / тип послуги)",
       formSend: "Надіслати заявку",
-      rights: "Всі права захищені."
+      formOk: "Дякуємо! Заявка відправлена в Telegram.",
+      formErr: "Помилка відправки. Перевірте підключення Telegram.",
+      rights: "Всі права захищені",
     };
 
     const ru = {
       city: "Николаев",
-      contactHeader: "Контакты",
-      headline: "Оригинальные автостекла, профессиональная установка и сертифицированная тонировка. Гарантия, скорость, качество.",
-      subline: "Профессионально подбираем автостекла для всех типов автомобилей — легковых, грузовых и спецтехники. Гарантируем точное соответствие модели и надежность установки.",
-      contactTitle: "Контакты и запись",
-      workHours: "Работаем ежедневно 09:00–19:00",
+contactHeader: "Контакты",
+
+      metaTitle: "Autoglass NK — Автостёкла и тонировка в Николаеве",
+      metaDesc: "Продажа, подбор и профессиональная установка автостёкол, сертифицированная тонировка. Гарантия, скорость, качество. Николаев, ул. Строителей, 7.",
+      menuContacts: "Контакты",
+
+      heroTitle: "Оригинальные автостёкла, профессиональная установка и сертифицированная тонировка. Гарантия, скорость, качество.",
+      heroText: "Подбираем профессионально автостёкла для всех типов автомобилей — легковых, грузовых и спецтехники. Гарантируем точное соответствие модели и надёжность установки.",
+      benefit1: "Гарантия до 12 мес.",
+      benefit2: "Оригинальные материалы",
+      benefit3: "В тот же день",
       address: "Николаев, ул. Строителей, 7",
+
+      servicesTitle: "Наши услуги",
+      s1Title: "Замена лобового, боковых и задних стёкол",
+      s1Text: "Профессиональная замена любых стёкол с соблюдением технологий. Качественные клеи, праймеры и контроль герметичности.",
+      s2Title: "Профессиональная тонировка",
+      s2Text: "Солнцезащитные и атермальные плёнки с сертификатами. Ровные края, без пыли и отслоений.",
+      s3Title: "Подбор автостёкол для всех типов автомобилей",
+      s3Text: "Подбираем автостёкла для легковых, грузовых авто и спецтехники. Учитываем все параметры, гарантируем совместимость.",
+
+      brandsTitle: "Бренды автостёкол",
+      brandsText: "Работаем только с проверенными мировыми производителями:",
+
+      pricesTitle: "Ориентировочные цены",
+      pricesNote: "Итоговая стоимость зависит от модели авто и выбранных материалов.",
+      p1: "Замена лобового стекла (работа)", p1price: "от 2200 грн",
+      p2: "Комплект лобового стекла",       p2price: "от 3500 грн",
+      p3: "Тонировка седан (все окна)",     p3price: "от 3500 грн",
+      p4: "Атермальная тонировка лобового", p4price: "от 1800 грн",
+
+      contactTitle: "Контакты и запись",
+      contactSub: "Работаем ежедневно 09:00–19:00",
+
       formName: "Имя",
       formPhone: "Телефон",
       formMsg: "Комментарий (модель авто / тип услуги)",
       formSend: "Отправить заявку",
-      rights: "Все права защищены."
+      formOk: "Спасибо! Заявка отправлена в Telegram.",
+      formErr: "Ошибка отправки. Проверьте подключение Telegram.",
+      rights: "Все права защищены",
     };
 
+    let lang = "ua";
     const dict = { ua, ru };
 
     function applyLang() {
       const t = dict[lang];
-      document.documentElement.lang = (lang === 'ua' ? 'uk' : 'ru');
-      document.getElementById('langLabel').textContent = (lang === 'ua' ? 'RU' : 'UA');
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (t[key] !== undefined) el.textContent = t[key];
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (key && t[key] !== undefined) el.textContent = t[key];
       });
+      document.documentElement.lang = (lang === "ua" ? "uk" : "ru");
+      document.getElementById("langLabel").textContent = (lang === "ua" ? "RU" : "UA");
+      // Обновляем <title> и <meta name="description">
+      document.title = t.metaTitle;
+      const md = document.querySelector("meta[name='description']");
+      if (md) md.setAttribute("content", t.metaDesc);
     }
 
-    document.getElementById('langBtn').addEventListener('click', () => {
-      lang = (lang === 'ua' ? 'ru' : 'ua');
+    document.getElementById("langBtn").addEventListener("click", () => {
+      lang = (lang === "ua" ? "ru" : "ua");
       applyLang();
     });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
     applyLang();
+
+    // ===== ФОРМА (опціонально, якщо є /api/telegram на бекенді) =====
+    document.getElementById("leadForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById("submitBtn");
+      const ok = document.getElementById("okMsg");
+      const err = document.getElementById("errMsg");
+      ok.classList.add("hidden"); err.classList.add("hidden");
+      btn.disabled = true; btn.textContent = (lang === "ua" ? ua.formSend : ru.formSend) + "...";
+
+      const form = new FormData(e.target);
+      const payload = { lang, name: form.get("name")||"", phone: form.get("phone")||"", msg: form.get("msg")||"" };
+
+      try {
+        const r = await fetch("/api/telegram", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        if (!r.ok) throw new Error(await r.text());
+        ok.classList.remove("hidden"); e.target.reset();
+      } catch (e2) {
+        console.error(e2);
+        err.classList.remove("hidden");
+      } finally {
+        btn.disabled = false; btn.textContent = (lang === "ua" ? ua.formSend : ru.formSend);
+      }
+    });
   </script>
 </body>
 </html>
