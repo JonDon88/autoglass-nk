@@ -1,0 +1,19 @@
+{
+  "name": "Autoglass NK",
+  "short_name": "Autoglass",
+  "icons": [
+    {
+      "src": "/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FF7A00",
+  "background_color": "#000000",
+  "display": "standalone"
+}
