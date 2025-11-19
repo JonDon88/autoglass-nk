@@ -455,10 +455,8 @@
       }
     });
   </script>
-  <script>
   const BOT_TOKEN = "8584554604:AAEXYCEZNHRIAw2CkK1-5Twn_MKQPOJmqFQ";
   const CHAT_ID = "5301549432";
-  const API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
   const form = document.getElementById("leadForm");
   const okMsg = document.getElementById("okMsg");
@@ -479,37 +477,35 @@
     }
 
     const text = 
-      `🧾 Нова заявка з сайту Autoglass NK\n` +
-      `👤 Імʼя: ${name}\n` +
-      `📞 Телефон: ${phone}\n` +
-      `💬 Коментар: ${msg}`;
+      `🧾 Нова заявка з сайту Autoglass NK%0A` +
+      `👤 Імʼя: ${encodeURIComponent(name)}%0A` +
+      `📞 Телефон: ${encodeURIComponent(phone)}%0A` +
+      `💬 Коментар: ${encodeURIComponent(msg)}`;
+
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`;
 
     submitBtn.disabled = true;
     submitBtn.style.opacity = "0.6";
 
     try {
-      const res = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chat_id: CHAT_ID, text })
-      });
-
-      if (res.ok) {
+      const response = await fetch(url);
+      if (response.ok) {
         okMsg.classList.remove("hidden");
         errMsg.classList.add("hidden");
         form.reset();
       } else {
-        throw new Error("not ok");
+        throw new Error("Telegram error");
       }
-    } catch (error) {
-      okMsg.classList.add("hidden");
+    } catch (e) {
       errMsg.classList.remove("hidden");
+      okMsg.classList.add("hidden");
     } finally {
       submitBtn.disabled = false;
       submitBtn.style.opacity = "1";
     }
   });
 </script>
+
 </body>
 </html>
 
