@@ -277,29 +277,33 @@
 
         <!-- Праворуч — форма -->
         <form id="leadForm" class="bg-white rounded-3xl p-8 shadow space-y-5">
-          <div>
-            <label class="block text-sm text-slate-600 mb-1" data-i18n="formName">Ім'я</label>
-            <input type="text" name="name" class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
-          </div>
-          <div>
-            <label class="block text-sm text-slate-600 mb-1" data-i18n="formPhone">Телефон</label>
-            <input type="tel" name="phone" class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
-          </div>
-          <div>
-            <label class="block text-sm text-slate-600 mb-1" data-i18n="formMsg">Коментар (модель авто / тип послуги)</label>
-            <textarea name="msg" rows="4" class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400"></textarea>
-          </div>
+        <div>
+          <label class="block text-sm text-slate-600 mb-1" data-i18n="formName">Ім'я</label>
+          <input type="text" name="name" required class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
+        </div>
 
-          <button id="submitBtn" class="w-full bg-black text-white px-6 py-3 rounded-xl hover:opacity-90 transition" data-i18n="formSend">
-            Надіслати заявку
-          </button>
+        <div>
+          <label class="block text-sm text-slate-600 mb-1" data-i18n="formPhone">Телефон</label>
+          <input type="tel" name="phone" required class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
+        </div>
 
-          <p id="okMsg" class="hidden text-green-600" data-i18n="formOk">Дякуємо! Заявка відправлена в Telegram.</p>
-          <p id="errMsg" class="hidden text-red-600" data-i18n="formErr">Помилка відправки. Перевірте підключення Telegram.</p>
-        </form>
-      </div>
+        <div>
+          <label class="block text-sm text-slate-600 mb-1" data-i18n="formMsg">Коментар (модель авто / тип послуги)</label>
+          <textarea name="msg" rows="4" required class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400"></textarea>
+        </div>
+
+        <button id="submitBtn" type="submit" class="w-full bg-black text-white px-6 py-3 rounded-xl hover:opacity-90 transition" data-i18n="formSend">
+          Надіслати заявку
+        </button>
+
+        <p id="okMsg" class="hidden text-green-600" data-i18n="formOk">Дякуємо! Заявка відправлена в Telegram.</p>
+        <p id="errMsg" class="hidden text-red-600" data-i18n="formErr">Помилка відправки. Перевірте підключення Telegram.</p>
+      </form>
     </div>
-  </section>
+
+  </div>
+</section>
+
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="border-t py-6 text-center text-sm text-slate-500">
@@ -451,6 +455,61 @@
       }
     });
   </script>
+  <script>
+  const BOT_TOKEN = "8584554604:AAEXYCEZNHRIAw2CkK1-5Twn_MKQPOJmqFQ";
+  const CHAT_ID = "5301549432";
+  const API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+  const form = document.getElementById("leadForm");
+  const okMsg = document.getElementById("okMsg");
+  const errMsg = document.getElementById("errMsg");
+  const submitBtn = document.getElementById("submitBtn");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector('[name="name"]').value.trim();
+    const phone = form.querySelector('[name="phone"]').value.trim();
+    const msg = form.querySelector('[name="msg"]').value.trim();
+
+    if (!name || !phone || !msg) {
+      errMsg.classList.remove("hidden");
+      errMsg.textContent = "Заповніть всі поля!";
+      return;
+    }
+
+    const text = 
+      `🧾 Нова заявка з сайту Autoglass NK\n` +
+      `👤 Імʼя: ${name}\n` +
+      `📞 Телефон: ${phone}\n` +
+      `💬 Коментар: ${msg}`;
+
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = "0.6";
+
+    try {
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: CHAT_ID, text })
+      });
+
+      if (res.ok) {
+        okMsg.classList.remove("hidden");
+        errMsg.classList.add("hidden");
+        form.reset();
+      } else {
+        throw new Error("not ok");
+      }
+    } catch (error) {
+      okMsg.classList.add("hidden");
+      errMsg.classList.remove("hidden");
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = "1";
+    }
+  });
+</script>
 </body>
 </html>
 
