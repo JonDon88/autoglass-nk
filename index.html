@@ -455,7 +455,7 @@
       }
     });
 <script>
-  const BOT_TOKEN = "8267662586:AAH0As64WOO_6_-HSXFKOsSI5Er5xxzbqKFw";
+  const BOT_TOKEN = "8267662586:AAH0As64WOO_6_-HSXFKOsSlEr5xxzbqKFw"; // скопировано из BotFather
   const CHAT_ID = "5301549432";
 
   const form = document.getElementById("leadForm");
@@ -463,42 +463,47 @@
   const errMsg = document.getElementById("errMsg");
   const submitBtn = document.getElementById("submitBtn");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-    const name = form.querySelector('[name="name"]').value.trim();
-    const phone = form.querySelector('[name="phone"]').value.trim();
-    const msg = form.querySelector('[name="msg"]').value.trim();
+      const name = form.querySelector('[name="name"]').value.trim();
+      const phone = form.querySelector('[name="phone"]').value.trim();
+      const msg = form.querySelector('[name="msg"]').value.trim();
 
-    if (!name || !phone || !msg) {
-      errMsg.classList.remove("hidden");
-      errMsg.textContent = "Заповніть всі поля!";
-      return;
-    }
+      if (!name || !phone || !msg) {
+        errMsg.classList.remove("hidden");
+        errMsg.textContent = "Заповніть всі поля!";
+        return;
+      }
 
-    const text =
-      `🧾 Нова заявка з сайту Autoglass NK%0A` +
-      `👤 Імʼя: ${encodeURIComponent(name)}%0A` +
-      `📞 Телефон: ${encodeURIComponent(phone)}%0A` +
-      `💬 Коментар: ${encodeURIComponent(msg)}`;
+      const text =
+        `🧾 Нова заявка з сайту Autoglass NK\n` +
+        `👤 Імʼя: ${name}\n` +
+        `📞 Телефон: ${phone}\n` +
+        `💬 Коментар: ${msg}`;
 
-    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`;
+      const url =
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}`;
 
-    const img = new Image();
-    img.src = url;
+      // Обход CORS через картинку
+      const img = new Image();
+      img.src = url;
 
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = "0.6";
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = "0.6";
 
-    setTimeout(() => {
-      okMsg.classList.remove("hidden");
-      errMsg.classList.add("hidden");
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.style.opacity = "1";
-    }, 800);
-  });
+      setTimeout(() => {
+        okMsg.classList.remove("hidden");
+        errMsg.classList.add("hidden");
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = "1";
+      }, 800);
+    });
+  }
 </script>
 
 </body>
 </html>
+
