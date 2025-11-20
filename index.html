@@ -454,7 +454,7 @@
         btn.disabled = false; btn.textContent = (lang === "ua" ? ua.formSend : ru.formSend);
       }
     });
-  <script>
+<script>
   const BOT_TOKEN = "8267662586:AAH0As64WOO_6_-HSXFKOsSI5Er5xxzbqKFw";
   const CHAT_ID = "5301549432";
 
@@ -484,7 +484,6 @@
 
     const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`;
 
-    // 💥 ИСПОЗЬЗУЕМ Image, чтобы обойти CORS
     const img = new Image();
     img.src = url;
 
@@ -501,5 +500,5 @@
   });
 </script>
 
+</body>
 </html>
-
