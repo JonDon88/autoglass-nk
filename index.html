@@ -53,11 +53,10 @@
       <!-- ЛОГО -->
       <div class="flex items-center gap-3 flex-none">
         <img src="/images/favicon-32x32.png" alt="Autoglass NK" class="w-10 h-10 rounded">
-
         <span class="text-2xl font-semibold">Autoglass NK</span>
       </div>
 
-      <!-- ✅ Кликабельный адрес (город + улица) -->
+      <!-- Адрес -->
       <a href="https://www.google.com/maps?q=Миколаїв, вул. Будівельників, 7"
          target="_blank" rel="noopener"
          class="flex items-center gap-2 text-lg font-semibold text-slate-700 hover:text-orange-600"
@@ -66,17 +65,17 @@
         📍 Миколаїв, вул. Будівельників, 7
       </a>
 
-      <!-- Справа: номер в рамке + Telegram/Viber + Контакти + Язык -->
+      <!-- Справа: контакты + язык -->
       <div class="flex items-center gap-4 flex-none">
 
-        <!-- Номер в рамке + иконки -->
+        <!-- Номер + TG/Viber -->
         <div class="flex items-center gap-3 bg-white border-2 border-orange-500 rounded-full py-2 pl-4 pr-3">
           <a href="tel:+380997625455"
              class="text-slate-900 font-semibold whitespace-nowrap">
             +380 99 762 5455
           </a>
 
-          <!-- Telegram (SVG без фона) -->
+          <!-- Telegram -->
           <a href="https://t.me/+380997625455" target="_blank" rel="noopener"
              class="w-8 h-8 hover:scale-110 transition" aria-label="Telegram">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -87,19 +86,19 @@
             </svg>
           </a>
 
-          <!-- Viber (SVG без фона) -->
+          <!-- Viber -->
           <a href="viber://chat?number=%2B380997625455" target="_blank" rel="noopener"
              class="w-8 h-8 hover:scale-110 transition" aria-label="Viber">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                  class="w-8 h-8" fill="none">
               <circle cx="12" cy="12" r="12" fill="#7360F2"/>
               <path fill="#fff"
-                d="M16.8 13.97c-.16 1.04-1.46 1.83-2.56 2.08-.86.19-1.98.21-3.18-.19l-1.4.74c-.19.1-.41.02-.49-.17l-.69-1.62c-.99-.8-1.74-1.86-2.17-3.04-.52-1.38-.49-2.56-.29-3.42.25-1.1 1.04-2.4 2.08-2.56 2.66-.41 5.29.36 7.17 2.24 1.88 1.88 2.65 4.51 2.13 6.94ZM9.4 10.2c.1.55.38 1.11.8 1.58.42.47.95.8 1.46.93.18.05.38 0 .52-.13l.6-.6c.15-.15.19-.38.1-.57l-.33-.7a.47.47 0 0 0-.51-.27l-.67.13c-.39-.28-.7-.6-.92-1l.14-.66a.47.47 0 0 0-.27-.51l-.7-.33a.47.47 0 0 0-.57.1l-.6.6c-.14.14-.19.34-.13.52Z"/>
+                d="M16.8 13.97c-.16 1.04-1.46 1.83-2.56 2.08-.86.19-1.98.21-3.18-.19l-1.4.74c-.19.1-.41.02-.49-.17l-.69-1.62c-.99-.8-1.74-1.86-2.17-3.04-.52-1.38-.49-2.56-.29-3.42.25-1.1 1.04-2.4 2.08-2.56 2.66-.41 5.29.36 7.17 2.24 1.88 1.88 2.65 4.51 2.13 6.94ZM9.4 10.2c.1.55.38 1.11.8 1.58.42.47.95.8 1.46.93.18.05.38 0 .52-.13l.6-.6c.15-.15.19-.38.1-.57l-.33-.7a.47.47 0 0 0-.51-.27л-.67.13c-.39-.28-.7-.6-.92-1л.14-.66a.47.47 0 0 0-.27-.51л-.7-.33a.47.47 0 0 0-.57.1л-.6.6c-.14.14-.19.34-.13.52Z"/>
             </svg>
           </a>
         </div>
 
-        <!-- Кнопка Контакти (пульс) -->
+        <!-- Кнопка Контакти -->
         <a href="#contacts"
            class="px-5 py-2 bg-orange-500 text-white rounded-full font-semibold hover:bg-orange-600 transition btn-pulse"
            data-i18n="contactHeader">
@@ -123,7 +122,6 @@
       </h1>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <!-- Ліва частина — помаранчевий блок -->
         <div>
           <div class="bg-orange-500 text-white p-8 lg:p-10 rounded-3xl shadow-xl">
             <p class="text-lg leading-relaxed mb-8" data-i18n="heroText">
@@ -144,11 +142,9 @@
                 <span data-i18n="benefit3">Той самий день</span>
               </div>
             </div>
-            <!-- Адреса з геро-блока прибрана за вашим запитом -->
           </div>
         </div>
 
-        <!-- Права частина — фото -->
         <div class="flex justify-center">
           <img src="images/hero.webp" alt="Авто скло" class="rounded-3xl shadow-2xl w-full max-w-xl object-cover" />
         </div>
@@ -250,7 +246,7 @@
       <h2 class="text-4xl font-extrabold mb-6" data-i18n="contactTitle">Контакти та запис</h2>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-        <!-- Ліворуч — помаранчевий блок з контактами -->
+        <!-- Ліворуч — контакти -->
         <div class="bg-orange-500 text-white p-8 rounded-3xl shadow-xl">
           <p class="text-lg mb-6" data-i18n="contactSub">Працюємо щодня 09:00–19:00</p>
 
@@ -277,33 +273,31 @@
 
         <!-- Праворуч — форма -->
         <form id="leadForm" class="bg-white rounded-3xl p-8 shadow space-y-5">
-        <div>
-          <label class="block text-sm text-slate-600 mb-1" data-i18n="formName">Ім'я</label>
-          <input type="text" name="name" required class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
-        </div>
+          <div>
+            <label class="block text-sm text-slate-600 mb-1" data-i18n="formName">Ім'я</label>
+            <input type="text" name="name" required class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
+          </div>
 
-        <div>
-          <label class="block text-sm text-slate-600 mb-1" data-i18n="formPhone">Телефон</label>
-          <input type="tel" name="phone" required class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
-        </div>
+          <div>
+            <label class="block text-sm text-slate-600 mb-1" data-i18n="formPhone">Телефон</label>
+            <input type="tel" name="phone" required class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400" />
+          </div>
 
-        <div>
-          <label class="block text-sm text-slate-600 mb-1" data-i18n="formMsg">Коментар (модель авто / тип послуги)</label>
-          <textarea name="msg" rows="4" required class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400"></textarea>
-        </div>
+          <div>
+            <label class="block text-sm text-slate-600 mb-1" data-i18n="formMsg">Коментар (модель авто / тип послуги)</label>
+            <textarea name="msg" rows="4" required class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-400"></textarea>
+          </div>
 
-        <button id="submitBtn" type="submit" class="w-full bg-black text-white px-6 py-3 rounded-xl hover:opacity-90 transition" data-i18n="formSend">
-          Надіслати заявку
-        </button>
+          <button id="submitBtn" type="submit" class="w-full bg-black text-white px-6 py-3 rounded-xl hover:opacity-90 transition" data-i18n="formSend">
+            Надіслати заявку
+          </button>
 
-        <p id="okMsg" class="hidden text-green-600" data-i18n="formOk">Дякуємо! Заявка відправлена в Telegram.</p>
-        <p id="errMsg" class="hidden text-red-600" data-i18n="formErr">Помилка відправки. Перевірте підключення Telegram.</p>
-      </form>
+          <p id="okMsg" class="hidden text-green-600" data-i18n="formOk">Дякуємо! Заявка відправлена в Telegram.</p>
+          <p id="errMsg" class="hidden text-red-600" data-i18n="formErr">Помилка відправки. Перевірте підключення Telegram.</p>
+        </form>
+      </div>
     </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="border-t py-6 text-center text-sm text-slate-500">
@@ -313,7 +307,7 @@
     </div>
   </footer>
 
-  <!-- ==================== I18N + ЛОГІКА ФОРМИ ==================== -->
+  <!-- ==================== I18N + TELEGRAM ==================== -->
   <script>
     const ua = {
       city: "Миколаїв",
@@ -427,94 +421,71 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     applyLang();
 
-    // Отправка формы (опционально; если настроен /api/telegram)
-    document.getElementById("leadForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const btn = document.getElementById("submitBtn");
+    // ===== Отправка формы в Telegram =====
+    (function () {
+      const BOT_TOKEN = "8267662586:AAH0As64WOO_6_-HSXFKOsSlEr5xxzbqKFw";
+      const CHAT_ID = "5301549432";
+
+      const form = document.getElementById("leadForm");
       const ok = document.getElementById("okMsg");
       const err = document.getElementById("errMsg");
-      ok.classList.add("hidden"); err.classList.add("hidden");
-      btn.disabled = true; btn.textContent = (lang === "ua" ? ua.formSend : ru.formSend) + "...";
+      const btn = document.getElementById("submitBtn");
+      if (!form) return;
 
-      const form = new FormData(e.target);
-      const payload = { lang, name: form.get("name")||"", phone: form.get("phone")||"", msg: form.get("msg")||"" };
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-      try {
-        const r = await fetch("/api/telegram", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-        if (!r.ok) throw new Error(await r.text());
-        ok.classList.remove("hidden"); e.target.reset();
-      } catch (e2) {
-        console.error(e2);
-        err.classList.remove("hidden");
-      } finally {
-        btn.disabled = false; btn.textContent = (lang === "ua" ? ua.formSend : ru.formSend);
-      }
-    });
-<script>
-  (function () {
-    const BOT_TOKEN = "8267662586:AAH0As64WOO_6_-HSXFKOsSlEr5xxzbqKFw"; // твой рабочий токен
-    const CHAT_ID = "5301549432";
+        ok.classList.add("hidden");
+        err.classList.add("hidden");
 
-    const form = document.getElementById("leadForm");
-    if (!form) return;
+        const fd = new FormData(form);
+        const name = (fd.get("name") || "").trim();
+        const phone = (fd.get("phone") || "").trim();
+        const msg = (fd.get("msg") || "").trim();
 
-    const okMsg = document.getElementById("okMsg");
-    const errMsg = document.getElementById("errMsg");
-    const submitBtn = document.getElementById("submitBtn");
+        if (!name || !phone || !msg) {
+          err.textContent = (lang === "ua"
+            ? "Заповніть всі поля!"
+            : "Заполните все поля!");
+          err.classList.remove("hidden");
+          return;
+        }
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+        const text =
+          "🧾 Нова заявка з сайту Autoglass NK\n" +
+          "👤 Імʼя: " + name + "\n" +
+          "📞 Телефон: " + phone + "\n" +
+          "💬 Коментар: " + msg;
 
-      const name  = form.querySelector('[name="name"]').value.trim();
-      const phone = form.querySelector('[name="phone"]').value.trim();
-      const msg   = form.querySelector('[name="msg"]').value.trim();
+        const url =
+          "https://api.telegram.org/bot" +
+          BOT_TOKEN +
+          "/sendMessage?chat_id=" +
+          CHAT_ID +
+          "&text=" +
+          encodeURIComponent(text);
 
-      // простая проверка
-      if (!name || !phone || !msg) {
-        errMsg.classList.remove("hidden");
-        errMsg.textContent = "Заповніть всі поля!";
-        okMsg.classList.add("hidden");
-        return;
-      }
+        console.log("TG URL:", url);
 
-      const text =
-        "🧾 Нова заявка з сайту Autoglass NK\n" +
-        "👤 Імʼя: " + name + "\n" +
-        "📞 Телефон: " + phone + "\n" +
-        "💬 Коментар: " + msg;
+        const img = new Image();
+        img.src = url;
 
-      const url =
-        "https://api.telegram.org/bot" +
-        BOT_TOKEN +
-        "/sendMessage?chat_id=" +
-        CHAT_ID +
-        "&text=" +
-        encodeURIComponent(text);
+        btn.disabled = true;
+        btn.style.opacity = "0.6";
+        btn.textContent = (lang === "ua" ? ua.formSend : ru.formSend) + "...";
 
-      console.log("TG URL:", url); // чтобы можно было проверить в консоли
-
-      // Обход CORS через картинку
-      const img = new Image();
-      img.src = url;
-
-      submitBtn.disabled = true;
-      submitBtn.style.opacity = "0.6";
-
-      // считаем, что запрос ушёл — телега уже доказала, что токен рабочий
-      setTimeout(function () {
-        okMsg.classList.remove("hidden");
-        errMsg.classList.add("hidden");
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = "1";
-      }, 800);
-    });
-  })();
-</script>
+        setTimeout(function () {
+          ok.textContent = (lang === "ua" ? ua.formOk : ru.formOk);
+          ok.classList.remove("hidden");
+          err.classList.add("hidden");
+          form.reset();
+          btn.disabled = false;
+          btn.style.opacity = "1";
+          btn.textContent = (lang === "ua" ? ua.formSend : ru.formSend);
+        }, 800);
+      });
+    })();
+  </script>
 
 </body>
 </html>
