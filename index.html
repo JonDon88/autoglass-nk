@@ -455,36 +455,47 @@
       }
     });
 <script>
-  const BOT_TOKEN = "8267662586:AAH0As64WOO_6_-HSXFKOsSlEr5xxzbqKFw"; // скопировано из BotFather
-  const CHAT_ID = "5301549432";
+  (function () {
+    const BOT_TOKEN = "8267662586:AAH0As64WOO_6_-HSXFKOsSlEr5xxzbqKFw"; // твой рабочий токен
+    const CHAT_ID = "5301549432";
 
-  const form = document.getElementById("leadForm");
-  const okMsg = document.getElementById("okMsg");
-  const errMsg = document.getElementById("errMsg");
-  const submitBtn = document.getElementById("submitBtn");
+    const form = document.getElementById("leadForm");
+    if (!form) return;
 
-  if (form) {
-    form.addEventListener("submit", (e) => {
+    const okMsg = document.getElementById("okMsg");
+    const errMsg = document.getElementById("errMsg");
+    const submitBtn = document.getElementById("submitBtn");
+
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const name = form.querySelector('[name="name"]').value.trim();
+      const name  = form.querySelector('[name="name"]').value.trim();
       const phone = form.querySelector('[name="phone"]').value.trim();
-      const msg = form.querySelector('[name="msg"]').value.trim();
+      const msg   = form.querySelector('[name="msg"]').value.trim();
 
+      // простая проверка
       if (!name || !phone || !msg) {
         errMsg.classList.remove("hidden");
         errMsg.textContent = "Заповніть всі поля!";
+        okMsg.classList.add("hidden");
         return;
       }
 
       const text =
-        `🧾 Нова заявка з сайту Autoglass NK\n` +
-        `👤 Імʼя: ${name}\n` +
-        `📞 Телефон: ${phone}\n` +
-        `💬 Коментар: ${msg}`;
+        "🧾 Нова заявка з сайту Autoglass NK\n" +
+        "👤 Імʼя: " + name + "\n" +
+        "📞 Телефон: " + phone + "\n" +
+        "💬 Коментар: " + msg;
 
       const url =
-        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}`;
+        "https://api.telegram.org/bot" +
+        BOT_TOKEN +
+        "/sendMessage?chat_id=" +
+        CHAT_ID +
+        "&text=" +
+        encodeURIComponent(text);
+
+      console.log("TG URL:", url); // чтобы можно было проверить в консоли
 
       // Обход CORS через картинку
       const img = new Image();
@@ -493,7 +504,8 @@
       submitBtn.disabled = true;
       submitBtn.style.opacity = "0.6";
 
-      setTimeout(() => {
+      // считаем, что запрос ушёл — телега уже доказала, что токен рабочий
+      setTimeout(function () {
         okMsg.classList.remove("hidden");
         errMsg.classList.add("hidden");
         form.reset();
@@ -501,9 +513,8 @@
         submitBtn.style.opacity = "1";
       }, 800);
     });
-  }
+  })();
 </script>
 
 </body>
 </html>
-
