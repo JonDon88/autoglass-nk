@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://autoglass-nk.online/$1",
+      "statusCode": 301
+    }
+  ]
+}
