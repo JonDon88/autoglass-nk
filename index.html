@@ -31,30 +31,31 @@
 <body class="bg-white text-slate-900 font-sans">
 
   <header class="sticky top-0 z-50 bg-white shadow-sm border-b">
-    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="container mx-auto px-2 md:px-4 py-3 flex items-center justify-between">
       
-      <a href="/" class="flex items-center gap-2">
-        <img src="/images/favicon-32x32.png" alt="Logo" class="w-8 h-8 rounded">
-        <span class="text-2xl font-black">Autoglass<span class="text-orange-600">NK</span></span>
+      <a href="/" class="flex items-center gap-1 md:gap-2 flex-none">
+        <img src="/images/favicon-32x32.png" alt="Logo" class="w-6 h-6 md:w-8 md:h-8 rounded">
+        <span class="text-lg md:text-2xl font-black leading-none">Autoglass<span class="text-orange-600">NK</span></span>
       </a>
 
-      <div class="flex items-center gap-4">
-        <a href="tel:+380997625455" class="flex flex-col items-end group">
-          <span class="text-xs text-slate-500 hidden sm:block">09:00 - 19:00</span>
-          <span class="text-xl font-black group-hover:text-orange-600 transition">+380 99 762 5455</span>
+      <div class="flex items-center gap-2 md:gap-4 flex-none">
+        
+        <a href="tel:+380997625455" class="flex flex-col items-end group leading-tight">
+          <span class="text-[10px] md:text-xs text-slate-500 hidden sm:block">09:00 - 19:00</span>
+          <span class="text-sm md:text-xl font-black group-hover:text-orange-600 transition whitespace-nowrap">+380 99 762 5455</span>
         </a>
 
-        <button onclick="switchLanguage()" class="w-10 h-10 bg-slate-100 border rounded-full font-bold hover:bg-slate-200 transition cursor-pointer">
+        <button onclick="switchLanguage()" class="w-8 h-8 md:w-10 md:h-10 bg-slate-100 border rounded-full font-bold text-xs md:text-sm hover:bg-slate-200 transition cursor-pointer flex items-center justify-center flex-none">
           <span id="langLabel">RU</span>
         </button>
       </div>
     </div>
   </header>
 
-  <section class="py-12 bg-slate-50">
-    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+  <section class="py-8 md:py-12 bg-slate-50">
+    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
       <div>
-        <div class="inline-block px-3 py-1 bg-green-100 text-green-700 font-bold rounded-full text-sm mb-4">✅ В наявності</div>
+        <div class="inline-block px-3 py-1 bg-green-100 text-green-700 font-bold rounded-full text-xs md:text-sm mb-4">✅ В наявності</div>
         
         <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6" id="heroTitle">
           Лопнуло скло? <br><span class="text-orange-600">Заміна за 1 годину</span>
@@ -65,10 +66,10 @@
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="tel:+380997625455" class="flex-1 text-center bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg btn-pulse hover:bg-orange-700 transition" id="btnCall">
+          <a href="tel:+380997625455" class="flex-1 text-center bg-orange-600 text-white px-6 py-4 rounded-xl font-bold text-lg shadow-lg btn-pulse hover:bg-orange-700 transition" id="btnCall">
             📞 ЗАТЕЛЕФОНУВАТИ
           </a>
-          <a href="#prices" class="flex-1 text-center bg-white border-2 border-slate-200 text-slate-900 px-8 py-4 rounded-xl font-bold hover:border-slate-900 transition" id="btnPrice">
+          <a href="#prices" class="flex-1 text-center bg-white border-2 border-slate-200 text-slate-900 px-6 py-4 rounded-xl font-bold hover:border-slate-900 transition" id="btnPrice">
             Дізнатись ціну
           </a>
         </div>
@@ -78,10 +79,10 @@
     </div>
   </section>
 
-  <section class="py-16 bg-white">
+  <section class="py-12 md:py-16 bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-black text-center mb-10" id="servicesTitle">Що ми робимо?</h2>
-      <div class="grid sm:grid-cols-3 gap-6">
+      <h2 class="text-3xl font-black text-center mb-8" id="servicesTitle">Що ми робимо?</h2>
+      <div class="grid sm:grid-cols-3 gap-4 md:gap-6">
         <div class="p-6 bg-slate-50 rounded-2xl border hover:border-orange-400 transition">
           <div class="text-4xl mb-4">🚗</div>
           <h3 class="text-xl font-bold mb-2" id="s1Title">Заміна скла</h3>
@@ -101,31 +102,31 @@
     </div>
   </section>
 
-  <section id="prices" class="py-16 bg-slate-50">
+  <section id="prices" class="py-12 md:py-16 bg-slate-50">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-black mb-10" id="pricesTitle">Ціни</h2>
-      <div class="grid md:grid-cols-4 gap-4">
-        <div class="bg-white p-6 rounded-xl shadow-sm">
-          <div class="text-slate-400 text-sm mb-1" id="p1">Робота</div>
-          <div class="text-2xl font-black" id="p1price">від 2200 грн</div>
+      <h2 class="text-3xl font-black mb-8" id="pricesTitle">Ціни</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
+          <div class="text-slate-400 text-xs md:text-sm mb-1" id="p1">Робота</div>
+          <div class="text-xl md:text-2xl font-black" id="p1price">від 2200 грн</div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm">
-          <div class="text-slate-400 text-sm mb-1" id="p2">Скло</div>
-          <div class="text-2xl font-black" id="p2price">від 3500 грн</div>
+        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
+          <div class="text-slate-400 text-xs md:text-sm mb-1" id="p2">Скло</div>
+          <div class="text-xl md:text-2xl font-black" id="p2price">від 3500 грн</div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm">
-          <div class="text-slate-400 text-sm mb-1" id="p3">Тонування</div>
-          <div class="text-2xl font-black" id="p3price">від 3500 грн</div>
+        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
+          <div class="text-slate-400 text-xs md:text-sm mb-1" id="p3">Тонування</div>
+          <div class="text-xl md:text-2xl font-black" id="p3price">від 3500 грн</div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm">
-          <div class="text-slate-400 text-sm mb-1" id="p4">Атермалка</div>
-          <div class="text-2xl font-black" id="p4price">від 1800 грн</div>
+        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
+          <div class="text-slate-400 text-xs md:text-sm mb-1" id="p4">Атермалка</div>
+          <div class="text-xl md:text-2xl font-black" id="p4price">від 1800 грн</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="leadForm" class="py-16 bg-slate-900 text-white">
+  <section id="leadForm" class="py-12 md:py-16 bg-slate-900 text-white">
     <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <h2 class="text-3xl font-black mb-6" id="contactTitle">Запис на сервіс</h2>
@@ -139,7 +140,7 @@
         </div>
       </div>
 
-      <form id="tgForm" class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl space-y-4">
+      <form id="tgForm" class="bg-white text-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl space-y-4">
         <h3 class="text-xl font-bold text-center mb-4" id="formHeader">Залиште заявку</h3>
         <input type="text" name="name" required placeholder="Ім'я" class="w-full bg-slate-100 p-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-500">
         <input type="tel" name="phone" required placeholder="Телефон" class="w-full bg-slate-100 p-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-500">
@@ -154,7 +155,6 @@
   </footer>
 
   <script>
-    // 1. ТЕКСТЫ
     const texts = {
       ua: {
         heroTitle: "Лопнуло скло? <br><span class='text-orange-600'>Заміна за 1 годину</span>",
@@ -200,15 +200,9 @@
 
     let currentLang = "ua";
 
-    // 2. ФУНКЦИЯ ПЕРЕКЛЮЧЕНИЯ
     function switchLanguage() {
-      // Меняем язык
       currentLang = (currentLang === "ua" ? "ru" : "ua");
-      
-      // Меняем кнопку
       document.getElementById("langLabel").textContent = (currentLang === "ua" ? "RU" : "UA");
-
-      // Меняем тексты
       const t = texts[currentLang];
       for (let key in t) {
         const el = document.getElementById(key);
@@ -216,13 +210,11 @@
       }
     }
 
-    // 3. TELEGRAM (Заявки)
     document.getElementById("tgForm").addEventListener("submit", function(e) {
       e.preventDefault();
       const form = e.target;
       const btn = document.getElementById("submitBtn");
       
-      // Данные
       const name = form.name.value;
       const phone = form.phone.value;
       const token = "8267662586:AAH0As64WOO_6_-HSXFKOsSlEr5xxzbqKFw";
@@ -231,7 +223,6 @@
 
       btn.textContent = "...";
       
-      // Отправка
       fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat}&text=${encodeURIComponent(txt)}`)
         .then(() => {
           document.getElementById("okMsg").classList.remove("hidden");
