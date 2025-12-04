@@ -4,339 +4,244 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Autoglass NK — Автоскло Миколаїв | Заміна за 1 годину</title>
-  <meta name="description" content="Термінова заміна автоскла в Миколаєві. В наявності 5000+ моделей. Гарантія 3 роки. Тонування. Телефонуйте!" data-i18n="metaDesc" />
+  <meta name="description" content="Термінова заміна автоскла в Миколаєві. В наявності 5000+ моделей. Гарантія 3 роки. Тонування. Телефонуйте!" id="metaDesc" />
 
   <meta name="author" content="Autoglass NK" />
-  <meta name="keywords" content="автоскло миколаїв, заміна лобового, купити лобове скло, тонування, Autoglass NK" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://autoglass-nk.online/" />
-  
-  <meta property="og:title" content="Autoglass NK — Термінова заміна автоскла" />
-  <meta property="og:description" content="Є в наявності на ваше авто! Заміна за 1 годину. Гарантія." />
-  <meta property="og:image" content="https://autoglass-nk.online/images/hero.webp" />
-  <meta property="og:url" content="https://autoglass-nk.online/" />
-  <meta property="og:type" content="website" />
   <meta name="theme-color" content="#FF4500" />
-
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48x48.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: sans-serif; }
-    .container { max-width: 1200px; }
-
-    /* Пульсация кнопки звонка */
-    .btn-pulse {
-      box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7);
-      animation: btnPulse 1.5s infinite;
-    }
-    @keyframes btnPulse {
-      0%   { transform: scale(1);   box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7); }
-      70%  { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(255, 69, 0, 0); }
-      100% { transform: scale(1);   box-shadow: 0 0 0 0 rgba(255, 69, 0, 0); }
-    }
-
-    /* Градиент для кнопки */
-    .bg-gradient-hot {
-      background: linear-gradient(90deg, #ff4e00 0%, #ec9f05 100%);
+    
+    /* Анимация кнопки звонка */
+    .btn-pulse { animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(255, 69, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0); }
     }
   </style>
 </head>
 
-<body class="bg-white text-slate-900 antialiased font-sans">
+<body class="bg-white text-slate-900 font-sans">
 
-  <header class="w-full bg-white border-b sticky top-0 z-50 shadow-sm">
-    <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
-
-      <a href="/" class="flex items-center gap-2 flex-none hover:opacity-80 transition">
-        <img src="/images/favicon-32x32.png" alt="Logo" class="w-8 h-8 rounded object-cover">
-        <span class="text-xl md:text-2xl font-black tracking-tighter text-slate-900">Autoglass<span class="text-orange-600">NK</span></span>
+  <header class="sticky top-0 z-50 bg-white shadow-sm border-b">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      
+      <a href="/" class="flex items-center gap-2">
+        <img src="/images/favicon-32x32.png" alt="Logo" class="w-8 h-8 rounded">
+        <span class="text-2xl font-black">Autoglass<span class="text-orange-600">NK</span></span>
       </a>
 
-      <div class="flex items-center gap-3 md:gap-6 flex-none">
-        
-        <a href="tel:+380997625455" class="flex flex-col items-end leading-none group">
-          <span class="text-xs text-slate-500 font-medium mb-1 hidden sm:block">Щоденно 09:00 - 19:00</span>
-          <span class="text-lg md:text-xl font-black text-slate-900 group-hover:text-orange-600 transition">
-            +380 99 762 5455
-          </span>
+      <div class="flex items-center gap-4">
+        <a href="tel:+380997625455" class="flex flex-col items-end group">
+          <span class="text-xs text-slate-500 hidden sm:block">09:00 - 19:00</span>
+          <span class="text-xl font-black group-hover:text-orange-600 transition">+380 99 762 5455</span>
         </a>
 
-        <button id="langBtn" type="button" class="w-10 h-10 flex items-center justify-center bg-slate-100 border border-slate-300 rounded-full font-bold text-sm hover:bg-slate-200 transition cursor-pointer">
+        <button onclick="switchLanguage()" class="w-10 h-10 bg-slate-100 border rounded-full font-bold hover:bg-slate-200 transition cursor-pointer">
           <span id="langLabel">RU</span>
         </button>
-
       </div>
     </div>
   </header>
 
-  <section class="py-12 md:py-20 bg-slate-50">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <section class="py-12 bg-slate-50">
+    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-block px-3 py-1 bg-green-100 text-green-700 font-bold rounded-full text-sm mb-4">✅ В наявності</div>
         
-        <div>
-          <div class="inline-block px-4 py-1 bg-green-100 text-green-700 font-bold rounded-full text-sm mb-6 border border-green-200">
-            ✅ Є в наявності на складі
-          </div>
+        <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6" id="heroTitle">
+          Лопнуло скло? <br><span class="text-orange-600">Заміна за 1 годину</span>
+        </h1>
+        
+        <p class="text-lg text-slate-600 mb-8" id="heroText">
+          Не чекайте, поки тріщина піде далі! 5000+ стекол в наявності. Гарантія 3 роки.
+        </p>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6" data-i18n="heroTitle">
-            Лопнуло скло? <br>
-            <span class="text-orange-600">Заміна за 1 годину</span> в Миколаєві
-          </h1>
-
-          <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed" data-i18n="heroText">
-            Не чекайте, поки тріщина піде далі! 5000+ стекол в наявності (оригінал та аналоги). 
-            Даємо гарантію 3 роки на герметичність.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="tel:+380997625455" 
-               class="flex-1 text-center bg-gradient-hot text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-orange-500/50 hover:scale-[1.02] transition btn-pulse"
-               data-i18n="btnCall">
-              📞 ЗАТЕЛЕФОНУВАТИ МАЙСТРУ
-            </a>
-            <a href="#prices" 
-               class="flex-1 text-center bg-white border-2 border-slate-200 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:border-slate-900 transition"
-               data-i18n="btnPrice">
-              Дізнатись ціну
-            </a>
-          </div>
-
-          <div class="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-sm font-semibold text-slate-500">
-             <div class="flex items-center gap-2">
-               <span class="text-orange-500 text-xl">⭐</span> <span data-i18n="trig1">Гарантія 3 роки</span>
-             </div>
-             <div class="flex items-center gap-2">
-               <span class="text-orange-500 text-xl">🚀</span> <span data-i18n="trig2">Установка в день звернення</span>
-             </div>
-             <div class="flex items-center gap-2">
-               <span class="text-orange-500 text-xl">💰</span> <span data-i18n="trig3">Чесні ціни</span>
-             </div>
-          </div>
-        </div>
-
-        <div class="relative">
-          <div class="absolute inset-0 bg-orange-500 rounded-3xl rotate-3 opacity-20 blur-xl"></div>
-          <img src="images/hero.webp" alt="Автоскло" class="relative rounded-3xl shadow-2xl w-full object-cover border-4 border-white" />
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:+380997625455" class="flex-1 text-center bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg btn-pulse hover:bg-orange-700 transition" id="btnCall">
+            📞 ЗАТЕЛЕФОНУВАТИ
+          </a>
+          <a href="#prices" class="flex-1 text-center bg-white border-2 border-slate-200 text-slate-900 px-8 py-4 rounded-xl font-bold hover:border-slate-900 transition" id="btnPrice">
+            Дізнатись ціну
+          </a>
         </div>
       </div>
+      
+      <img src="images/hero.webp" alt="Auto Glass" class="rounded-3xl shadow-xl w-full object-cover border-4 border-white">
     </div>
   </section>
 
-  <section id="services" class="py-16 bg-white">
+  <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-black mb-4" data-i18n="servicesTitle">Що ми робимо?</h2>
-        <p class="text-slate-500" data-i18n="servicesSub">Вирішуємо будь-які проблеми зі склом. Від сколу до повної заміни.</p>
-      </div>
-
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="bg-slate-50 hover:bg-orange-50 rounded-3xl p-8 transition border border-slate-100 hover:border-orange-200">
-          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-6">🚗</div>
-          <h3 class="text-xl font-bold mb-3" data-i18n="s1Title">Заміна скла (Будь-яке авто)</h3>
-          <p class="text-slate-600 mb-4" data-i18n="s1Text">Акуратно зріжемо старе скло, збережемо молдинги, вклеїмо нове. Герметично.</p>
-          <a href="#leadForm" class="text-orange-600 font-bold hover:underline" data-i18n="linkOrder">Записатися →</a>
-        </article>
-
-        <article class="bg-slate-50 hover:bg-orange-50 rounded-3xl p-8 transition border border-slate-100 hover:border-orange-200">
-          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-6">😎</div>
-          <h3 class="text-xl font-bold mb-3" data-i18n="s2Title">Тонування (США)</h3>
-          <p class="text-slate-600 mb-4" data-i18n="s2Text">Оригінальні плівки. Захист від сонця та зайвих очей. Гарантія.</p>
-          <a href="#leadForm" class="text-orange-600 font-bold hover:underline" data-i18n="linkOrder">Записатися →</a>
-        </article>
-
-        <article class="bg-slate-50 hover:bg-orange-50 rounded-3xl p-8 transition border border-slate-100 hover:border-orange-200">
-          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-6">🚚</div>
-          <h3 class="text-xl font-bold mb-3" data-i18n="s3Title">Для вантажівок та автобусів</h3>
-          <p class="text-slate-600 mb-4" data-i18n="s3Text">Величезний склад скла для комерційного транспорту. Не втрачайте час на простій.</p>
-          <a href="#leadForm" class="text-orange-600 font-bold hover:underline" data-i18n="linkOrder">Записатися →</a>
-        </article>
+      <h2 class="text-3xl font-black text-center mb-10" id="servicesTitle">Що ми робимо?</h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="p-6 bg-slate-50 rounded-2xl border hover:border-orange-400 transition">
+          <div class="text-4xl mb-4">🚗</div>
+          <h3 class="text-xl font-bold mb-2" id="s1Title">Заміна скла</h3>
+          <p class="text-slate-600" id="s1Text">Швидка заміна лобового, бокового або заднього скла.</p>
+        </div>
+        <div class="p-6 bg-slate-50 rounded-2xl border hover:border-orange-400 transition">
+          <div class="text-4xl mb-4">😎</div>
+          <h3 class="text-xl font-bold mb-2" id="s2Title">Тонування</h3>
+          <p class="text-slate-600" id="s2Text">Якісні плівки США. Захист від сонця.</p>
+        </div>
+        <div class="p-6 bg-slate-50 rounded-2xl border hover:border-orange-400 transition">
+          <div class="text-4xl mb-4">🚚</div>
+          <h3 class="text-xl font-bold mb-2" id="s3Title">Вантажівки</h3>
+          <p class="text-slate-600" id="s3Text">Скло для автобусів та фур в наявності.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="prices" class="py-16 bg-slate-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-black mb-3 text-center" data-i18n="pricesTitle">Чесні ціни</h2>
-      <p class="text-slate-500 mb-10 text-center max-w-lg mx-auto" data-i18n="pricesNote">Ціна залежить від авто. Телефонуйте, підберемо варіант під ваш бюджет.</p>
-
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        <div class="bg-white rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-sm text-slate-400 mb-2" data-i18n="p1">Робота із заміни</div>
-          <div class="text-2xl font-black text-slate-900" data-i18n="p1price">від 2200 грн</div>
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-black mb-10" id="pricesTitle">Ціни</h2>
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <div class="text-slate-400 text-sm mb-1" id="p1">Робота</div>
+          <div class="text-2xl font-black" id="p1price">від 2200 грн</div>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-sm text-slate-400 mb-2" data-i18n="p2">Лобове скло (Товар)</div>
-          <div class="text-2xl font-black text-slate-900" data-i18n="p2price">від 3500 грн</div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <div class="text-slate-400 text-sm mb-1" id="p2">Скло</div>
+          <div class="text-2xl font-black" id="p2price">від 3500 грн</div>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-sm text-slate-400 mb-2" data-i18n="p3">Тонування (Седан)</div>
-          <div class="text-2xl font-black text-slate-900" data-i18n="p3price">від 3500 грн</div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <div class="text-slate-400 text-sm mb-1" id="p3">Тонування</div>
+          <div class="text-2xl font-black" id="p3price">від 3500 грн</div>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm text-center">
-          <div class="text-sm text-slate-400 mb-2" data-i18n="p4">Атермальна плівка</div>
-          <div class="text-2xl font-black text-slate-900" data-i18n="p4price">від 1800 грн</div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <div class="text-slate-400 text-sm mb-1" id="p4">Атермалка</div>
+          <div class="text-2xl font-black" id="p4price">від 1800 грн</div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="leadForm" class="py-16 bg-slate-900 text-white">
-    <div class="container mx-auto px-4">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-black mb-6" data-i18n="contactTitle">Запишіться на заміну</h2>
-          <p class="text-slate-400 text-lg mb-8" data-i18n="contactSub">Ми знаходимось у зручному місці. Є зона очікування. Залиште номер, ми передзвонимо за 5 хвилин.</p>
-          <div class="flex items-center gap-4 mb-4">
-            <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center">📍</div>
-            <a href="https://www.google.com/maps?q=Миколаїв, вул. Будівельників, 7" class="hover:text-white text-slate-300 underline" data-i18n="address">Миколаїв, вул. Будівельників, 7</a>
-          </div>
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center">📞</div>
-            <div class="font-bold text-xl">+380 99 762 5455</div>
-          </div>
+    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-black mb-6" id="contactTitle">Запис на сервіс</h2>
+        <div class="flex items-center gap-4 mb-4">
+          <span class="text-2xl">📍</span>
+          <a href="https://goo.gl/maps/xyz" class="hover:text-orange-400 underline" id="address">Миколаїв, вул. Будівельників, 7</a>
         </div>
-
-        <div class="bg-white text-slate-900 rounded-3xl p-8 shadow-2xl">
-          <form id="tgForm" class="space-y-4">
-            <h3 class="text-xl font-bold mb-4 text-center" data-i18n="formHeader">Розрахунок вартості + Запис</h3>
-            <input type="text" name="name" required class="w-full bg-slate-50 border rounded-xl px-4 py-3 outline-none focus:ring-1 focus:ring-orange-500" placeholder="Іван" />
-            <input type="tel" name="phone" required class="w-full bg-slate-50 border rounded-xl px-4 py-3 outline-none focus:ring-1 focus:ring-orange-500" placeholder="+380..." />
-            <textarea name="msg" rows="3" class="w-full bg-slate-50 border rounded-xl px-4 py-3 outline-none focus:ring-1 focus:ring-orange-500" placeholder="Авто..."></textarea>
-            
-            <button id="submitBtn" type="submit" class="w-full bg-orange-600 text-white font-bold py-4 rounded-xl hover:bg-orange-700 transition" data-i18n="formSend">
-              ВІДПРАВИТИ ЗАЯВКУ
-            </button>
-            <div id="okMsg" class="hidden p-4 bg-green-100 text-green-700 rounded-xl text-center text-sm font-bold">✅ Заявка прийнята!</div>
-          </form>
+        <div class="flex items-center gap-4">
+          <span class="text-2xl">📞</span>
+          <span class="text-xl font-bold">+380 99 762 5455</span>
         </div>
       </div>
+
+      <form id="tgForm" class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl space-y-4">
+        <h3 class="text-xl font-bold text-center mb-4" id="formHeader">Залиште заявку</h3>
+        <input type="text" name="name" required placeholder="Ім'я" class="w-full bg-slate-100 p-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-500">
+        <input type="tel" name="phone" required placeholder="Телефон" class="w-full bg-slate-100 p-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-500">
+        <button type="submit" id="submitBtn" class="w-full bg-orange-600 text-white font-bold py-3 rounded-lg hover:bg-orange-700 transition">ВІДПРАВИТИ</button>
+        <div id="okMsg" class="hidden text-center text-green-600 font-bold mt-2">✅ Відправлено!</div>
+      </form>
     </div>
   </section>
 
-  <footer class="bg-slate-900 text-slate-600 py-8 border-t border-slate-800 text-center text-sm">
-    <div class="container mx-auto px-4">
-      <p>© <span id="year"></span> Autoglass NK. <span data-i18n="rights">Всі права захищені.</span></p>
-    </div>
+  <footer class="bg-slate-900 text-slate-600 py-6 text-center text-sm border-t border-slate-800">
+    <p>© 2025 Autoglass NK. <span id="rights">Всі права захищені.</span></p>
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      
-      // === 1. СЛОВАРЬ (ЯЗЫКИ) ===
-      const ua = {
-        metaTitle: "Autoglass NK — Автоскло Миколаїв | Заміна за 1 годину",
-        metaDesc: "Термінова заміна автоскла в Миколаєві. В наявності 5000+ моделей. Гарантія 3 роки. Тонування. Телефонуйте!",
-        
-        heroTitle: "Лопнуло скло? <br><span class='text-orange-600'>Заміна за 1 годину</span> в Миколаєві",
-        heroText: "Не чекайте, поки тріщина піде далі! 5000+ стекол в наявності (оригінал та аналоги). Даємо гарантію 3 роки.",
-        btnCall: "📞 ЗАТЕЛЕФОНУВАТИ МАЙСТРУ",
+    // 1. ТЕКСТЫ
+    const texts = {
+      ua: {
+        heroTitle: "Лопнуло скло? <br><span class='text-orange-600'>Заміна за 1 годину</span>",
+        heroText: "Не чекайте, поки тріщина піде далі! 5000+ стекол в наявності. Гарантія 3 роки.",
+        btnCall: "📞 ЗАТЕЛЕФОНУВАТИ",
         btnPrice: "Дізнатись ціну",
-        trig1: "Гарантія 3 роки",
-        trig2: "Сьогодні на сьогодні",
-        trig3: "Чесні ціни",
-
         servicesTitle: "Що ми робимо?",
-        servicesSub: "Вирішуємо будь-які проблеми зі склом. Від сколу до повної заміни.",
-        s1Title: "Заміна скла (Будь-яке авто)",
-        s1Text: "Акуратно зріжемо старе скло, збережемо молдинги, вклеїмо нове. Герметично.",
-        s2Title: "Тонування (США)",
-        s2Text: "Оригінальні плівки. Захист від сонця та зайвих очей. Гарантія.",
-        s3Title: "Для вантажівок та автобусів",
-        s3Text: "Величезний склад скла для комерційного транспорту. Не втрачайте час на простій.",
-        linkOrder: "Записатися →",
-
-        pricesTitle: "Чесні ціни",
-        pricesNote: "Ціна залежить від авто. Телефонуйте, підберемо варіант під ваш бюджет.",
-        p1: "Робота із заміни", p1price: "від 2200 грн",
-        p2: "Лобове скло (Товар)", p2price: "від 3500 грн",
-        p3: "Тонування (Седан)", p3price: "від 3500 грн",
-        p4: "Атермальна плівка", p4price: "від 1800 грн",
-
-        contactTitle: "Запишіться на заміну",
-        contactSub: "Ми знаходимось у зручному місці. Є зона очікування. Залиште номер, ми передзвонимо за 5 хвилин.",
+        s1Title: "Заміна скла", s1Text: "Швидка заміна лобового, бокового або заднього скла.",
+        s2Title: "Тонування", s2Text: "Якісні плівки США. Захист від сонця.",
+        s3Title: "Вантажівки", s3Text: "Скло для автобусів та фур в наявності.",
+        pricesTitle: "Ціни",
+        p1: "Робота", p1price: "від 2200 грн",
+        p2: "Скло", p2price: "від 3500 грн",
+        p3: "Тонування", p3price: "від 3500 грн",
+        p4: "Атермалка", p4price: "від 1800 грн",
+        contactTitle: "Запис на сервіс",
         address: "Миколаїв, вул. Будівельників, 7",
-        
-        formHeader: "Розрахунок вартості + Запис",
-        formSend: "ВІДПРАВИТИ ЗАЯВКУ",
+        formHeader: "Залиште заявку",
+        submitBtn: "ВІДПРАВИТИ",
         rights: "Всі права захищені."
-      };
-
-      const ru = {
-        metaTitle: "Autoglass NK — Автостекла Николаев | Замена за 1 час",
-        metaDesc: "Срочная замена автостекол в Николаеве. В наличии 5000+ моделей. Гарантия 3 года. Тонировка. Звоните!",
-        
-        heroTitle: "Лопнуло стекло? <br><span class='text-orange-600'>Замена за 1 час</span> в Николаеве",
-        heroText: "Не ждите, пока трещина пойдет дальше! 5000+ стекол в наличии (оригинал и аналоги). Даем гарантию 3 года.",
-        btnCall: "📞 ПОЗВОНИТЬ МАСТЕРУ",
+      },
+      ru: {
+        heroTitle: "Лопнуло стекло? <br><span class='text-orange-600'>Замена за 1 час</span>",
+        heroText: "Не ждите, пока трещина пойдет дальше! 5000+ стекол в наличии. Гарантия 3 года.",
+        btnCall: "📞 ПОЗВОНИТЬ",
         btnPrice: "Узнать цену",
-        trig1: "Гарантия 3 года",
-        trig2: "Сегодня на сегодня",
-        trig3: "Честные цены",
-
         servicesTitle: "Что мы делаем?",
-        servicesSub: "Решаем любые проблемы со стеклом. От скола до полной замены.",
-        s1Title: "Замена стекла (Любое авто)",
-        s1Text: "Аккуратно срежем старое стекло, сохраним молдинги, вклеим новое. Герметично.",
-        s2Title: "Тонировка (США)",
-        s2Text: "Оригинальные пленки. Защита от солнца и лишних глаз. Гарантия.",
-        s3Title: "Для грузовиков и автобусов",
-        s3Text: "Огромный склад стекол для коммерческого транспорта. Не теряйте деньги на простое.",
-        linkOrder: "Записаться →",
-
-        pricesTitle: "Честные цены",
-        pricesNote: "Цена зависит от авто. Звоните, подберем вариант под ваш бюджет.",
-        p1: "Работа по замене", p1price: "от 2200 грн",
-        p2: "Лобовое стекло (Товар)", p2price: "от 3500 грн",
-        p3: "Тонировка (Седан)", p3price: "от 3500 грн",
-        p4: "Атермальная пленка", p4price: "от 1800 грн",
-
-        contactTitle: "Запишитесь на замену",
-        contactSub: "Мы находимся в удобном месте. Есть зона ожидания. Оставьте номер, мы перезвоним за 5 минут.",
+        s1Title: "Замена стекла", s1Text: "Быстрая замена лобового, бокового или заднего стекла.",
+        s2Title: "Тонировка", s2Text: "Качественные пленки США. Защита от солнца.",
+        s3Title: "Грузовики", s3Text: "Стекло для автобусов и фур в наличии.",
+        pricesTitle: "Цены",
+        p1: "Работа", p1price: "от 2200 грн",
+        p2: "Стекло", p2price: "от 3500 грн",
+        p3: "Тонировка", p3price: "от 3500 грн",
+        p4: "Атермалка", p4price: "от 1800 грн",
+        contactTitle: "Запись на сервис",
         address: "Николаев, ул. Строителей, 7",
-        
-        formHeader: "Расчет стоимости + Запись",
-        formSend: "ОТПРАВИТЬ ЗАЯВКУ",
+        formHeader: "Оставьте заявку",
+        submitBtn: "ОТПРАВИТЬ",
         rights: "Все права защищены."
-      };
-
-      // === 2. ЛОГИКА СМЕНЫ ЯЗЫКА ===
-      let currentLang = "ua";
-      const langBtn = document.getElementById("langBtn");
-      const langLabel = document.getElementById("langLabel");
-      const dict = { ua, ru };
-
-      function applyLanguage() {
-        const t = dict[currentLang];
-        
-        // Меняем текст везде, где есть атрибут data-i18n
-        document.querySelectorAll("[data-i18n]").forEach(el => {
-          const key = el.getAttribute("data-i18n");
-          if (t[key]) {
-             if (t[key].includes("<")) el.innerHTML = t[key];
-             else el.textContent = t[key];
-          }
-        });
-
-        // Меняем кнопку и мета-теги
-        langLabel.textContent = currentLang === "ua" ? "RU" : "UA";
-        document.title = t.metaTitle;
-        document.querySelector("meta[name='description']").setAttribute("content", t.metaDesc);
-        document.documentElement.lang = currentLang === "ua" ? "uk" : "ru";
       }
+    };
 
-      // Клик по кнопке
-      langBtn.addEventListener("click", function() {
-        currentLang = (currentLang === "ua" ? "ru" : "ua");
-        applyLanguage();
-      });
+    let currentLang = "ua";
 
-      // Запуск при старте
-      applyLanguage();
-      document.getElementById
+    // 2. ФУНКЦИЯ ПЕРЕКЛЮЧЕНИЯ
+    function switchLanguage() {
+      // Меняем язык
+      currentLang = (currentLang === "ua" ? "ru" : "ua");
+      
+      // Меняем кнопку
+      document.getElementById("langLabel").textContent = (currentLang === "ua" ? "RU" : "UA");
+
+      // Меняем тексты
+      const t = texts[currentLang];
+      for (let key in t) {
+        const el = document.getElementById(key);
+        if (el) el.innerHTML = t[key];
+      }
+    }
+
+    // 3. TELEGRAM (Заявки)
+    document.getElementById("tgForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById("submitBtn");
+      
+      // Данные
+      const name = form.name.value;
+      const phone = form.phone.value;
+      const token = "8267662586:AAH0As64WOO_6_-HSXFKOsSlEr5xxzbqKFw";
+      const chat = "5301549432";
+      const txt = `🔥 ЗАЯВКА!\n👤 ${name}\n📞 ${phone}`;
+
+      btn.textContent = "...";
+      
+      // Отправка
+      fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat}&text=${encodeURIComponent(txt)}`)
+        .then(() => {
+          document.getElementById("okMsg").classList.remove("hidden");
+          form.reset();
+        })
+        .finally(() => {
+          btn.textContent = texts[currentLang].submitBtn;
+        });
+    });
+  </script>
+
+</body>
+</html>
