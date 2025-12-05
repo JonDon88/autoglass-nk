@@ -1,238 +1,263 @@
-<!doctype html>
-<html lang="uk">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Autoglass NK — Автоскло Миколаїв | Заміна за 1 годину</title>
-  <meta name="description" content="Термінова заміна автоскла в Миколаєві. В наявності 5000+ моделей. Гарантія 3 роки. Тонування. Телефонуйте!" id="metaDesc" />
-
-  <meta name="author" content="Autoglass NK" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://autoglass-nk.online/" />
-  <meta name="theme-color" content="#FF4500" />
-  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: sans-serif; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    /* Анимация кнопки звонка */
-    .btn-pulse { animation: pulse 2s infinite; }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(255, 69, 0, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0); }
-    }
-  </style>
+    <title>Замена лобового стекла Николаев | Ремонт сколов | Autoglass NK</title>
+    <meta name="description" content="Профессиональная замена автостекла в Николаеве 🚘. Ремонт сколов и трещин, тонировка. ✅ Низкие цены, гарантия качества. 📍 ул. Строителей, 7. ☎️ Звоните: +38 (099) 762-54-55">
+    <meta name="keywords" content="замена лобового стекла николаев, ремонт автостекла николаев, автостекло купить, тонировка авто, autoglass nk, установка автостекла">
+    
+    <style>
+        /* Основные стили */
+        :root {
+            --primary-color: #0056b3;
+            --text-color: #333;
+            --bg-light: #f4f4f4;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+        
+        /* Шапка */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .contact-header {
+            font-weight: bold;
+            text-align: right;
+        }
+        .contact-header a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        /* Главный экран */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #004494;
+        }
+
+        /* Услуги */
+        .services {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            border: 1px solid #eee;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* SEO Текст */
+        .seo-text {
+            background: var(--bg-light);
+            padding: 50px 0;
+        }
+        .seo-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .seo-content h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        /* Карта и Контакты */
+        .contacts-section {
+            padding: 50px 0;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптив */
+        @media (max-width: 600px) {
+            .navbar { flex-direction: column; gap: 10px; text-align: center; }
+            .contact-header { text-align: center; margin-top: 10px; }
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
 </head>
+<body>
 
-<body class="bg-white text-slate-900 font-sans">
-
-  <header class="sticky top-0 z-50 bg-white shadow-sm border-b">
-    <div class="container mx-auto px-2 md:px-4 py-3 flex items-center justify-between">
-      
-      <a href="/" class="flex items-center gap-1 md:gap-2 flex-none">
-        <img src="/images/favicon-32x32.png" alt="Logo" class="w-6 h-6 md:w-8 md:h-8 rounded">
-        <span class="text-lg md:text-2xl font-black leading-none">Autoglass<span class="text-orange-600">NK</span></span>
-      </a>
-
-      <div class="flex items-center gap-2 md:gap-4 flex-none">
-        
-        <a href="tel:+380997625455" class="flex flex-col items-end group leading-tight">
-          <span class="text-[10px] md:text-xs text-slate-500 hidden sm:block">09:00 - 19:00</span>
-          <span class="text-sm md:text-xl font-black group-hover:text-orange-600 transition whitespace-nowrap">+380 99 762 5455</span>
-        </a>
-
-        <button onclick="switchLanguage()" class="w-8 h-8 md:w-10 md:h-10 bg-slate-100 border rounded-full font-bold text-xs md:text-sm hover:bg-slate-200 transition cursor-pointer flex items-center justify-center flex-none">
-          <span id="langLabel">RU</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <section class="py-8 md:py-12 bg-slate-50">
-    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
-      <div>
-        <div class="inline-block px-3 py-1 bg-green-100 text-green-700 font-bold rounded-full text-xs md:text-sm mb-4">✅ В наявності</div>
-        
-        <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6" id="heroTitle">
-          Лопнуло скло? <br><span class="text-orange-600">Заміна за 1 годину</span>
-        </h1>
-        
-        <p class="text-lg text-slate-600 mb-8" id="heroText">
-          Не чекайте, поки тріщина піде далі! 5000+ стекол в наявності. Гарантія 3 роки.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="tel:+380997625455" class="flex-1 text-center bg-orange-600 text-white px-6 py-4 rounded-xl font-bold text-lg shadow-lg btn-pulse hover:bg-orange-700 transition" id="btnCall">
-            📞 ЗАТЕЛЕФОНУВАТИ
-          </a>
-          <a href="#prices" class="flex-1 text-center bg-white border-2 border-slate-200 text-slate-900 px-6 py-4 rounded-xl font-bold hover:border-slate-900 transition" id="btnPrice">
-            Дізнатись ціну
-          </a>
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">AUTOGLASS NK</a>
+            <div class="contact-header">
+                📍 Николаев, ул. Строителей, 7 <br>
+                📞 <a href="tel:+380997625455"><b>+38 (099) 762-54-55</b></a>
+            </div>
         </div>
-      </div>
-      
-      <img src="images/hero.webp" alt="Auto Glass" class="rounded-3xl shadow-xl w-full object-cover border-4 border-white">
-    </div>
-  </section>
+    </header>
 
-  <section class="py-12 md:py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-black text-center mb-8" id="servicesTitle">Що ми робимо?</h2>
-      <div class="grid sm:grid-cols-3 gap-4 md:gap-6">
-        <div class="p-6 bg-slate-50 rounded-2xl border hover:border-orange-400 transition">
-          <div class="text-4xl mb-4">🚗</div>
-          <h3 class="text-xl font-bold mb-2" id="s1Title">Заміна скла</h3>
-          <p class="text-slate-600" id="s1Text">Швидка заміна лобового, бокового або заднього скла.</p>
+    <section class="hero">
+        <div class="container">
+            <h1>Замена и ремонт автостекол в Николаеве</h1>
+            <p>Вернем вашему авто идеальный вид за 1 день. Гарантия на работу.</p>
+            <a href="tel:+380997625455" class="btn">Записаться на ремонт</a>
         </div>
-        <div class="p-6 bg-slate-50 rounded-2xl border hover:border-orange-400 transition">
-          <div class="text-4xl mb-4">😎</div>
-          <h3 class="text-xl font-bold mb-2" id="s2Title">Тонування</h3>
-          <p class="text-slate-600" id="s2Text">Якісні плівки США. Захист від сонця.</p>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🚗 Замена автостекла</h3>
+                    <p>Профессиональная установка лобового, заднего и боковых стекол. Используем качественный герметик. Гарантия герметичности.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔧 Ремонт сколов и трещин</h3>
+                    <p>Не спешите менять! Если скол свежий, мы можем его «залечить» полимером, и он станет почти незаметным.</p>
+                </div>
+                <div class="service-card">
+                    <h3>☀️ Тонировка авто</h3>
+                    <p>Качественная тонировка американскими пленками. Защита от жары и посторонних взглядов.</p>
+                </div>
+            </div>
         </div>
-        <div class="p-6 bg-slate-50 rounded-2xl border hover:border-orange-400 transition">
-          <div class="text-4xl mb-4">🚚</div>
-          <h3 class="text-xl font-bold mb-2" id="s3Title">Вантажівки</h3>
-          <p class="text-slate-600" id="s3Text">Скло для автобусів та фур в наявності.</p>
+    </section>
+
+    <section class="seo-text">
+        <div class="container">
+            <div class="seo-content">
+                <h2>Почему стоит выбрать Autoglass NK?</h2>
+                <p>Если вы ищете <strong>ремонт автостекла в Николаеве</strong> или вам срочно нужна <strong>замена лобового стекла</strong>, вы попали по адресу. Сервис Autoglass NK предлагает полный спектр услуг по обслуживанию стекол вашего автомобиля.</p>
+                <p>Мы понимаем, как важно качество. Плохо вклеенное стекло может протекать или треснуть. Наши мастера имеют многолетний опыт установки стекол на любые марки авто. Мы используем только проверенные материалы.</p>
+                <ul>
+                    <li>✅ Быстрый подбор стекла (в наличии и под заказ).</li>
+                    <li>✅ Ремонт трещин любой сложности.</li>
+                    <li>✅ Доступные цены на автостекла в Николаеве.</li>
+                </ul>
+                <p>Нужна консультация? Звоните нам прямо сейчас!</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="prices" class="py-12 md:py-16 bg-slate-50">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-black mb-8" id="pricesTitle">Ціни</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
-          <div class="text-slate-400 text-xs md:text-sm mb-1" id="p1">Робота</div>
-          <div class="text-xl md:text-2xl font-black" id="p1price">від 2200 грн</div>
+    <section class="contacts-section">
+        <div class="container">
+            <h2 class="section-title">Как нас найти</h2>
+            <p style="text-align: center; font-size: 1.2rem;">
+                Мы находимся: <strong>г. Николаев, ул. Строителей, 7</strong><br>
+                Время работы: Пн-Сб с 9:00 до 18:00
+            </p>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="tel:+380997625455" class="btn">Позвонить: +38 (099) 762-54-55</a>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Mykolaiv,%20Budivelnykiv%20St,%207&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
+            </div>
         </div>
-        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
-          <div class="text-slate-400 text-xs md:text-sm mb-1" id="p2">Скло</div>
-          <div class="text-xl md:text-2xl font-black" id="p2price">від 3500 грн</div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Autoglass NK. Все права защищены.</p>
         </div>
-        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
-          <div class="text-slate-400 text-xs md:text-sm mb-1" id="p3">Тонування</div>
-          <div class="text-xl md:text-2xl font-black" id="p3price">від 3500 грн</div>
-        </div>
-        <div class="bg-white p-4 md:p-6 rounded-xl shadow-sm">
-          <div class="text-slate-400 text-xs md:text-sm mb-1" id="p4">Атермалка</div>
-          <div class="text-xl md:text-2xl font-black" id="p4price">від 1800 грн</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="leadForm" class="py-12 md:py-16 bg-slate-900 text-white">
-    <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="text-3xl font-black mb-6" id="contactTitle">Запис на сервіс</h2>
-        <div class="flex items-center gap-4 mb-4">
-          <span class="text-2xl">📍</span>
-          <a href="https://goo.gl/maps/xyz" class="hover:text-orange-400 underline" id="address">Миколаїв, вул. Будівельників, 7</a>
-        </div>
-        <div class="flex items-center gap-4">
-          <span class="text-2xl">📞</span>
-          <span class="text-xl font-bold">+380 99 762 5455</span>
-        </div>
-      </div>
-
-      <form id="tgForm" class="bg-white text-slate-900 p-6 md:p-8 rounded-3xl shadow-2xl space-y-4">
-        <h3 class="text-xl font-bold text-center mb-4" id="formHeader">Залиште заявку</h3>
-        <input type="text" name="name" required placeholder="Ім'я" class="w-full bg-slate-100 p-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-500">
-        <input type="tel" name="phone" required placeholder="Телефон" class="w-full bg-slate-100 p-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-500">
-        <button type="submit" id="submitBtn" class="w-full bg-orange-600 text-white font-bold py-3 rounded-lg hover:bg-orange-700 transition">ВІДПРАВИТИ</button>
-        <div id="okMsg" class="hidden text-center text-green-600 font-bold mt-2">✅ Відправлено!</div>
-      </form>
-    </div>
-  </section>
-
-  <footer class="bg-slate-900 text-slate-600 py-6 text-center text-sm border-t border-slate-800">
-    <p>© 2025 Autoglass NK. <span id="rights">Всі права захищені.</span></p>
-  </footer>
-
-  <script>
-    const texts = {
-      ua: {
-        heroTitle: "Лопнуло скло? <br><span class='text-orange-600'>Заміна за 1 годину</span>",
-        heroText: "Не чекайте, поки тріщина піде далі! 5000+ стекол в наявності. Гарантія 3 роки.",
-        btnCall: "📞 ЗАТЕЛЕФОНУВАТИ",
-        btnPrice: "Дізнатись ціну",
-        servicesTitle: "Що ми робимо?",
-        s1Title: "Заміна скла", s1Text: "Швидка заміна лобового, бокового або заднього скла.",
-        s2Title: "Тонування", s2Text: "Якісні плівки США. Захист від сонця.",
-        s3Title: "Вантажівки", s3Text: "Скло для автобусів та фур в наявності.",
-        pricesTitle: "Ціни",
-        p1: "Робота", p1price: "від 2200 грн",
-        p2: "Скло", p2price: "від 3500 грн",
-        p3: "Тонування", p3price: "від 3500 грн",
-        p4: "Атермалка", p4price: "від 1800 грн",
-        contactTitle: "Запис на сервіс",
-        address: "Миколаїв, вул. Будівельників, 7",
-        formHeader: "Залиште заявку",
-        submitBtn: "ВІДПРАВИТИ",
-        rights: "Всі права захищені."
-      },
-      ru: {
-        heroTitle: "Лопнуло стекло? <br><span class='text-orange-600'>Замена за 1 час</span>",
-        heroText: "Не ждите, пока трещина пойдет дальше! 5000+ стекол в наличии. Гарантия 3 года.",
-        btnCall: "📞 ПОЗВОНИТЬ",
-        btnPrice: "Узнать цену",
-        servicesTitle: "Что мы делаем?",
-        s1Title: "Замена стекла", s1Text: "Быстрая замена лобового, бокового или заднего стекла.",
-        s2Title: "Тонировка", s2Text: "Качественные пленки США. Защита от солнца.",
-        s3Title: "Грузовики", s3Text: "Стекло для автобусов и фур в наличии.",
-        pricesTitle: "Цены",
-        p1: "Работа", p1price: "от 2200 грн",
-        p2: "Стекло", p2price: "от 3500 грн",
-        p3: "Тонировка", p3price: "от 3500 грн",
-        p4: "Атермалка", p4price: "от 1800 грн",
-        contactTitle: "Запись на сервис",
-        address: "Николаев, ул. Строителей, 7",
-        formHeader: "Оставьте заявку",
-        submitBtn: "ОТПРАВИТЬ",
-        rights: "Все права защищены."
-      }
-    };
-
-    let currentLang = "ua";
-
-    function switchLanguage() {
-      currentLang = (currentLang === "ua" ? "ru" : "ua");
-      document.getElementById("langLabel").textContent = (currentLang === "ua" ? "RU" : "UA");
-      const t = texts[currentLang];
-      for (let key in t) {
-        const el = document.getElementById(key);
-        if (el) el.innerHTML = t[key];
-      }
-    }
-
-    document.getElementById("tgForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const btn = document.getElementById("submitBtn");
-      
-      const name = form.name.value;
-      const phone = form.phone.value;
-      const token = "8267662586:AAH0As64WOO_6_-HSXFKOsSlEr5xxzbqKFw";
-      const chat = "5301549432";
-      const txt = `🔥 ЗАЯВКА!\n👤 ${name}\n📞 ${phone}`;
-
-      btn.textContent = "...";
-      
-      fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat}&text=${encodeURIComponent(txt)}`)
-        .then(() => {
-          document.getElementById("okMsg").classList.remove("hidden");
-          form.reset();
-        })
-        .finally(() => {
-          btn.textContent = texts[currentLang].submitBtn;
-        });
-    });
-  </script>
+    </footer>
 
 </body>
 </html>
