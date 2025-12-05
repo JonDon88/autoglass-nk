@@ -4,260 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Замена лобового стекла Николаев | Ремонт сколов | Autoglass NK</title>
-    <meta name="description" content="Профессиональная замена автостекла в Николаеве 🚘. Ремонт сколов и трещин, тонировка. ✅ Низкие цены, гарантия качества. 📍 ул. Строителей, 7. ☎️ Звоните: +38 (099) 762-54-55">
-    <meta name="keywords" content="замена лобового стекла николаев, ремонт автостекла николаев, автостекло купить, тонировка авто, autoglass nk, установка автостекла">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+
+    <title>Замена лобового стекла Николаев | Autoglass NK</title>
+    <meta name="description" content="Профессиональная замена автостекла в Николаеве 🚘. Ремонт сколов, тонировка. Низкие цены. 📍 ул. Строителей, 7. ☎️ +38 (099) 762-54-55">
     
     <style>
-        /* Основные стили */
-        :root {
-            --primary-color: #0056b3;
-            --text-color: #333;
-            --bg-light: #f4f4f4;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-color);
-        }
+        /* Стили */
+        :root { --primary-color: #0056b3; --text-color: #333; --bg-light: #f4f4f4; }
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: var(--text-color); }
+        header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 0 15px; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        .contact-header { font-weight: bold; text-align: right; }
+        .contact-header a { color: #333; text-decoration: none; }
         
-        /* Шапка */
-        header {
-            background: #fff;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        /* Главный блок с вашим фото */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image_2.png'); /* Ваше фото здесь */
+            background-size: cover; 
+            background-position: center; 
+            color: #fff; 
+            padding: 100px 0; 
+            text-align: center; 
         }
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        .contact-header {
-            font-weight: bold;
-            text-align: right;
-        }
-        .contact-header a {
-            color: #333;
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-
-        /* Главный экран */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 80px 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #004494;
-        }
-
-        /* Услуги */
-        .services {
-            padding: 60px 0;
-            background: #fff;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-            font-size: 2rem;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .service-card {
-            border: 1px solid #eee;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        .service-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        /* SEO Текст */
-        .seo-text {
-            background: var(--bg-light);
-            padding: 50px 0;
-        }
-        .seo-content {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .seo-content h2 {
-            color: #333;
-            margin-top: 0;
-        }
-
-        /* Карта и Контакты */
-        .contacts-section {
-            padding: 50px 0;
-        }
-        .map-container {
-            width: 100%;
-            height: 400px;
-            margin-top: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; }
         
-        /* Footer */
-        footer {
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
-        }
-
-        /* Адаптив */
-        @media (max-width: 600px) {
-            .navbar { flex-direction: column; gap: 10px; text-align: center; }
-            .contact-header { text-align: center; margin-top: 10px; }
-            .hero h1 { font-size: 1.8rem; }
-        }
+        .btn { display: inline-block; background: var(--primary-color); color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
+        .services { padding: 60px 0; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .service-card { border: 1px solid #eee; padding: 25px; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .service-card h3 { color: var(--primary-color); }
+        .contacts-section { padding: 50px 0; background: #fafafa; }
+        .map-container { width: 100%; height: 400px; margin-top: 20px; }
+        iframe { width: 100%; height: 100%; border: 0; }
+        footer { background: #222; color: #fff; text-align: center; padding: 20px 0; }
+        @media (max-width: 600px) { .navbar { flex-direction: column; text-align: center; } .contact-header { text-align: center; } }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container navbar">
-            <a href="#" class="logo">AUTOGLASS NK</a>
+            <a href="/" class="logo">AUTOGLASS NK</a>
             <div class="contact-header">
                 📍 Николаев, ул. Строителей, 7 <br>
-                📞 <a href="tel:+380997625455"><b>+38 (099) 762-54-55</b></a>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Замена и ремонт автостекол в Николаеве</h1>
-            <p>Вернем вашему авто идеальный вид за 1 день. Гарантия на работу.</p>
-            <a href="tel:+380997625455" class="btn">Записаться на ремонт</a>
-        </div>
-    </section>
-
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Наши услуги</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>🚗 Замена автостекла</h3>
-                    <p>Профессиональная установка лобового, заднего и боковых стекол. Используем качественный герметик. Гарантия герметичности.</p>
-                </div>
-                <div class="service-card">
-                    <h3>🔧 Ремонт сколов и трещин</h3>
-                    <p>Не спешите менять! Если скол свежий, мы можем его «залечить» полимером, и он станет почти незаметным.</p>
-                </div>
-                <div class="service-card">
-                    <h3>☀️ Тонировка авто</h3>
-                    <p>Качественная тонировка американскими пленками. Защита от жары и посторонних взглядов.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="seo-text">
-        <div class="container">
-            <div class="seo-content">
-                <h2>Почему стоит выбрать Autoglass NK?</h2>
-                <p>Если вы ищете <strong>ремонт автостекла в Николаеве</strong> или вам срочно нужна <strong>замена лобового стекла</strong>, вы попали по адресу. Сервис Autoglass NK предлагает полный спектр услуг по обслуживанию стекол вашего автомобиля.</p>
-                <p>Мы понимаем, как важно качество. Плохо вклеенное стекло может протекать или треснуть. Наши мастера имеют многолетний опыт установки стекол на любые марки авто. Мы используем только проверенные материалы.</p>
-                <ul>
-                    <li>✅ Быстрый подбор стекла (в наличии и под заказ).</li>
-                    <li>✅ Ремонт трещин любой сложности.</li>
-                    <li>✅ Доступные цены на автостекла в Николаеве.</li>
-                </ul>
-                <p>Нужна консультация? Звоните нам прямо сейчас!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contacts-section">
-        <div class="container">
-            <h2 class="section-title">Как нас найти</h2>
-            <p style="text-align: center; font-size: 1.2rem;">
-                Мы находимся: <strong>г. Николаев, ул. Строителей, 7</strong><br>
-                Время работы: Пн-Сб с 9:00 до 18:00
-            </p>
-            
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="tel:+380997625455" class="btn">Позвонить: +38 (099) 762-54-55</a>
-            </div>
-
-            <div class="map-container">
-                <iframe src="https://maps.google.com/maps?q=Mykolaiv,%20Budivelnykiv%20St,%207&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Autoglass NK. Все права защищены.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+                📞 <a href="tel:+380997625455">+38 (099) 762-54-55</a>
