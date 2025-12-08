@@ -1,198 +1,246 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
+<html lang="ru" class="scroll-smooth"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autoglass NK — Автоскло Миколаїв</title>
-    <link rel="icon" href="logo.png" type="image/png">
+    <title>Autoglass NK - Автостекла в Николаеве</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <style>
-        /* --- ОСНОВНІ СТИЛІ (НОВИЙ ДИЗАЙН) --- */
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            color: #fff;
-            background-color: #1a1a1a;
-            /* Фіксований фон з майстром */
-            background-image: url('bg.webp');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            min-height: 100vh;
-        }
-
-        /* Затемнення фону, щоб текст читався */
-        .page-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.85); /* 85% темряви */
-            z-index: -1;
-        }
-
-        /* Контейнер для центрування контенту */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Хедер з логотипом */
-        header {
-            text-align: center;
-            padding: 40px 0 20px;
-            border-bottom: 1px solid rgba(255, 170, 0, 0.3);
-        }
-        .logo-img {
-            width: 150px;
-            margin-bottom: 10px;
-        }
-        h1 {
-            color: #ffaa00; /* Наш фірмовий помаранчевий */
-            text-transform: uppercase;
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-        }
-        .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.8;
-            margin-top: 5px;
-        }
-
-        /* Секції контенту */
-        section {
-            background: rgba(255, 255, 255, 0.05); /* Легка підкладка */
-            border-radius: 10px;
-            padding: 25px;
-            margin: 30px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        h2 {
-            color: #ffaa00;
-            border-left: 4px solid #ffaa00;
-            padding-left: 15px;
-        }
-
-        /* Послуги (сітка) */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .service-card {
-            background: rgba(0,0,0,0.3);
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-        .service-card h3 { color: #fff; margin-top: 0; }
-
-        /* Ціни */
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px dashed rgba(255,255,255,0.2);
-        }
-        .price { color: #ffaa00; font-weight: bold; }
-
-        /* Кнопка та контакти */
-        .btn {
-            display: inline-block;
-            background: #ffaa00;
-            color: #000;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-top: 20px;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-        .btn:hover { background: #ffcc00; }
-        
-        .contacts-info { font-size: 1.2rem; line-height: 1.6; }
-        .contacts-info strong { color: #ffaa00; }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            opacity: 0.6;
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom subtle grid background for linear/vercel vibe */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         }
     </style>
 </head>
-<body>
+<body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-[#ffaa00] selection:text-black">
 
-    <div class="page-overlay"></div>
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-white text-lg font-semibold tracking-tighter flex items-center gap-2 group">
+                <span class="bg-[#ffaa00] text-black w-8 h-8 flex items-center justify-center rounded-lg">
+                    <span class="iconify" data-icon="lucide:layers" data-width="18" data-height="18" style="stroke-width: 1.5;"></span>
+                </span>
+                AUTOGLASS NK
+            </a>
+            
+            <!-- Contact CTA (Mobile/Desktop) -->
+            <a href="tel:+380997625455" class="flex items-center gap-2 text-sm font-medium text-white hover:text-[#ffaa00] transition-colors duration-300">
+                <span class="iconify" data-icon="lucide:phone" style="stroke-width: 1.5;"></span>
+                <span class="hidden sm:inline">+38 (099) 762-54-55</span>
+            </a>
+        </div>
+    </header>
 
-    <div class="container">
-        
-        <header>
-            <img src="logo.png" alt="Logo" class="logo-img">
-            <h1>Autoglass NK</h1>
-            <p class="subtitle">Професійне автоскло у Миколаєві: продаж, заміна, тонування</p>
-            <a href="tel:+380997625455" class="btn">📞 Зателефонувати майстру</a>
-        </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+            <!-- Background Effects -->
+            <div class="absolute inset-0 bg-grid pointer-events-none"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#ffaa00] opacity-10 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <section>
-            <h2>🚘 Про нас</h2>
-            <p>Підбираємо та встановлюємо автоскло для всіх типів автомобілів — легкових, вантажних та спецтехніки. Працюємо з оригінальними матеріалами та високоякісними аналогами (Pilkington, Sekurit, AGC та ін.).</p>
-            <p>✔️ <strong>Гарантія</strong> на роботу та герметичність.<br>
-            ✔️ <strong>Швидкість:</strong> можлива заміна у день звернення.<br>
-            ✔️ <strong>Якість:</strong> використовуємо професійні клеї та праймери.</p>
-        </section>
-
-        <section>
-            <h2>🛠 Наші послуги</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Заміна скла</h3>
-                    <p>Лобові, бокові, задні. Акуратний демонтаж, збереження молдингів (де можливо), ідеальна герметичність.</p>
+            <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-[#ffaa00] mb-8">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffaa00] opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-[#ffaa00]"></span>
+                    </span>
+                    Работаем в Николаеве
                 </div>
-                <div class="service-card">
-                    <h3>Ремонт сколів</h3>
-                    <p>Зупинимо тріщину, поки вона не розрослася. Економія до 80% вартості нового скла.</p>
+                
+                <h1 class="text-5xl md:text-7xl font-semibold text-white tracking-tight mb-6 leading-[1.1]">
+                    Профессиональный сервис <span class="text-[#ffaa00]">автостекол</span>
+                </h1>
+                
+                <p class="text-lg text-neutral-400 mb-10 max-w-xl mx-auto font-light leading-relaxed">
+                    Качественная замена, ремонт сколов и тонировка любой сложности. Надежность, прозрачность и гарантия на выполненные работы.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="tel:+380997625455" class="w-full sm:w-auto px-8 py-3.5 bg-[#ffaa00] hover:bg-[#e69900] text-black font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group">
+                        <span class="iconify group-hover:rotate-12 transition-transform duration-300" data-icon="lucide:phone-call" style="stroke-width: 1.5;"></span>
+                        Позвонить мастеру
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto px-8 py-3.5 bg-white/5 hover:bg-white/10 text-white font-medium rounded-lg border border-white/10 transition-all duration-300 flex items-center justify-center">
+                        Наши услуги
+                    </a>
                 </div>
-                <div class="service-card">
-                    <h3>Тонування</h3>
-                    <p>Атермальні та сонцезахисні плівки. Захист салону від вигорання та комфорт для водія.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 border-t border-white/5 bg-neutral-950">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-16">
+                    <h2 class="text-3xl font-semibold text-white tracking-tight mb-4">Наши услуги</h2>
+                    <p class="text-neutral-400 max-w-lg">Полный спектр работ по обслуживанию остекления вашего автомобиля с использованием современного оборудования.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Service 1 -->
+                    <div class="group p-6 rounded-xl bg-neutral-900/50 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300 hover:bg-neutral-900">
+                        <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-6 group-hover:text-[#ffaa00] group-hover:bg-[#ffaa00]/10 transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:car-front" data-width="24" data-height="24" style="stroke-width: 1.5;"></span>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2 tracking-tight">Замена лобового</h3>
+                        <p class="text-sm text-neutral-500 leading-relaxed">Профессиональная установка новых автостекол с соблюдением всех технологических норм.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="group p-6 rounded-xl bg-neutral-900/50 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300 hover:bg-neutral-900">
+                        <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-6 group-hover:text-[#ffaa00] group-hover:bg-[#ffaa00]/10 transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:hammer" data-width="24" data-height="24" style="stroke-width: 1.5;"></span>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2 tracking-tight">Ремонт сколов</h3>
+                        <p class="text-sm text-neutral-500 leading-relaxed">Восстановление целостности стекла, остановка трещин и устранение визуальных дефектов.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="group p-6 rounded-xl bg-neutral-900/50 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300 hover:bg-neutral-900">
+                        <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-6 group-hover:text-[#ffaa00] group-hover:bg-[#ffaa00]/10 transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:aperture" data-width="24" data-height="24" style="stroke-width: 1.5;"></span>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2 tracking-tight">Тонировка стекол</h3>
+                        <p class="text-sm text-neutral-500 leading-relaxed">Качественная тонировочная пленка для защиты от солнца и посторонних взглядов.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="group p-6 rounded-xl bg-neutral-900/50 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300 hover:bg-neutral-900">
+                        <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-6 group-hover:text-[#ffaa00] group-hover:bg-[#ffaa00]/10 transition-colors duration-300">
+                            <span class="iconify" data-icon="lucide:shopping-bag" data-width="24" data-height="24" style="stroke-width: 1.5;"></span>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2 tracking-tight">Продажа стекла</h3>
+                        <p class="text-sm text-neutral-500 leading-relaxed">Широкий ассортимент автостекол в наличии и под заказ для любых марок автомобилей.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>💰 Орієнтовні ціни</h2>
-            <div class="price-row">
-                <span>Заміна лобового скла (робота)</span>
-                <span class="price">від 2200 грн</span>
-            </div>
-            <div class="price-row">
-                <span>Комплект лобового скла (бюджет)</span>
-                <span class="price">від 3500 грн</span>
-            </div>
-            <div class="price-row">
-                <span>Тонування (седан, все авто)</span>
-                <span class="price">від 3500 грн</span>
-            </div>
-            <div class="price-row">
-                <span>Ремонт сколу</span>
-                <span class="price">від 400 грн</span>
+        <!-- Process / Features (Visual Break) -->
+        <section class="py-24 border-t border-white/5 relative overflow-hidden">
+             <!-- Orange accent gradient on right -->
+            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#ffaa00] opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-semibold text-white tracking-tight mb-6">Почему выбирают Autoglass NK?</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 rounded-full bg-[#ffaa00]/10 flex items-center justify-center shrink-0">
+                                <span class="iconify text-[#ffaa00]" data-icon="lucide:check" data-width="14"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Опытные мастера</h4>
+                                <p class="text-sm text-neutral-500">Более 10 лет опыта работы с автомобилями премиум и эконом класса.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 rounded-full bg-[#ffaa00]/10 flex items-center justify-center shrink-0">
+                                <span class="iconify text-[#ffaa00]" data-icon="lucide:check" data-width="14"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Материалы высокого качества</h4>
+                                <p class="text-sm text-neutral-500">Используем только сертифицированные стекла и клеевые составы.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 rounded-full bg-[#ffaa00]/10 flex items-center justify-center shrink-0">
+                                <span class="iconify text-[#ffaa00]" data-icon="lucide:check" data-width="14"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Гарантия на работу</h4>
+                                <p class="text-sm text-neutral-500">Предоставляем гарантию на герметичность и качество установки.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <!-- Abstract representation of glass layers -->
+                    <div class="relative z-10 bg-neutral-900 border border-white/10 rounded-2xl p-8 aspect-square flex flex-col justify-between">
+                        <div class="flex justify-between items-start">
+                            <span class="iconify text-neutral-600" data-icon="lucide:shield-check" data-width="48" data-height="48" style="stroke-width: 1;"></span>
+                            <div class="px-3 py-1 bg-[#ffaa00]/10 text-[#ffaa00] text-xs font-medium rounded-full border border-[#ffaa00]/20">Гарантия качества</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-semibold text-white tracking-tight mb-2">100%</div>
+                            <div class="text-neutral-500">Довольных клиентов в Николаеве</div>
+                        </div>
+                    </div>
+                    <!-- Decorative back layer -->
+                    <div class="absolute -top-4 -right-4 w-full h-full border border-white/5 rounded-2xl -z-10 bg-neutral-900/50"></div>
+                </div>
             </div>
         </section>
 
-        <section class="contacts-info">
-            <h2>📍 Контакти</h2>
-            <p><strong>Адреса:</strong> м. Миколаїв, вул. Будівельників, 7</p>
-            <p><strong>Телефон:</strong> <a href="tel:+380997625455" style="color:#fff;">+38 (099) 762-54-55</a></p>
-            <p><strong>Графік:</strong> Пн-Сб 09:00 – 18:00</p>
+        <!-- Contact Section -->
+        <section class="py-24 border-t border-white/5 bg-neutral-950">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="text-3xl font-semibold text-white tracking-tight mb-8">Контакты</h2>
+                        
+                        <div class="space-y-8">
+                            <div class="group">
+                                <h3 class="text-sm text-neutral-500 font-medium mb-2 uppercase tracking-wider">Адрес сервиса</h3>
+                                <div class="flex items-start gap-3">
+                                    <span class="iconify text-[#ffaa00] mt-1" data-icon="lucide:map-pin" data-width="20" style="stroke-width: 1.5;"></span>
+                                    <p class="text-xl text-white font-medium">г. Николаев, ул. Строителей, 7</p>
+                                </div>
+                            </div>
+
+                            <div class="group">
+                                <h3 class="text-sm text-neutral-500 font-medium mb-2 uppercase tracking-wider">Телефон</h3>
+                                <a href="tel:+380997625455" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                                    <span class="iconify text-[#ffaa00] mt-1" data-icon="lucide:phone" data-width="20" style="stroke-width: 1.5;"></span>
+                                    <p class="text-xl text-white font-medium">+38 (099) 762-54-55</p>
+                                </a>
+                            </div>
+
+                            <div class="pt-6">
+                                <a href="tel:+380997625455" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white text-black font-medium rounded-lg hover:bg-neutral-200 transition-colors duration-300">
+                                    Записаться на сервис
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Map Placeholder (Styled) -->
+                    <div class="h-[400px] w-full bg-neutral-900 rounded-2xl border border-white/10 relative overflow-hidden flex items-center justify-center group">
+                        <!-- Abstract Map Graphic -->
+                        <div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMSI+PHBhdGggZD0iTTAgMjBoNDBNMjAgMHY0MCIvPjwvc3ZnPg==')]"></div>
+                        
+                        <div class="relative z-10 text-center">
+                            <div class="w-16 h-16 bg-[#ffaa00] text-black rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_30px_rgba(255,170,0,0.4)] animate-pulse">
+                                <span class="iconify" data-icon="lucide:map-pin" data-width="32" style="stroke-width: 1.5;"></span>
+                            </div>
+                            <p class="text-white font-medium">Мы находимся здесь</p>
+                            <p class="text-sm text-neutral-500">ул. Строителей, 7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+    </main>
 
-        <footer>
-            © 2024 Autoglass NK. Всі права захищені.
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/5 bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2 text-white font-semibold tracking-tighter">
+                <span class="text-[#ffaa00]">
+                    <span class="iconify" data-icon="lucide:layers" data-width="16" style="stroke-width: 1.5;"></span>
+                </span>
+                AUTOGLASS NK
+            </div>
+            <p class="text-sm text-neutral-600">© 2023 Autoglass NK. Все права защищены.</p>
+        </div>
+    </footer>
 
-</body>
-</html>
+
+</body></html>
