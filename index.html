@@ -1,4 +1,5 @@
-<html lang="ru" class="scroll-smooth"><head>
+<html lang="ru" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autoglass NK - Сеть автостекол: Николаев, Одесса, Львов</title>
@@ -19,28 +20,28 @@
 <body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-[#ffaa00] selection:text-black">
 
     <header class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-white text-lg font-semibold tracking-tighter flex items-center gap-2 group">
-                <span class="bg-[#ffaa00] text-black w-8 h-8 flex items-center justify-center rounded-lg">
-                    <span class="iconify" data-icon="lucide:layers" data-width="18" data-height="18" style="stroke-width: 1.5;"></span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-white text-base sm:text-lg font-semibold tracking-tighter flex items-center gap-2 group">
+                <span class="bg-[#ffaa00] text-black w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-lg">
+                    <span class="iconify" data-icon="lucide:layers" data-width="18" style="stroke-width: 1.5;"></span>
                 </span>
                 AUTOGLASS NK
             </a>
             
-            <a href="tel:+380997625455" class="flex items-center gap-2 text-sm font-medium text-white hover:text-[#ffaa00] transition-colors duration-300">
-                <span class="iconify" data-icon="lucide:phone" style="stroke-width: 1.5;"></span>
-                <span class="hidden sm:inline">+38 (099) 762-54-55</span>
+            <a href="tel:+380997625455" class="flex items-center gap-2 text-xs sm:text-sm font-medium text-white hover:text-[#ffaa00] transition-colors">
+                <span class="iconify text-[#ffaa00]" data-icon="lucide:phone" data-width="16"></span>
+                <span>+38 (099) 762-54-55</span>
             </a>
         </div>
     </header>
 
     <main>
-        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <section class="relative pt-28 pb-16 md:pt-48 md:pb-32 overflow-hidden px-4">
             <div class="absolute inset-0 bg-grid pointer-events-none"></div>
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#ffaa00] opacity-10 blur-[120px] rounded-full pointer-events-none"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[400px] bg-[#ffaa00] opacity-10 blur-[100px] rounded-full pointer-events-none"></div>
 
-            <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-[#ffaa00] mb-8">
+            <div class="max-w-3xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] sm:text-xs font-medium text-[#ffaa00] mb-6 sm:mb-8">
                     <span class="relative flex h-2 w-2">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffaa00] opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-2 w-2 bg-[#ffaa00]"></span>
@@ -48,159 +49,96 @@
                     Сеть сервисов в Украине
                 </div>
                 
-                <h1 class="text-5xl md:text-7xl font-semibold text-white tracking-tight mb-6 leading-[1.1]">
-                    Профессиональный сервис <span class="text-[#ffaa00]">автостекол</span>
+                <h1 class="text-4xl md:text-7xl font-semibold text-white tracking-tight mb-6 leading-tight">
+                    Сервис <span class="text-[#ffaa00]">автостекол</span>
                 </h1>
                 
-                <p class="text-lg text-neutral-400 mb-10 max-w-xl mx-auto font-light leading-relaxed">
-                    Качественная замена, ремонт сколов и тонировка в Николаеве, Одессе и Львове. Гарантия на все виды работ.
+                <p class="text-base md:text-lg text-neutral-400 mb-10 max-w-xl mx-auto font-light">
+                    Замена, ремонт и продажа стекол в Николаеве, Одессе и Львове. Качество мирового уровня у вас в городе.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="tel:+380997625455" class="w-full sm:w-auto px-8 py-3.5 bg-[#ffaa00] hover:bg-[#e69900] text-black font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group">
-                        <span class="iconify group-hover:rotate-12 transition-transform duration-300" data-icon="lucide:phone-call" style="stroke-width: 1.5;"></span>
+                    <a href="tel:+380997625455" class="w-full sm:w-auto px-8 py-4 bg-[#ffaa00] text-black font-semibold rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
+                        <span class="iconify" data-icon="lucide:phone-call"></span>
                         Позвонить мастеру
                     </a>
-                    <a href="#locations" class="w-full sm:w-auto px-8 py-3.5 bg-white/5 hover:bg-white/10 text-white font-medium rounded-lg border border-white/10 transition-all duration-300 flex items-center justify-center">
+                    <a href="#locations" class="w-full sm:w-auto px-8 py-4 bg-white/5 text-white font-medium rounded-xl border border-white/10">
                         Наши адреса
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="py-24 border-t border-white/5 bg-neutral-950">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="mb-16">
-                    <h2 class="text-3xl font-semibold text-white tracking-tight mb-4">Наши услуги</h2>
-                    <p class="text-neutral-400 max-w-lg">Полный спектр работ по обслуживанию остекления вашего автомобиля во всех филиалах сети.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="group p-6 rounded-xl bg-neutral-900/50 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300 hover:bg-neutral-900">
-                        <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-6 group-hover:text-[#ffaa00] group-hover:bg-[#ffaa00]/10 transition-colors duration-300">
-                            <span class="iconify" data-icon="lucide:car-front" data-width="24" data-height="24" style="stroke-width: 1.5;"></span>
-                        </div>
-                        <h3 class="text-lg font-medium text-white mb-2">Замена лобового</h3>
-                        <p class="text-sm text-neutral-500 leading-relaxed">Установка новых автостекол с соблюдением всех технологических норм.</p>
+        <section id="services" class="py-20 border-t border-white/5 bg-neutral-950 px-4">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-white mb-12">Наши услуги</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="p-6 rounded-2xl bg-neutral-900/50 border border-white/5">
+                        <span class="iconify text-[#ffaa00] mb-4" data-icon="lucide:car-front" data-width="32"></span>
+                        <h3 class="text-lg font-medium text-white mb-2">Замена</h3>
+                        <p class="text-sm text-neutral-500">Установка новых стекол по заводским стандартам.</p>
                     </div>
-                    <div class="group p-6 rounded-xl bg-neutral-900/50 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300 hover:bg-neutral-900">
-                        <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-6 group-hover:text-[#ffaa00] group-hover:bg-[#ffaa00]/10 transition-colors duration-300">
-                            <span class="iconify" data-icon="lucide:hammer" data-width="24" data-height="24" style="stroke-width: 1.5;"></span>
-                        </div>
-                        <h3 class="text-lg font-medium text-white mb-2">Ремонт сколов</h3>
-                        <p class="text-sm text-neutral-500 leading-relaxed">Восстановление целостности стекла и остановка трещин.</p>
+                    <div class="p-6 rounded-2xl bg-neutral-900/50 border border-white/5">
+                        <span class="iconify text-[#ffaa00] mb-4" data-icon="lucide:hammer" data-width="32"></span>
+                        <h3 class="text-lg font-medium text-white mb-2">Ремонт</h3>
+                        <p class="text-sm text-neutral-500">Остановка трещин и устранение сколов любой сложности.</p>
                     </div>
-                    <div class="group p-6 rounded-xl bg-neutral-900/50 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300 hover:bg-neutral-900">
-                        <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-6 group-hover:text-[#ffaa00] group-hover:bg-[#ffaa00]/10 transition-colors duration-300">
-                            <span class="iconify" data-icon="lucide:aperture" data-width="24" data-height="24" style="stroke-width: 1.5;"></span>
-                        </div>
-                        <h3 class="text-lg font-medium text-white mb-2">Тонировка стекол</h3>
-                        <p class="text-sm text-neutral-500 leading-relaxed">Защита от солнца и приватность с качественными пленками.</p>
-                    </div>
-                    <div class="group p-6 rounded-xl bg-neutral-900/50 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300 hover:bg-neutral-900">
-                        <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-6 group-hover:text-[#ffaa00] group-hover:bg-[#ffaa00]/10 transition-colors duration-300">
-                            <span class="iconify" data-icon="lucide:shopping-bag" data-width="24" data-height="24" style="stroke-width: 1.5;"></span>
-                        </div>
-                        <h3 class="text-lg font-medium text-white mb-2">Продажа стекла</h3>
-                        <p class="text-sm text-neutral-500 leading-relaxed">Широкий ассортимент стекол в наличии для любых марок.</p>
+                    <div class="p-6 rounded-2xl bg-neutral-900/50 border border-white/5">
+                        <span class="iconify text-[#ffaa00] mb-4" data-icon="lucide:shopping-bag" data-width="32"></span>
+                        <h3 class="text-lg font-medium text-white mb-2">Продажа</h3>
+                        <p class="text-sm text-neutral-500">Огромный выбор автостекол в наличии и под заказ.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="locations" class="py-24 border-t border-white/5 bg-neutral-900/30">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="mb-16 text-center lg:text-left">
-                    <h2 class="text-3xl font-semibold text-white tracking-tight mb-4">Наши сервисные центры</h2>
-                    <p class="text-neutral-400 max-w-lg">Мы расширяемся, чтобы быть ближе. Выберите ваш город для записи на сервис.</p>
+        <section id="locations" class="py-20 border-t border-white/5 bg-neutral-900/20 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-semibold text-white mb-4">Выберите город</h2>
+                    <p class="text-sm text-neutral-500">Запишитесь в ближайший к вам филиал</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-8 rounded-2xl bg-neutral-900 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300">
-                        <div class="inline-flex items-center gap-2 px-2 py-1 rounded-md bg-[#ffaa00]/10 text-[#ffaa00] text-[10px] font-bold uppercase mb-4 border border-[#ffaa00]/20">Центральный офис</div>
-                        <h3 class="text-xl font-medium text-white mb-2">Николаев</h3>
-                        <p class="text-sm text-neutral-500 mb-6">ул. Строителей, 7<br>Основной склад и мастерская.</p>
-                        <a href="zamena-lobovogo-stekla-nikolaev.html" class="text-[#ffaa00] text-sm font-medium hover:underline flex items-center gap-1">
-                            Цены и услуги <span class="iconify" data-icon="lucide:arrow-right" data-width="14"></span>
-                        </a>
-                    </div>
-
-                    <div class="p-8 rounded-2xl bg-neutral-900 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300">
-                        <div class="inline-flex items-center gap-2 px-2 py-1 rounded-md bg-white/5 text-white/60 text-[10px] font-bold uppercase mb-4 border border-white/10">Филиал</div>
-                        <h3 class="text-xl font-medium text-white mb-2">Одесса</h3>
-                        <p class="text-sm text-neutral-500 mb-6">ул. Василия Стуса, 1<br>Быстрая установка в Одессе.</p>
-                        <a href="zamena-lobovogo-stekla-odessa.html" class="text-[#ffaa00] text-sm font-medium hover:underline flex items-center gap-1">
-                            Цены и услуги <span class="iconify" data-icon="lucide:arrow-right" data-width="14"></span>
-                        </a>
-                    </div>
-
-                    <div class="p-8 rounded-2xl bg-neutral-900 border border-white/5 hover:border-[#ffaa00]/40 transition-all duration-300">
-                        <div class="inline-flex items-center gap-2 px-2 py-1 rounded-md bg-white/5 text-white/60 text-[10px] font-bold uppercase mb-4 border border-white/10">Филиал</div>
-                        <h3 class="text-xl font-medium text-white mb-2">Львов</h3>
-                        <p class="text-sm text-neutral-500 mb-6">ул. Дорожная, 60 (ЛЦ "Порт")<br>Пасеки-Зубрицкие, терм. G.</p>
-                        <a href="zamena-lobovogo-stekla-lviv.html" class="text-[#ffaa00] text-sm font-medium hover:underline flex items-center gap-1">
-                            Цены и услуги <span class="iconify" data-icon="lucide:arrow-right" data-width="14"></span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="mt-12 text-center">
-                    <p class="text-xs text-neutral-600 uppercase tracking-widest">Скоро открытие: Киев • Запорожье • Днепр</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 border-t border-white/5 bg-neutral-950">
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl font-semibold text-white tracking-tight mb-6">Почему выбирают нас?</h2>
-                    <ul class="space-y-6">
-                        <li class="flex items-start gap-4">
-                            <div class="mt-1 w-6 h-6 rounded-full bg-[#ffaa00]/10 flex items-center justify-center shrink-0">
-                                <span class="iconify text-[#ffaa00]" data-icon="lucide:check" data-width="14"></span>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-medium mb-1">Сетевой стандарт качества</h4>
-                                <p class="text-sm text-neutral-500">Единые стандарты установки и материалов во всех городах присутствия.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div class="mt-1 w-6 h-6 rounded-full bg-[#ffaa00]/10 flex items-center justify-center shrink-0">
-                                <span class="iconify text-[#ffaa00]" data-icon="lucide:check" data-width="14"></span>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-medium mb-1">Сертифицированные материалы</h4>
-                                <p class="text-sm text-neutral-500">Используем только проверенные клеевые составы и автостекла от мировых брендов.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="relative">
-                    <div class="relative z-10 bg-neutral-900 border border-white/10 rounded-2xl p-8 aspect-square flex flex-col justify-between">
-                        <div class="flex justify-between items-start">
-                            <span class="iconify text-neutral-600" data-icon="lucide:shield-check" data-width="48" style="stroke-width: 1;"></span>
-                            <div class="px-3 py-1 bg-[#ffaa00]/10 text-[#ffaa00] text-xs font-medium rounded-full border border-[#ffaa00]/20">Гарантия на установку</div>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-2xl bg-neutral-900 border border-white/5 flex flex-col justify-between">
                         <div>
-                            <div class="text-4xl font-semibold text-white tracking-tight mb-2">100%</div>
-                            <div class="text-neutral-500">Герметичность и безопасность вашего авто</div>
+                            <span class="text-[10px] font-bold text-[#ffaa00] uppercase tracking-widest bg-[#ffaa00]/10 px-2 py-1 rounded">Центр</span>
+                            <h3 class="text-xl text-white mt-4 mb-2">Николаев</h3>
+                            <p class="text-sm text-neutral-500 mb-6">ул. Строителей, 7</p>
                         </div>
+                        <a href="zamena-lobovogo-stekla-nikolaev.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black transition-colors">Перейти к ценам</a>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-neutral-900 border border-white/5 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Филиал</span>
+                            <h3 class="text-xl text-white mt-4 mb-2">Одесса</h3>
+                            <p class="text-sm text-neutral-500 mb-6">ул. Василия Стуса, 1</p>
+                        </div>
+                        <a href="zamena-lobovogo-stekla-odessa.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black transition-colors">Перейти к ценам</a>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-neutral-900 border border-white/5 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Филиал</span>
+                            <h3 class="text-xl text-white mt-4 mb-2">Львов</h3>
+                            <p class="text-sm text-neutral-500 mb-6">ул. Дорожная, 60 (ЛЦ "Порт")</p>
+                        </div>
+                        <a href="zamena-lobovogo-stekla-lviv.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black transition-colors">Перейти к ценам</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-8 border-t border-white/5 bg-neutral-950">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center gap-2 text-white font-semibold tracking-tighter">
-                <span class="text-[#ffaa00]">
-                    <span class="iconify" data-icon="lucide:layers" data-width="16" style="stroke-width: 1.5;"></span>
-                </span>
+    <footer class="py-10 border-t border-white/5 bg-neutral-950 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col gap-6 items-center md:flex-row md:justify-between">
+            <div class="flex items-center gap-2 text-white font-semibold">
+                <span class="text-[#ffaa00] iconify" data-icon="lucide:layers"></span>
                 AUTOGLASS NK
             </div>
-            <p class="text-sm text-neutral-600">© 2026 Autoglass NK. Все права защищены.</p>
+            <p class="text-[10px] sm:text-xs text-neutral-600">© 2026 Autoglass NK. Все права защищены.</p>
         </div>
     </footer>
-
-</body></html>
+</body>
+</html>
