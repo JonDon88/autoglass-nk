@@ -41,7 +41,7 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .lang-ru { display: none; } /* По умолчанию русский скрыт */
+        .lang-ru { display: none; }
         .lang-ua { display: inline; }
         .bg-grid {
             background-size: 40px 40px;
@@ -54,7 +54,6 @@
 
     <header class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
-            
             <a href="#" class="text-white text-sm sm:text-lg font-semibold tracking-tighter flex items-center gap-2 shrink-0 pl-1 active:scale-95 transition-transform">
                 <span class="bg-[#ffaa00] text-black w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center">
                     <span class="iconify" data-icon="lucide:layers" data-width="18"></span>
@@ -125,7 +124,7 @@
                                 <span class="lang-ua">вул. Будівельників, 7</span><span class="lang-ru">ул. Строителей, 7</span>
                             </p>
                         </div>
-                        <a href="zamena-lobovogo-stekla-nikolaev.html" class="w-full py-3 bg-[#ffaa00] text-black text-center rounded-lg text-sm font-bold">
+                        <a href="zamena-lobovogo-stekla-nikolaev.html" class="w-full py-3 bg-[#ffaa00] text-black text-center rounded-lg text-sm font-bold active:scale-95 transition-all">
                              <span class="lang-ua">Ціни</span><span class="lang-ru">Цены</span>
                         </a>
                     </div>
@@ -140,7 +139,7 @@
                                 <span class="lang-ua">вул. Василя Стуса, 1</span><span class="lang-ru">ул. Василия Стуса, 1</span>
                             </p>
                         </div>
-                        <a href="zamena-lobovogo-stekla-odessa.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black transition-all">
+                        <a href="zamena-lobovogo-stekla-odessa.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black active:scale-95 transition-all">
                             <span class="lang-ua">Ціни</span><span class="lang-ru">Цены</span>
                         </a>
                     </div>
@@ -153,14 +152,54 @@
                             </h3>
                             <p class="text-sm text-neutral-500 mb-6">вул. Дорожна, 60 (ЛЦ "Порт")</p>
                         </div>
-                        <a href="zamena-lobovogo-stekla-lviv.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black transition-all">
+                        <a href="zamena-lobovogo-stekla-lviv.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black active:scale-95 transition-all">
                             <span class="lang-ua">Ціни</span><span class="lang-ru">Цены</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="py-20 border-t border-white/5 bg-neutral-950 px-4">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <div class="bg-neutral-900 rounded-3xl border border-white/5 overflow-hidden flex flex-col">
+                    <div class="w-full h-64 overflow-hidden relative">
+                        <img src="zamena.png" alt="Процес заміни автоскла" class="w-full h-full object-cover opacity-80">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-white mb-4">
+                            <span class="lang-ua">Якісна заміна</span><span class="lang-ru">Качественная замена</span>
+                        </h3>
+                        <p class="text-neutral-400 font-light">
+                            <span class="lang-ua">Використовуємо лише перевірені герметики та професійне обладнання. Гарантія на роботу.</span>
+                            <span class="lang-ru">Используем только проверенные герметики и профессиональное оборудование. Гарантия на работу.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-900 rounded-3xl border border-white/5 overflow-hidden flex flex-col">
+                    <div class="w-full h-64 overflow-hidden relative">
+                        <img src="sklad.png" alt="Склад автоскла" class="w-full h-full object-cover opacity-80">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-white mb-4">
+                            <span class="lang-ua">Власний склад</span><span class="lang-ru">Собственный склад</span>
+                        </h3>
+                        <p class="text-neutral-400 font-light">
+                            <span class="lang-ua">Великий вибір скла в наявності для будь-яких марок авто. Від бюджетних до преміум варіантів.</span>
+                            <span class="lang-ru">Большой выбор стекол в наличии для любых марок авто. От бюджетных до премиум вариантов.</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
+
+    <div class="max-w-7xl mx-auto px-4 py-6 border-t border-white/5 text-[11px] text-neutral-700 text-center">
+        Заміна лобового скла Миколаїв ціна, замена автостекла Одесса недорого, ремонт сколів Львів, установка стекла Николаев срочно, купить автостекло Одесса.
+    </div>
 
     <footer class="py-10 border-t border-white/5 bg-neutral-950 px-4">
         <div class="max-w-7xl mx-auto flex flex-col gap-6 items-center md:flex-row md:justify-between text-center">
