@@ -41,10 +41,8 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; }
-        /* По умолчанию русский текст скрыт */
-        .lang-ru { display: none; }
+        .lang-ru { display: none; } /* По умолчанию русский скрыт */
         .lang-ua { display: inline; }
-        
         .bg-grid {
             background-size: 40px 40px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -55,18 +53,19 @@
 <body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-[#ffaa00] selection:text-black">
 
     <header class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-            <a href="#" class="text-white text-base sm:text-lg font-semibold tracking-tighter flex items-center gap-2 shrink-0">
-                <span class="bg-[#ffaa00] text-black w-7 h-7 rounded-lg flex items-center justify-center">
-                    <span class="iconify" data-icon="lucide:layers"></span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
+            
+            <a href="#" class="text-white text-sm sm:text-lg font-semibold tracking-tighter flex items-center gap-2 shrink-0 pl-1 active:scale-95 transition-transform">
+                <span class="bg-[#ffaa00] text-black w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center">
+                    <span class="iconify" data-icon="lucide:layers" data-width="18"></span>
                 </span>
-                <span class="hidden xs:inline">AUTOGLASS NK</span>
-                <span class="xs:hidden">AG NK</span>
+                <span class="hidden sm:inline">AUTOGLASS NK</span>
+                <span class="sm:hidden font-bold">AG NK</span>
             </a>
             
             <div class="flex items-center gap-2 md:gap-4 ml-auto">
-                <a href="tel:+380997625455" class="flex items-center gap-2 text-sm sm:text-base font-bold text-white hover:text-[#ffaa00] transition-colors py-1.5 px-3 bg-white/5 rounded-xl border border-white/10 active:scale-95 shrink-0">
-                    <span class="iconify text-[#ffaa00]" data-icon="lucide:phone-call" data-width="18"></span>
+                <a href="tel:+380997625455" class="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-base font-bold text-white hover:text-[#ffaa00] transition-colors py-1.5 px-3 bg-white/5 rounded-xl border border-white/10 active:scale-95 shrink-0">
+                    <span class="iconify text-[#ffaa00]" data-icon="lucide:phone-call" data-width="16"></span>
                     <span class="whitespace-nowrap">+38 (099) 762-54-55</span>
                 </a>
 
@@ -111,8 +110,7 @@
             <div class="max-w-7xl mx-auto">
                 <div class="mb-12 text-center md:text-left">
                     <h2 class="text-2xl sm:text-3xl font-semibold text-white mb-4">
-                        <span class="lang-ua">Оберіть місто</span>
-                        <span class="lang-ru">Выберите город</span>
+                        <span class="lang-ua">Оберіть місто</span><span class="lang-ru">Выберите город</span>
                     </h2>
                 </div>
 
@@ -127,14 +125,14 @@
                                 <span class="lang-ua">вул. Будівельників, 7</span><span class="lang-ru">ул. Строителей, 7</span>
                             </p>
                         </div>
-                        <a href="zamena-lobovogo-stekla-nikolaev.html" class="w-full py-3 bg-[#ffaa00] text-black text-center rounded-lg text-sm font-bold active:scale-95 transition-transform">
+                        <a href="zamena-lobovogo-stekla-nikolaev.html" class="w-full py-3 bg-[#ffaa00] text-black text-center rounded-lg text-sm font-bold">
                              <span class="lang-ua">Ціни</span><span class="lang-ru">Цены</span>
                         </a>
                     </div>
 
                     <div class="p-6 rounded-2xl bg-neutral-900 border border-white/5 flex flex-col justify-between">
                         <div>
-                            <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Филиал</span>
+                            <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Одеса</span>
                             <h3 class="text-xl text-white mt-4 mb-2">
                                 <span class="lang-ua">Одеса</span><span class="lang-ru">Одесса</span>
                             </h3>
@@ -142,20 +140,20 @@
                                 <span class="lang-ua">вул. Василя Стуса, 1</span><span class="lang-ru">ул. Василия Стуса, 1</span>
                             </p>
                         </div>
-                        <a href="zamena-lobovogo-stekla-odessa.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black active:scale-95 transition-all">
+                        <a href="zamena-lobovogo-stekla-odessa.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black transition-all">
                             <span class="lang-ua">Ціни</span><span class="lang-ru">Цены</span>
                         </a>
                     </div>
 
                     <div class="p-6 rounded-2xl bg-neutral-900 border border-white/5 flex flex-col justify-between">
                         <div>
-                            <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Филиал</span>
+                            <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Львів</span>
                             <h3 class="text-xl text-white mt-4 mb-2">
                                 <span class="lang-ua">Львів</span><span class="lang-ru">Львов</span>
                             </h3>
                             <p class="text-sm text-neutral-500 mb-6">вул. Дорожна, 60 (ЛЦ "Порт")</p>
                         </div>
-                        <a href="zamena-lobovogo-stekla-lviv.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black active:scale-95 transition-all">
+                        <a href="zamena-lobovogo-stekla-lviv.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black transition-all">
                             <span class="lang-ua">Ціни</span><span class="lang-ru">Цены</span>
                         </a>
                     </div>
