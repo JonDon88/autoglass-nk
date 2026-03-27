@@ -41,7 +41,10 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .lang-ru { display: none; } /* По умолчанию русский скрыт */
+        /* По умолчанию русский текст скрыт */
+        .lang-ru { display: none; }
+        .lang-ua { display: inline; }
+        
         .bg-grid {
             background-size: 40px 40px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -52,24 +55,25 @@
 <body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-[#ffaa00] selection:text-black">
 
     <header class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-white text-base sm:text-lg font-semibold tracking-tighter flex items-center gap-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+            <a href="#" class="text-white text-base sm:text-lg font-semibold tracking-tighter flex items-center gap-2 shrink-0">
                 <span class="bg-[#ffaa00] text-black w-7 h-7 rounded-lg flex items-center justify-center">
                     <span class="iconify" data-icon="lucide:layers"></span>
                 </span>
-                AUTOGLASS NK
+                <span class="hidden xs:inline">AUTOGLASS NK</span>
+                <span class="xs:hidden">AG NK</span>
             </a>
             
-            <div class="flex items-center gap-4">
-                <div class="flex border border-white/10 rounded-lg overflow-hidden text-[10px] font-bold">
-                    <button onclick="setLang('ua')" id="btn-ua" class="px-3 py-2 bg-[#ffaa00] text-black transition-colors">UA</button>
-                    <button onclick="setLang('ru')" id="btn-ru" class="px-3 py-2 bg-transparent text-white/50 hover:bg-white/5 transition-colors">RU</button>
-                </div>
-                
-                <a href="tel:+380997625455" class="text-white hover:text-[#ffaa00] transition-colors flex items-center gap-2 text-xs sm:text-sm">
-                    <span class="iconify text-[#ffaa00]" data-icon="lucide:phone" data-width="16"></span>
-                    <span class="hidden xs:inline">+38 (099) 762-54-55</span>
+            <div class="flex items-center gap-2 md:gap-4 ml-auto">
+                <a href="tel:+380997625455" class="flex items-center gap-2 text-sm sm:text-base font-bold text-white hover:text-[#ffaa00] transition-colors py-1.5 px-3 bg-white/5 rounded-xl border border-white/10 active:scale-95 shrink-0">
+                    <span class="iconify text-[#ffaa00]" data-icon="lucide:phone-call" data-width="18"></span>
+                    <span class="whitespace-nowrap">+38 (099) 762-54-55</span>
                 </a>
+
+                <div class="flex border border-white/10 rounded-lg overflow-hidden text-[10px] font-bold shrink-0">
+                    <button onclick="setLang('ua')" id="btn-ua" class="px-2 sm:px-3 py-2 bg-[#ffaa00] text-black transition-all">UA</button>
+                    <button onclick="setLang('ru')" id="btn-ru" class="px-2 sm:px-3 py-2 bg-transparent text-white/50 hover:bg-white/5 transition-all">RU</button>
+                </div>
             </div>
         </div>
     </header>
@@ -89,8 +93,8 @@
                 </h1>
                 
                 <p class="text-base md:text-lg text-neutral-400 mb-10 max-w-xl mx-auto font-light">
-                    <span class="lang-ua">Заміна, ремонт та продаж скла у Миколаєві, Одесі та Львові. Якість світового рівня у вашому місті.</span>
-                    <span class="lang-ru">Замена, ремонт и продажа стекол в Николаеве, Одессе и Львове. Качество мирового уровня у вас в городе.</span>
+                    <span class="lang-ua">Заміна, ремонт та продаж скла у Миколаєві, Одесі та Львові. Якість світового рівня.</span>
+                    <span class="lang-ru">Замена, ремонт и продажа стекол в Николаеве, Одессе и Львове. Качество мирового уровня.</span>
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -123,7 +127,7 @@
                                 <span class="lang-ua">вул. Будівельників, 7</span><span class="lang-ru">ул. Строителей, 7</span>
                             </p>
                         </div>
-                        <a href="zamena-lobovogo-stekla-nikolaev.html" class="w-full py-3 bg-[#ffaa00] text-black text-center rounded-lg text-sm font-bold hover:opacity-90">
+                        <a href="zamena-lobovogo-stekla-nikolaev.html" class="w-full py-3 bg-[#ffaa00] text-black text-center rounded-lg text-sm font-bold active:scale-95 transition-transform">
                              <span class="lang-ua">Ціни</span><span class="lang-ru">Цены</span>
                         </a>
                     </div>
@@ -138,7 +142,7 @@
                                 <span class="lang-ua">вул. Василя Стуса, 1</span><span class="lang-ru">ул. Василия Стуса, 1</span>
                             </p>
                         </div>
-                        <a href="zamena-lobovogo-stekla-odessa.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black">
+                        <a href="zamena-lobovogo-stekla-odessa.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black active:scale-95 transition-all">
                             <span class="lang-ua">Ціни</span><span class="lang-ru">Цены</span>
                         </a>
                     </div>
@@ -149,9 +153,9 @@
                             <h3 class="text-xl text-white mt-4 mb-2">
                                 <span class="lang-ua">Львів</span><span class="lang-ru">Львов</span>
                             </h3>
-                            <p class="text-sm text-neutral-500 mb-6">вул. Дорожня, 60 (ЛЦ "Порт")</p>
+                            <p class="text-sm text-neutral-500 mb-6">вул. Дорожна, 60 (ЛЦ "Порт")</p>
                         </div>
-                        <a href="zamena-lobovogo-stekla-lviv.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black">
+                        <a href="zamena-lobovogo-stekla-lviv.html" class="w-full py-3 bg-white/5 border border-white/10 text-white text-center rounded-lg text-sm font-medium hover:bg-[#ffaa00] hover:text-black active:scale-95 transition-all">
                             <span class="lang-ua">Ціни</span><span class="lang-ru">Цены</span>
                         </a>
                     </div>
@@ -161,7 +165,7 @@
     </main>
 
     <footer class="py-10 border-t border-white/5 bg-neutral-950 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col gap-6 items-center md:flex-row md:justify-between">
+        <div class="max-w-7xl mx-auto flex flex-col gap-6 items-center md:flex-row md:justify-between text-center">
             <div class="flex items-center gap-2 text-white font-semibold">
                 <span class="text-[#ffaa00] iconify" data-icon="lucide:layers"></span>
                 AUTOGLASS NK
@@ -183,13 +187,13 @@
             if (lang === 'ua') {
                 uaElements.forEach(el => el.style.display = 'inline');
                 ruElements.forEach(el => el.style.display = 'none');
-                btnUa.className = 'px-3 py-2 bg-[#ffaa00] text-black transition-colors';
-                btnRu.className = 'px-3 py-2 bg-transparent text-white/50 hover:bg-white/5 transition-colors';
+                btnUa.className = 'px-2 sm:px-3 py-2 bg-[#ffaa00] text-black transition-all';
+                btnRu.className = 'px-2 sm:px-3 py-2 bg-transparent text-white/50 hover:bg-white/5 transition-all';
             } else {
                 uaElements.forEach(el => el.style.display = 'none');
                 ruElements.forEach(el => el.style.display = 'inline');
-                btnRu.className = 'px-3 py-2 bg-[#ffaa00] text-black transition-colors';
-                btnUa.className = 'px-3 py-2 bg-transparent text-white/50 hover:bg-white/5 transition-colors';
+                btnRu.className = 'px-2 sm:px-3 py-2 bg-[#ffaa00] text-black transition-all';
+                btnUa.className = 'px-2 sm:px-3 py-2 bg-transparent text-white/50 hover:bg-white/5 transition-all';
             }
         }
     </script>
