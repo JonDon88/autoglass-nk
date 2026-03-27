@@ -1,51 +1,71 @@
-<html lang="ru" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16501602600"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16501602600');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16501602600"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16501602600');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Замена лобового стекла Одесса | ул. Василия Стуса, 1 | Autoglass</title>
-    <meta name="description" content="Замена автостекла в Одессе на ул. Василия Стуса, 1. Качественная установка лобового стекла, ремонт сколов и продажа стекол для любых авто.">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AutoRepair",
-  "name": "Autoglass NK Одесса",
-  "telephone": "+380997625455",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Василия Стуса, 1",
-    "addressLocality": "Одесса",
-    "addressCountry": "UA"
-  }
-}
-</script>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+    
+    <title>Заміна лобового скла Одеса | вул. Василя Стуса, 1 | Autoglass NK</title>
+    <meta name="description" content="Якісна заміна автоскла в Одесі на вул. Василя Стуса, 1. Замена лобового стекла Одесса. Ремонт трещин и сколов с гарантией.">
+    <meta name="keywords" content="заміна лобового скла одеса, замена лобового стекла одесса, ремонт трещин одесса, василя стуса 1 автоскло">
+
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .lang-ru { display: none; }
+        .bg-grid { background-size: 40px 40px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px); }
+    </style>
 </head>
 <body class="bg-neutral-950 text-neutral-400 antialiased">
-    <main class="pt-32 pb-20 px-4 text-center">
-        <h1 class="text-4xl md:text-6xl font-semibold text-white mb-6">Замена автостекла <span class="text-[#ffaa00]">в Одессе</span></h1>
-        <p class="text-lg mb-10">Профессиональный сервис на ул. Василия Стуса, 1. Быстрая установка и ремонт сколов.</p>
-        <div class="bg-neutral-900 p-8 rounded-2xl inline-block border border-white/5 text-left max-w-lg">
-            <h3 class="text-white font-medium mb-4">Контакты в Одессе:</h3>
-            <p class="mb-2">📍 Адрес: ул. Василия Стуса, 1</p>
-            <p class="mb-6">📞 Телефон: +38 (099) 762-54-55</p>
-            <a href="tel:+380997625455" class="block w-full py-4 bg-[#ffaa00] text-black text-center font-bold rounded-xl">Позвонить и записаться</a>
+    <header class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-2">
+            <a href="index.html" class="text-white text-sm sm:text-lg font-semibold tracking-tighter flex items-center gap-2 shrink-0 pl-1">
+                <span class="bg-[#ffaa00] text-black w-7 h-7 rounded-lg flex items-center justify-center"><span class="iconify" data-icon="lucide:layers"></span></span>
+                <span class="hidden sm:inline">AUTOGLASS NK</span><span class="sm:hidden">AG NK</span>
+            </a>
+            <div class="flex items-center gap-2 ml-auto">
+                <a href="tel:+380997625455" class="flex items-center gap-1.5 text-xs sm:text-base font-bold text-white py-1.5 px-3 bg-white/5 rounded-xl border border-white/10 active:scale-95"><span class="iconify text-[#ffaa00]" data-icon="lucide:phone-call"></span><span>+38 (099) 762-54-55</span></a>
+                <div class="flex border border-white/10 rounded-lg overflow-hidden text-[10px] font-bold">
+                    <button onclick="setLang('ua')" id="btn-ua" class="px-2 py-2 bg-[#ffaa00] text-black">UA</button>
+                    <button onclick="setLang('ru')" id="btn-ru" class="px-2 py-2 bg-transparent text-white/50">RU</button>
+                </div>
+            </div>
         </div>
-        <br><br>
-        <a href="index.html" class="text-sm underline">Вернуться на главную</a>
+    </header>
+
+    <main class="pt-32 px-4 max-w-4xl mx-auto">
+        <h1 class="text-3xl md:text-5xl font-bold text-white mb-6">
+            <span class="lang-ua">Заміна скла у <span class="text-[#ffaa00]">Одесі</span></span>
+            <span class="lang-ru">Замена стекла в <span class="text-[#ffaa00]">Одессе</span></span>
+        </h1>
+        <p class="text-lg mb-8">
+            <span class="lang-ua">Адреса: вул. Василя Стуса, 1. Професійне встановлення.</span>
+            <span class="lang-ru">Адрес: ул. Василия Стуса, 1. Профессиональная установка.</span>
+        </p>
+        <div class="p-6 bg-neutral-900 rounded-2xl border border-white/5">
+            <h2 class="text-xl text-white mb-4"><span class="lang-ua">Наші ціни</span><span class="lang-ru">Наши цены</span></h2>
+            <ul class="space-y-3">
+                <li class="flex justify-between border-b border-white/5 pb-2"><span><span class="lang-ua">Заміна лобового</span><span class="lang-ru">Замена лобового</span></span><span class="text-white">від 900 грн</span></li>
+                <li class="flex justify-between border-b border-white/5 pb-2"><span><span class="lang-ua">Зупинка тріщини</span><span class="lang-ru">Остановка трещины</span></span><span class="text-white">від 300 грн</span></li>
+            </ul>
+        </div>
     </main>
+
+    <script>
+        function setLang(lang) {
+            const ua = document.querySelectorAll('.lang-ua'); const ru = document.querySelectorAll('.lang-ru');
+            const bUa = document.getElementById('btn-ua'); const bRu = document.getElementById('btn-ru');
+            if(lang==='ua'){ ua.forEach(e=>e.style.display='inline'); ru.forEach(e=>e.style.display='none'); bUa.className='px-2 py-2 bg-[#ffaa00] text-black'; bRu.className='px-2 py-2 bg-transparent text-white/50'; }
+            else { ua.forEach(e=>e.style.display='none'); ru.forEach(e=>e.style.display='inline'); bRu.className='px-2 py-2 bg-[#ffaa00] text-black'; bUa.className='px-2 py-2 bg-transparent text-white/50'; }
+        }
+    </script>
 </body>
 </html>
